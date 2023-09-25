@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 APP</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- 2022.11.03 : mod : header 수정 -->
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<h1 class="for-a11y">PetCare</h1>
+							<a href="" class="header__my">
+								<!-- DD : 이미지 없을 때 -->
+								<span class="header__my-photo">
+									<span class="header__my-photo-inner"></span>
+								</span>
+								<!-- //DD : 이미지 없을 때 -->
+
+								<!-- DD : 이미지 에러 -->
+								<span class="header__my-photo">
+									<span class="header__my-photo-inner is-error">
+										<img src="./assets/images/_dummy/" alt="" onerror="this.parentNode.className += ' is-error';" />
+									</span>
+								</span>
+								<!-- //DD : 이미지 에러 -->
+
+								<!-- DD : 이미지 있을 때 -->
+								<span class="header__my-photo">
+									<span class="header__my-photo-inner">
+										<img src="./assets/images/_dummy/my-photo.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+									</span>
+								</span>
+								<!-- //DD : 이미지 있을 때 -->
+
+								<span class="header__my-name">$반려동물이름$</span>
+							</a>
+						</div>
+						<div class="header__right">
+							<a href="" class="header__button header__button--push">
+								<span class="for-a11y">알림</span>
+								<span class="header__button-new">
+									<span class="for-a11y">(신규 알림 있음)</span>
+								</span>
+							</a>
+						</div>
+					</header>
+					<!-- //header -->
+					<!-- //2022.11.03 : mod : header 수정 -->
+
+					<!-- nav -->
+					<nav class="nav-bar">
+						<h2 class="for-a11y">메뉴</h2>
+						<div class="nav-bar__inner">
+							<ul class="nav-bar__list">
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">홈</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">셀프점검</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link is-active">
+										<span class="nav-bar__link-text">캘린더</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">병원수첩</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<!-- 2022.10.11 : mod : 메뉴명 수정 -->
+										<span class="nav-bar__link-text">MY</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<!-- //nav -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<!-- calendar -->
+						<div class="calendar">
+							<div class="calendar__head">
+								<button type="button" class="ui-button calendar__select-month">
+									<span class="calendar__select-month-text">2022년 07월</span>
+								</button>
+							</div>
+							<div class="calendar__table">
+								<table>
+									<thead>
+										<tr>
+											<th>일</th>
+											<th>월</th>
+											<th>화</th>
+											<th>수</th>
+											<th>목</th>
+											<th>금</th>
+											<th>토</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">1</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">2</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">3</span>
+													</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">4</span>
+														<span class="calendar__be">
+															<span class="for-a11y">(일정 있음)</span>
+														</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">5</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">6</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">7</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">8</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">9</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">10</span>
+													</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">11</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">12</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">13</span>
+														<span class="calendar__be">
+															<span class="for-a11y">(일정 있음)</span>
+														</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">14</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">15</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">16</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">17</span>
+													</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">18</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">19</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">20</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">21</span>
+														<span class="calendar__be">
+															<span class="for-a11y">(일정 있음)</span>
+														</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">22</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<!-- DD : 선택 된 날짜 is-active 클래스 값 추가 -->
+													<button type="button" class="ui-button calendar__day is-active">
+														<span class="calendar__day-text">23</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">24</span>
+													</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">25</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<!-- DD : 오늘 날짜 is-today 클래스 값 추가 -->
+													<button type="button" class="ui-button calendar__day is-today">
+														<span class="calendar__day-text">26</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">27</span>
+														<span class="calendar__be">
+															<span class="for-a11y">(일정 있음)</span>
+														</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">28</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">29</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">30</span>
+														<span class="calendar__be">
+															<span class="for-a11y">(일정 있음)</span>
+														</span>
+													</button>
+												</div>
+											</td>
+											<td>
+												<div class="calendar__cell">
+													<button type="button" class="ui-button calendar__day">
+														<span class="calendar__day-text">31</span>
+													</button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- //calendar -->
+
+						<section class="section">
+							<div class="section-head">
+								<div class="section-head__left">
+									<h2 class="section-head__title">2022.07.27</h2>
+								</div>
+							</div>
+
+							<div class="ui-form">
+								<div class="ui-form__list">
+									<div class="ui-form__item">
+										<div class="button-menu button-menu--per-500">
+											<ul class="button-menu__list">
+												<li class="button-menu__item">
+													<a href="" class="button-menu__link">
+														<span class="button-menu__icon button-menu__icon--001"></span>
+														<span class="button-menu__text">일정 등록하기</span>
+													</a>
+												</li>
+												<li class="button-menu__item">
+													<a href="" class="button-menu__link">
+														<!-- 2022.12.09 : mod : button-menu__icon--001 → button-menu__icon--002 클래스 값 변경 -->
+														<span class="button-menu__icon button-menu__icon--002"></span>
+														<span class="button-menu__text">반려일기 쓰기</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<section class="ui-form__item">
+										<h3 class="ui-form__key">일정</h3>
+										<div class="ui-form__val">
+											<div class="schedules">
+												<ul class="schedules__list">
+													<li class="schedules__item">
+														<a href="" class="schedules__block">
+															<div class="schedules__dot"></div>
+															<div class="schedules__left">
+																<div class="schedules__time">종일</div>
+																<div class="schedules__title">백신 접종</div>
+															</div>
+															<div class="schedules__right">
+																<span class="icon-status icon-status--008">예방접종</span>
+															</div>
+														</a>
+													</li>
+													<li class="schedules__item">
+														<a href="" class="schedules__block">
+															<div class="schedules__dot"></div>
+															<div class="schedules__left">
+																<div class="schedules__time">12:30 - 01:30</div>
+																<div class="schedules__title">애견카페 방문</div>
+															</div>
+															<div class="schedules__right">
+																<span class="icon-status icon-status--001">일상</span>
+															</div>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</section>
+									<section class="ui-form__item">
+										<h3 class="ui-form__key">반려일기</h3>
+										<div class="ui-form__val">
+											<div class="diary-menu">
+												<ul class="diary-menu__list">
+													<li class="diary-menu__item">
+														<a href="" class="diary-menu__link">
+															<div class="diary-menu__left">
+																<div class="diary-menu__text">오늘의 춘봉이</div>
+															</div>
+															<div class="diary-menu__right">
+																<span class="icon-status icon-status--001">일상</span>
+															</div>
+														</a>
+													</li>
+													<li class="diary-menu__item">
+														<a href="" class="diary-menu__link">
+															<div class="diary-menu__left">
+																<div class="diary-menu__text">오늘의 춘봉이</div>
+															</div>
+															<div class="diary-menu__right">
+																<span class="icon-status icon-status--002">건강</span>
+															</div>
+														</a>
+													</li>
+													<li class="diary-menu__item">
+														<a href="" class="diary-menu__link">
+															<div class="diary-menu__left">
+																<div class="diary-menu__text">오늘의 춘봉이</div>
+															</div>
+															<div class="diary-menu__right">
+																<span class="icon-status icon-status--003">운동</span>
+															</div>
+														</a>
+													</li>
+													<li class="diary-menu__item">
+														<a href="" class="diary-menu__link">
+															<div class="diary-menu__left">
+																<div class="diary-menu__text">오늘의 춘봉이</div>
+															</div>
+															<div class="diary-menu__right">
+																<span class="icon-status icon-status--004">병원</span>
+															</div>
+														</a>
+													</li>
+													<li class="diary-menu__item">
+														<a href="" class="diary-menu__link">
+															<div class="diary-menu__left">
+																<div class="diary-menu__text">오늘의 춘봉이</div>
+															</div>
+															<div class="diary-menu__right">
+																<span class="icon-status icon-status--005">미용</span>
+															</div>
+														</a>
+													</li>
+													<li class="diary-menu__item">
+														<a href="" class="diary-menu__link">
+															<div class="diary-menu__left">
+																<div class="diary-menu__text">오늘의 춘봉이</div>
+															</div>
+															<div class="diary-menu__right">
+																<span class="icon-status icon-status--006">목욕</span>
+															</div>
+														</a>
+													</li>
+													<li class="diary-menu__item">
+														<a href="" class="diary-menu__link">
+															<div class="diary-menu__left">
+																<div class="diary-menu__text">오늘의 춘봉이</div>
+															</div>
+															<div class="diary-menu__right">
+																<span class="icon-status icon-status--007">기타</span>
+															</div>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</section>
+								</div>
+							</div>
+						</section>
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				var $monthPicker = $('.calendar__select-month');
+				var monthPicker = $monthPicker.data('datetimepicker');
+
+				monthPicker.dates.setValue(monthPicker.dates.parseInput('2022.02')); // 특정 월 선택 시키기
+
+				$monthPicker.on('change.td', function (e) {
+					// 월 변경 이벤트
+					if (e.date) {
+						console.log(e.date);
+					}
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

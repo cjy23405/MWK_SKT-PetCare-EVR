@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR Mobile</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<h1 class="header__title">진료</h1>
+						</div>
+						<div class="header__right">
+							<a href="" class="header__button header__button--menu" data-layer-open="layer-gnb">
+								<span class="for-a11y">메뉴</span>
+							</a>
+						</div>
+					</header>
+					<!-- //header -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-input-block ui-input-block--search row-contents-group">
+							<a href="" class="ui-input" title="검색" data-placeholder="환자, 보호자 검색"></a>
+						</div>
+
+						<!-- Case : 환자 미 선택 상태일 때 -->
+						<div class="ui-empty">
+							<div class="ui-empty__object ui-empty__object--search"></div>
+							<p class="ui-empty__text">검색 후 환자를 먼저 선택해 주세요.</p>
+						</div>
+						<!-- //Case : 환자 미 선택 상태일 때 -->
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <path data-name="사각형 29425" style="fill:none" d="M0 0h40v40H0z"/>
+    <g data-name="그룹 21131" transform="translate(10.198 10.355)">
+        <path data-name="제외 1" d="M17.041 17H2.959A3.047 3.047 0 0 1 0 13.879V6.126a3.047 3.047 0 0 1 2.959-3.121h1.87l.36-.936A2.58 2.58 0 0 1 7.708 0h4.584a2.58 2.58 0 0 1 2.519 2.069l.36.936h1.869A3.047 3.047 0 0 1 20 6.126v7.753A3.047 3.047 0 0 1 17.041 17zM10 5.95a4.3 4.3 0 0 0-4.349 4.25 4.349 4.349 0 0 0 8.7 0A4.305 4.305 0 0 0 10 5.95zm5.42-1.313a.637.637 0 1 0 0 1.274h1.334a.637.637 0 0 0 0-1.274z" transform="translate(-.198 .145)" style="stroke:transparent;stroke-miterlimit:10;fill:#fff"/>
+        <circle data-name="타원 3034" cx="2.752" cy="2.752" r="2.752" transform="translate(7.049 7.676)" style="fill:#fff"/>
+    </g>
+</svg>

@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title></title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./dist/assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/common.css" />
+		<style>
+			body {
+				margin: 0;
+			}
+			.is-emphasis {
+				font-weight: 700;
+				color: #ff706e;
+			}
+			.index-wrap {
+				box-sizing: border-box;
+				min-width: 1900px;
+				padding: 20px;
+			}
+			.index-title {
+				font-size: 30px;
+				line-height: 40px;
+				margin: 0 0 20px;
+			}
+			.index-links:before {
+				content: '';
+				display: table;
+			}
+			.index-links__inner {
+				margin: -10px 0 0 -10px;
+			}
+			.index-links__inner:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+			.index-links a {
+				display: block;
+				margin: 10px 0 0 10px;
+				float: left;
+				padding: 5px 15px;
+				font-size: 14px;
+				line-height: 20px;
+				color: #fff;
+				text-decoration: none;
+				border-radius: 5px;
+				background: #666;
+			}
+			.index-gnb {
+				margin: 20px 0;
+			}
+			.index-bottom {
+				position: fixed;
+				z-index: 1000;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				min-width: 1900px;
+				box-sizing: border-box;
+				padding: 10px 20px;
+				background: rgba(0, 0, 0, 0.4);
+			}
+			.index-bottom a {
+				background-color: #066cb3;
+			}
+			.index-section {
+				border-radius: 5px;
+				background-color: #fff;
+			}
+			.index-section + .index-section {
+				margin-top: 20px;
+			}
+			.index-section--clicked {
+				-webkit-animation: index-section-clicked 0.8s linear;
+				animation: index-section-clicked 0.8s linear;
+			}
+			@-webkit-keyframes index-section-clicked {
+				0% {
+					background-color: rgba(255, 255, 255, 1);
+				}
+				30% {
+					background-color: rgba(255, 202, 222, 1);
+				}
+				70% {
+					background-color: rgba(255, 202, 222, 1);
+				}
+				100% {
+					background-color: rgba(255, 255, 255, 1);
+				}
+			}
+			@keyframes index-section-clicked {
+				0% {
+					background-color: rgba(255, 255, 255, 1);
+				}
+				30% {
+					background-color: rgba(255, 202, 222, 1);
+				}
+				70% {
+					background-color: rgba(255, 202, 222, 1);
+				}
+				100% {
+					background-color: rgba(255, 255, 255, 1);
+				}
+			}
+			.index-section__title {
+				margin: 0;
+				padding: 5px 15px;
+				font-size: 14px;
+				line-height: 20px;
+				color: #fff;
+				border-radius: 5px 5px 0 0;
+				background: #333;
+			}
+			.index-table > table {
+				width: 100%;
+				table-layout: fixed;
+				margin: 0;
+				padding: 0;
+				border-spacing: 0;
+				box-sizing: border-box;
+			}
+			.index-table > table > thead > tr > th,
+			.index-table > table > tbody > tr > th,
+			.index-table > table > tbody > tr > td {
+				box-sizing: border-box;
+				font-size: 12px;
+				line-height: 18px;
+				text-align: left;
+				padding: 5px 10px;
+				border: 0 solid #cdcdcd;
+				border-width: 0 1px 1px 0;
+				background: none;
+				word-break: keep-all;
+				word-wrap: break-word;
+			}
+			.index-table > table > tbody > tr:hover > th,
+			.index-table > table > tbody > tr:hover > td {
+				background-color: #f6f6f6;
+			}
+			.index-table > table > thead > tr > th:first-child,
+			.index-table > table > tbody > tr > th:first-child,
+			.index-table > table > tbody > tr > td:first-child {
+				border-left-width: 1px;
+			}
+			.index-table > table > thead > tr > th {
+				border-top-width: 1px;
+			}
+			.index-table > table > thead > tr > th,
+			.index-table > table > tbody > tr > th {
+				background-color: #e8e8e8;
+			}
+			.index-table > table > tbody > tr:last-child > td:first-child {
+				border-radius: 0 0 0 5px;
+			}
+			.index-table > table > tbody > tr:last-child > td:last-child {
+				border-radius: 0 0 5px 0;
+			}
+			.index-status {
+				display: inline-block;
+				vertical-align: top;
+				padding: 3px 8px;
+				margin: -3px 0;
+				background: #999;
+				color: #fff;
+				border-radius: 5px;
+			}
+			.index-status--ing {
+				background-color: #cf8800;
+			}
+			.index-status--end {
+				background-color: #00a6a0;
+			}
+			.index-status--moding {
+				background-color: #ff4594;
+			}
+			.index-log {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.index-log__item {
+				position: relative;
+				padding-left: 80px;
+			}
+			.index-log__item__date {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.index-text {
+				margin-bottom: 20px;
+			}
+			.index-type {
+				color: #2b5cd9;
+			}
+		</style>
+		<!-- //style -->
+	</head>
+	<body>
+		<div class="index-wrap">
+			<h1 class="index-title"></h1>
+			<div class="index-gnb">
+				<div class="index-links">
+					<div class="index-links__inner">
+						<a href="./guide-popup.html" target="_blank">레이어 팝업 가이드</a>
+						<a href="./guide-component.html" target="_blank">컴포넌트 가이드</a>
+						<a href="./guide-script.html" target="_blank">스크립트 가이드</a>
+					</div>
+				</div>
+			</div>
+			<div class="index-bottom">
+				<div class="index-links">
+					<div class="index-links__inner" id="nav"></div>
+				</div>
+			</div>
+
+			<!--
+			<div class="index-text">기타 문구</div>
+			-->
+
+			<div class="index-datas" id="indexTable"></div>
+		</div>
+
+		<div class="index-fake-botttom"></div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./dist/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script>
+			var title = 'SKT 펫케어 APP';
+			var tableData = [
+				/*
+				{
+					depth1: '',
+					data: [
+						{
+							id: '',
+							depth2: '',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '',
+							status: '',
+							create: '',
+							update: '',
+							log: [
+								//{ date: '', text: '', },
+							],
+						},
+					],
+				},
+				*/
+				{
+					depth1: '공통',
+					data: [
+						{
+							id: '',
+							depth2: '레이아웃',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/_layout.html',
+							status: 'end',
+							create: '2022.08.16',
+							log: [
+								{ date: '2022.09.05', text: '레이아웃 작업 완료' },
+								{ date: '2022.10.11', text: '메뉴명 수정' },
+							],
+						},
+						{
+							id: '',
+							depth2: '얼럿 레이어 팝업',
+							depth3: '버튼 한개',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/_alert-1.html',
+							status: 'end',
+							create: '2022.09.19',
+							log: [],
+						},
+						{
+							id: '',
+							depth2: '얼럿 레이어 팝업',
+							depth3: '버튼 두개',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/_alert-2.html',
+							status: 'end',
+							create: '2022.09.19',
+							log: [],
+						},
+						{
+							id: '',
+							depth2: '얼럿 레이어 팝업',
+							depth3: '타이틀만 있는 경우',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/_alert-3.html',
+							status: 'end',
+							create: '2022.09.19',
+							log: [],
+						},
+						{
+							id: '',
+							depth2: '메뉴 팝업',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/_context-menu.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [],
+						},
+						{
+							id: '',
+							depth2: '소팅 팝업',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/_sorting-menu.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [],
+						},
+						{
+							id: '',
+							depth2: '로딩화면',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/_loading.html',
+							status: 'end',
+							create: '2022.10.28',
+							log: [],
+						},
+						{
+							id: '',
+							depth2: '에러화면',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MERR001.html',
+							status: 'end',
+							create: '2022.10.28',
+							log: [],
+						},
+					],
+				},
+				{
+					depth1: '알림',
+					data: [
+						{
+							id: 'ARM001',
+							depth2: '',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/ARM001.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [],
+						},
+					],
+				},
+				{
+					depth1: '메인',
+					data: [
+						{
+							id: 'MAIN001',
+							depth2: '',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MAIN001.html',
+							status: 'end',
+							create: '2022.08.16',
+							log: [
+								{ date: '2022.09.05', text: '하단 다음 일정 안내 링크로 변경' },
+								{ date: '2022.10.11', text: '메뉴명 수정' },
+								{ date: '2022.10.14', text: '디자인 변경 반영' },
+							],
+						},
+						{
+							id: 'PETLIST001',
+							depth2: '[팝업] 반려동물 목록',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/PETLIST001.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [],
+						},
+					],
+				},
+				{
+					depth1: '오늘의 셀프점검',
+					data: [
+						{
+							id: 'TODAY_DOG_001',
+							depth2: '반려견',
+							depth3: '등록',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/TODAY_DOG_001.html',
+							status: 'end',
+							create: '2022.09.13',
+							log: [
+								{ date: '2022.10.11', text: '메모 영역 사진 추가' },
+								{ date: '2022.11.03', text: '메모 영역 img 태그 추가' },
+							],
+						},
+						{
+							id: 'TODAY_DOG_002',
+							depth2: '반려견',
+							depth3: '수정',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/TODAY_DOG_002.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [{ date: '2022.11.03', text: '메모 영역 img 태그 추가' }],
+						},
+						{
+							id: 'TODAY_CAT_001',
+							depth2: '반려묘',
+							depth3: '등록',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/TODAY_CAT_001.html',
+							status: 'end',
+							create: '2022.09.13',
+							log: [
+								{ date: '2022.10.11', text: '메모 영역 사진 추가' },
+								{ date: '2022.11.03', text: '메모 영역 img 태그 추가' },
+							],
+						},
+						{
+							id: 'TODAY_CAT_002',
+							depth2: '반려묘',
+							depth3: '수정',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/TODAY_CAT_002.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [{ date: '2022.11.03', text: '메모 영역 img 태그 추가' }],
+						},
+					],
+				},
+				{
+					depth1: '반려동물 등록',
+					data: [
+						{
+							id: 'REG001',
+							depth2: 'Step 1',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/REG001.html',
+							status: 'end',
+							create: '2022.09.13',
+							log: [
+								{ date: '2022.09.19', text: '생일 인풋 타이틀 속성 수정' },
+								{ date: '2022.10.11', text: '간격 클래스 제거 및 추가' },
+								{ date: '2022.10.14', text: '메인 사진 항목 추가' },
+							],
+						},
+						{
+							id: 'POP_BRE001',
+							depth2: 'Step 1',
+							depth3: '[팝업] 품종 검색',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/POP_BRE001.html',
+							status: 'end',
+							create: '2022.09.13',
+							log: [],
+						},
+						{
+							id: 'REG002',
+							depth2: 'Step 2',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/REG002.html',
+							status: 'end',
+							create: '2022.09.13',
+							log: [{ date: '2022.10.11', text: '하단 버튼명 수정' }],
+						},
+					],
+				},
+				{
+					depth1: '셀프점검',
+					data: [
+						{
+							id: 'CARE_DOG_001',
+							depth2: '반려견',
+							depth3: '등록 전',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/CARE_DOG_001--type1.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [{ date: '2022.10.11', text: '메뉴명 수정' }],
+						},
+						{
+							id: 'CARE_DOG_001',
+							depth2: '반려견',
+							depth3: '등록 후',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/CARE_DOG_001--type2.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [{ date: '2022.10.11', text: '메뉴명 수정' }],
+						},
+						{
+							id: 'HIS_DOG_001',
+							depth2: '반려견',
+							depth3: '셀프점검 기록',
+							depth4: '급식',
+							depth5: '',
+							depth6: '',
+							path: '/HIS_DOG_001.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [
+								{ date: '2022.09.30', text: '셀프점검 기록 달력으로 변경\nTip영역 변경 디자인 반영\n기준일 문구 선택 버튼으로 변경\n상단 카운팅 아이콘 순서 변경' },
+								{ date: '2022.10.11', text: '월 선택 기능 추가' },
+							],
+						},
+						{
+							id: 'HIS_DOG_002',
+							depth2: '반려견',
+							depth3: '셀프점검 기록',
+							depth4: '대변상태',
+							depth5: '',
+							depth6: '',
+							path: '/HIS_DOG_002.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [
+								{ date: '2022.09.30', text: '셀프점검 기록 달력으로 변경\nTip영역 변경 디자인 반영\n기준일 문구 선택 버튼으로 변경\n상단 카운팅 아이콘 띄어쓰기 수정' },
+								{ date: '2022.10.11', text: '월 선택 기능 추가' },
+							],
+						},
+						{
+							id: 'HIS_DOG_003',
+							depth2: '반려견',
+							depth3: '셀프점검 기록',
+							depth4: '양치질',
+							depth5: '',
+							depth6: '',
+							path: '/HIS_DOG_003.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [
+								{ date: '2022.09.30', text: '셀프점검 기록 달력으로 변경\nTip영역 변경 디자인 반영\n기준일 문구 선택 버튼으로 변경\n상단 카운팅 아이콘 띄어쓰기 수정' },
+								{ date: '2022.10.11', text: '월 선택 기능 추가' },
+							],
+						},
+						{
+							id: 'HIS_DOG_004',
+							depth2: '반려견',
+							depth3: '셀프점검 기록',
+							depth4: '산책',
+							depth5: '',
+							depth6: '',
+							path: '/HIS_DOG_004.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [
+								{ date: '2022.09.30', text: '셀프점검 기록 달력으로 변경\nTip영역 변경 디자인 반영\n기준일 문구 선택 버튼으로 변경\n상단 카운팅 아이콘 띄어쓰기 수정' },
+								{ date: '2022.10.11', text: '월 선택 기능 추가' },
+							],
+						},
+						{
+							id: 'HIS_DOG_005',
+							depth2: '반려견',
+							depth3: '셀프점검 기록',
+							depth4: '이상부위',
+							depth5: '',
+							depth6: '',
+							path: '/HIS_DOG_005.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [
+								{ date: '2022.09.30', text: '셀프점검 기록 달력으로 변경\nTip영역 변경 디자인 반영\n기준일 문구 선택 버튼으로 변경' },
+								{ date: '2022.10.11', text: '월 선택 기능 추가' },
+								{ date: '2022.11.14', text: 'Tip.셀프점검 영역 클래스 값 수정' },
+							],
+						},
+						{
+							id: 'HIS_DOG_006',
+							depth2: '반려견',
+							depth3: '셀프점검 기록',
+							depth4: '메모',
+							depth5: '',
+							depth6: '',
+							path: '/HIS_DOG_006.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [{ date: '2022.10.11', text: '메모 영역 사진 추가' }],
+						},
+						{
+							id: 'CARE_CAT_001',
+							depth2: '반려묘',
+							depth3: '등록 전',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/CARE_CAT_001--type1.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [{ date: '2022.10.11', text: '메뉴명 수정' }],
+						},
+						{
+							id: 'CARE_CAT_001',
+							depth2: '반려묘',
+							depth3: '등록 후',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/CARE_CAT_001--type2.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [{ date: '2022.10.11', text: '메뉴명 수정' }],
+						},
+						{
+							id: 'HIS_CAT_001',
+							depth2: '반려묘',
+							depth3: '셀프점검 기록',
+							depth4: '급식',
+							depth5: '',
+							depth6: '',
+							path: '/HIS_CAT_001.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [
+								{ date: '2022.09.30', text: '셀프점검 기록 달력으로 변경\nTip영역 변경 디자인 반영\n기준일 문구 선택 버튼으로 변경\n상단 카운팅 아이콘 순서 변경' },
+								{ date: '2022.10.11', text: '아이콘 클래스명 변경\n월 선택 기능 추가' },
+								{ date: '2022.11.14', text: 'Tip.셀프점검 영역 클래스 값 수정' },
+							],
+						},
+						{
+							id: 'HIS_CAT_002',
+							depth2: '반려묘',
+							depth3: '셀프점검 기록',
+							depth4: '소변상태',
+							depth5: '',
+							depth6: '',
+							path: '/HIS_CAT_002.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [
+								{ date: '2022.09.30', text: '셀프점검 기록 달력으로 변경\nTip영역 변경 디자인 반영\n기준일 문구 선택 버튼으로 변경\n상단 카운팅 아이콘 구성 변경' },
+								{ date: '2022.10.11', text: '월 선택 기능 추가' },
+								{ date: '2022.11.14', text: 'Tip.셀프점검 영역 클래스 값 수정' },
+							],
+						},
+						{
+							id: 'HIS_CAT_003',
+							depth2: '반려묘',
+							depth3: '셀프점검 기록',
+							depth4: '빗질',
+							depth5: '',
+							depth6: '',
+							path: '/HIS_CAT_003.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [
+								{ date: '2022.09.30', text: '셀프점검 기록 달력으로 변경\nTip영역 변경 디자인 반영\n기준일 문구 선택 버튼으로 변경\n상단 카운팅 아이콘 띄어쓰기 수정' },
+								{ date: '2022.10.11', text: '월 선택 기능 추가' },
+							],
+						},
+						{
+							id: 'HIS_CAT_004',
+							depth2: '반려묘',
+							depth3: '셀프점검 기록',
+							depth4: '놀이',
+							depth5: '',
+							depth6: '',
+							path: '/HIS_CAT_004.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [
+								{ date: '2022.09.30', text: '셀프점검 기록 달력으로 변경\nTip영역 변경 디자인 반영\n기준일 문구 선택 버튼으로 변경\n상단 카운팅 아이콘 띄어쓰기 수정' },
+								{ date: '2022.10.11', text: '월 선택 기능 추가' },
+							],
+						},
+						{
+							id: 'HIS_CAT_005',
+							depth2: '반려묘',
+							depth3: '셀프점검 기록',
+							depth4: '이상부위',
+							depth5: '',
+							depth6: '',
+							path: '/HIS_CAT_005.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [
+								{ date: '2022.09.30', text: '셀프점검 기록 달력으로 변경\nTip영역 변경 디자인 반영\n기준일 문구 선택 버튼으로 변경' },
+								{ date: '2022.10.11', text: '월 선택 기능 추가' },
+								{ date: '2022.11.14', text: 'Tip.셀프점검 영역 클래스 값 수정' },
+							],
+						},
+						{
+							id: 'HIS_CAT_006',
+							depth2: '반려묘',
+							depth3: '셀프점검 기록',
+							depth4: '메모',
+							depth5: '',
+							depth6: '',
+							path: '/HIS_CAT_006.html',
+							status: 'end',
+							create: '2022.09.05',
+							log: [{ date: '2022.10.11', text: '메모 영역 사진 추가' }],
+						},
+					],
+				},
+				{
+					depth1: '캘린더',
+					data: [
+						{
+							id: 'CAL001',
+							depth2: '',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/CAL001.html',
+							status: 'end',
+							create: '2022.09.13',
+							log: [
+								{ date: '2022.10.11', text: '메뉴명 수정' },
+								{ date: '2022.11.03', text: '헤더 구조 수정' },
+								{ date: '2022.12.09', text: '아이콘 변경' },
+							],
+						},
+						{
+							id: 'SCH001',
+							depth2: '일정',
+							depth3: '등록',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/SCH001.html',
+							status: 'end',
+							create: '2022.09.13',
+							log: [],
+						},
+						{
+							id: 'SCH003',
+							depth2: '일정',
+							depth3: '수정',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/SCH003.html',
+							status: 'end',
+							create: '2022.09.13',
+							log: [],
+						},
+						{
+							id: 'SCH004',
+							depth2: '일정',
+							depth3: '예방접종 일정 수정',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/SCH004.html',
+							status: 'end',
+							create: '2022.09.13',
+							log: [],
+						},
+						{
+							id: 'SCH002',
+							depth2: '일정',
+							depth3: '상세',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/SCH002.html',
+							status: 'end',
+							create: '2022.09.13',
+							log: [{ date: '2022.09.26', text: 'DD 주석 추가' }],
+						},
+						{
+							id: 'DIA001',
+							depth2: '반려일기',
+							depth3: '등록',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/DIA001.html',
+							status: 'end',
+							create: '2022.09.13',
+							log: [{ date: '2022.11.03', text: '일기 영역 img 태그 추가' }],
+						},
+						{
+							id: 'DIA003',
+							depth2: '반려일기',
+							depth3: '수정',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/DIA003.html',
+							status: 'end',
+							create: '2022.09.13',
+							log: [{ date: '2022.11.03', text: '일기 영역 img 태그 추가' }],
+						},
+						{
+							id: 'DIA002',
+							depth2: '반려일기',
+							depth3: '상세',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/DIA002.html',
+							status: 'end',
+							create: '2022.09.13',
+							log: [{ date: '2022.09.26', text: 'DD 주석 추가' }],
+						},
+					],
+				},
+				{
+					depth1: '전체',
+					data: [
+						{
+							id: 'WHO001',
+							depth2: '',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/WHO001.html',
+							status: 'end',
+							create: '2022.09.19',
+							log: [{ date: '2022.10.11', text: '메뉴명 및 텍스트 수정' }],
+						},
+						{
+							id: 'TID001',
+							depth2: 'T 아이디 계정관리',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/TID001.html',
+							status: 'end',
+							create: '2022.09.19',
+							log: [{ date: '2022.10.11', text: '메뉴명 수정' }],
+						},
+						{
+							id: 'ACC001',
+							depth2: 'T 아이디 계정관리',
+							depth3: '탈퇴하기',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/ACC001.html',
+							status: 'end',
+							create: '2022.09.19',
+							log: [
+								{ date: '2022.10.11', text: '약관 영역 추가' },
+								{ date: '2022.10.24', text: '버튼 크기 클래스 삭제' },
+							],
+						},
+						{
+							id: 'MAN001',
+							depth2: '반려동물 관리',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MAN001.html',
+							status: 'end',
+							create: '2022.09.19',
+							log: [],
+						},
+						{
+							id: 'EDI001',
+							depth2: '반려동물 관리',
+							depth3: '반려동물 정보 수정',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/EDI001.html',
+							status: 'end',
+							create: '2022.09.19',
+							log: [{ date: '2022.10.14', text: '메인 사진 항목 추가' }],
+						},
+						{
+							id: 'TERM001',
+							depth2: '약관',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/TERM001.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [],
+						},
+						{
+							id: 'NOT001',
+							depth2: '공지사항',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/NOT001.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [],
+						},
+						{
+							id: 'NOT002',
+							depth2: '공지사항',
+							depth3: '상세',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/NOT002.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [],
+						},
+						{
+							id: 'EVE001',
+							depth2: '이벤트',
+							depth3: '진행중',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/EVE001--type1.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [{ date: '2022.11.14', text: '리스트 영역 일부 클래스 값 변경' }],
+						},
+						{
+							id: 'EVE001',
+							depth2: '이벤트',
+							depth3: '종료',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/EVE001--type2.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [{ date: '2022.11.14', text: '리스트 영역 일부 클래스 값 변경' }],
+						},
+						{
+							id: 'EVE002',
+							depth2: '이벤트',
+							depth3: '상세',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/EVE002.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [],
+						},
+						{
+							id: 'SCO001',
+							depth2: '멍냥포인트',
+							depth3: '강아지',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/SCO001--type1.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [{ date: '2022.10.11', text: '텍스트 수정 (반려점수=>멍냥포인트)' }],
+						},
+						{
+							id: 'SCO001',
+							depth2: '멍냥포인트',
+							depth3: '고양이',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/SCO001--type2.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [{ date: '2022.10.11', text: '텍스트 수정 (반려점수=>멍냥포인트)' }],
+						},
+						{
+							id: 'POP_SCO001',
+							depth2: '멍냥포인트',
+							depth3: '[팝업] 복귀보너스',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/POP_SCO001.html',
+							status: 'end',
+							create: '2022.10.24',
+							log: [],
+						},
+						{
+							id: 'SCO002',
+							depth2: '멍냥포인트',
+							depth3: '멍냥포인트 현황',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/SCO002.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [{ date: '2022.10.11', text: '텍스트 수정 (반려점수=>멍냥포인트)' }],
+						},
+					],
+				},
+				{
+					depth1: '병원수첩',
+					data: [
+						{
+							id: 'HOS001',
+							depth2: '메인',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/HOS001--type1.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [{ date: '2022.10.11', text: '메뉴명 수정' }],
+						},
+						{
+							id: 'HOS001',
+							depth2: '메인',
+							depth3: '일정없음',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/HOS001--type2.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [{ date: '2022.10.11', text: '메뉴명 수정' }],
+						},
+						{
+							id: 'VAC001',
+							depth2: '예방접종 기록',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/VAC001.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [{ date: '2022.10.11', text: '예방접종 명 스타일 변경 및 메모 추가' }],
+						},
+						{
+							id: 'VAC002',
+							depth2: '예방접종 기록',
+							depth3: '등록',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/VAC002.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [{ date: '2022.10.11', text: '예방접종 명 기타 입력 폼 추가\n메모 항목 추가' }],
+						},
+						{
+							id: 'VAC004',
+							depth2: '예방접종 기록',
+							depth3: '수정',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/VAC004.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [{ date: '2022.10.11', text: '예방접종 명 기타 입력 폼 추가\n메모 항목 추가' }],
+						},
+						{
+							id: 'VAC003',
+							depth2: '예방접종 기록',
+							depth3: '상세',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/VAC003.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [{ date: '2022.10.11', text: '메모 항목 추가' }],
+						},
+						{
+							id: 'TRE001',
+							depth2: '진료이력',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/TRE001.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [],
+						},
+						{
+							id: 'TRE002',
+							depth2: '진료이력',
+							depth3: '등록',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/TRE002.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [{ date: '2022.11.03', text: '처방내역 영역 img 태그 추가' }],
+						},
+						{
+							id: 'TRE004',
+							depth2: '진료이력',
+							depth3: '수정',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/TRE004.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [
+								{ date: '2022.10.11', text: '하단 버튼명 수정' },
+								{ date: '2022.11.03', text: '처방내역 영역 img 태그 추가' },
+							],
+						},
+						{
+							id: 'TRE003',
+							depth2: '진료이력',
+							depth3: '상세',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/TRE003.html',
+							status: 'end',
+							create: '2022.09.26',
+							log: [],
+						},
+					],
+				},
+			];
+
+			var html = '';
+			var navHTML = '';
+			var totalIndex = 0;
+			var dates = (function () {
+				var array = [];
+
+				function add(date) {
+					if (typeof date === 'string' && date.length && array.indexOf(date) === -1) {
+						array.push(date);
+					}
+				}
+
+				$.each(tableData, function (i) {
+					var sectionData = tableData[i].data;
+					$.each(sectionData, function (j) {
+						add(this.create);
+						$.each(sectionData[j].log, function (l) {
+							add(this.date);
+						});
+					});
+				});
+
+				array.sort();
+
+				return array;
+			})();
+			var latestDate = dates[dates.length - 1];
+
+			$.each(tableData, function (i) {
+				var sectionIndex = i;
+				var sectionData = tableData[i].data;
+				var tableHTML = '';
+
+				$.each(sectionData, function (j) {
+					var returnVal = function (key, secondTestKey) {
+						var val = sectionData[j][key];
+						var secondTestVal = sectionData[j][secondTestKey];
+						var prevIndex = j - 1;
+						var isPrint = true;
+						if (prevIndex >= 0) {
+							if (sectionData[prevIndex][key] === val) {
+								isPrint = false;
+							}
+							if (typeof secondTestKey === 'string' && secondTestKey.length && !sectionData[j].depthOnly) {
+								if (sectionData[prevIndex][key] === val && sectionData[prevIndex][secondTestKey] === secondTestVal) {
+									isPrint = false;
+								} else {
+									isPrint = true;
+								}
+							}
+						}
+						return isPrint ? val.replace(/\n/g, '<br>') : '';
+					};
+					var id = returnVal('id');
+					//var type = returnVal('type', 'depth2');
+					var depth2 = returnVal('depth2');
+					var depth3 = returnVal('depth3');
+					var depth4 = returnVal('depth4');
+					var depth5 = returnVal('depth5');
+					var depth6 = returnVal('depth6');
+					var path = (function () {
+						var val = sectionData[j].path;
+						var href = '';
+						if (val.match(/^\.\//g)) {
+							href = val;
+						} else {
+							href = './dist' + val;
+						}
+						return val.length ? '<a href="' + href + '" target="_blank">' + val + '</a>' : '';
+					})();
+					var status = (function () {
+						var val = sectionData[j].status;
+						var text = '';
+						if (val === 'ing') {
+							text = '작업중';
+						} else if (val === 'end') {
+							text = '작업완료';
+						} else if (val === 'moding') {
+							text = '수정중';
+						}
+						return val.length ? '<span class="index-status index-status--' + val + '">' + text + '</span>' : '';
+					})();
+					var create = this.create;
+					var update = '';
+					var log = (function () {
+						var val = sectionData[j].log;
+						var length = val.length;
+						var html = '<ul class="index-log">';
+						$.each(val, function (l) {
+							var date = this.date;
+							html +=
+								'<li class="index-log__item' + (date === latestDate ? ' is-emphasis' : '') + '"><div class="index-log__item__date">[' + date + ']</div>' + this.text.replace(/\n/g, '<br>') + '</li>';
+							if (length - 1 === l) {
+								update = date;
+							}
+						});
+						html += '</ul>';
+
+						return html;
+					})();
+
+					tableHTML +=
+						'<tr>' +
+						'<td>' +
+						(j + 1) +
+						'</td>' +
+						'<td>' +
+						id +
+						'</td>' +
+						//'<td class="index-type">' +
+						//type +
+						//'</td>' +
+						'<td>' +
+						depth2 +
+						'</td>' +
+						'<td>' +
+						depth3 +
+						'</td>' +
+						'<td>' +
+						depth4 +
+						'</td>' +
+						'<td>' +
+						depth5 +
+						'</td>' +
+						'<td>' +
+						depth6 +
+						'</td>' +
+						'<td>' +
+						path +
+						'</td>' +
+						'<td>' +
+						status +
+						'</td>' +
+						'<td class="' +
+						(create === latestDate ? ' is-emphasis' : '') +
+						'">' +
+						create +
+						'</td>' +
+						'<td class="' +
+						(update === latestDate ? ' is-emphasis' : '') +
+						'">' +
+						update +
+						'</td>' +
+						'<td>' +
+						log +
+						'</td>' +
+						'</tr>';
+
+					totalIndex++;
+				});
+
+				navHTML += '<a href="#section' + i + '">' + tableData[i].depth1 + '</a>';
+
+				html +=
+					'<div class="index-section" id="section' +
+					i +
+					'">' +
+					'<h2 class="index-section__title">' +
+					tableData[i].depth1 +
+					'</h2>' +
+					'<div class="index-table">' +
+					'<table>' +
+					'<colgroup>' +
+					'<col width="50px" />' +
+					'<col width="160px" />' +
+					//'<col width="80px" />' +
+					'<col width="160px" />' +
+					'<col width="160px" />' +
+					'<col width="160px" />' +
+					'<col width="160px" />' +
+					'<col width="160px" />' +
+					'<col width="" />' +
+					'<col width="100px" />' +
+					'<col width="110px" />' +
+					'<col width="110px" />' +
+					'<col width="300px" />' +
+					'</colgroup>' +
+					'<thead>' +
+					'<tr>' +
+					'<th>No</th>' +
+					'<th>ID</th>' +
+					//'<th>type</th>' +
+					'<th>depth2</th>' +
+					'<th>depth3</th>' +
+					'<th>depth4</th>' +
+					'<th>depth5</th>' +
+					'<th>depth6</th>' +
+					'<th>path</th>' +
+					'<th>status</th>' +
+					'<th>create</th>' +
+					'<th>update</th>' +
+					'<th>log</th>' +
+					'</tr>' +
+					'</thead>' +
+					'<tbody>' +
+					tableHTML +
+					'</tbody>' +
+					'</table>' +
+					'</div>' +
+					'</div>';
+			});
+
+			$('title, .index-title').text(title);
+			$('#nav').append(navHTML);
+			$('#indexTable').append(html);
+
+			var $nav = $('.index-bottom');
+			var $doc = $(document);
+			var $win = $(window);
+
+			function paddingBottom() {
+				$('.index-fake-botttom').css('height', $nav.outerHeight());
+			}
+
+			var clickedTimer = null;
+
+			$doc.on('click', '#nav a', function () {
+				var $this = $(this);
+				var href = $this.attr('href');
+				var $target = $(href);
+				var $sections = $('.index-section');
+
+				$sections.removeClass('index-section--clicked');
+
+				clearTimeout(clickedTimer);
+
+				clickedTimer = setTimeout(function () {
+					$target.addClass('index-section--clicked');
+				}, 100);
+			});
+
+			$win
+				.on('scroll', function () {
+					var scrollLeft = $win.scrollLeft();
+					$nav.css('margin-left', -scrollLeft);
+				})
+				.on('resize', function () {
+					paddingBottom();
+				})
+				.on('load', function () {
+					paddingBottom();
+				});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

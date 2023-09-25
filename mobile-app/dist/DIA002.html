@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 APP</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<a href="" class="header__button header__button--back">
+								<span class="for-a11y">뒤로가기</span>
+							</a>
+						</div>
+						<div class="header__center">
+							<h1 class="header__title">반려일기 상세</h1>
+						</div>
+					</header>
+					<!-- //header -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<section class="detail-section">
+							<div class="detail-section-head">
+								<div class="detail-section-head__left">
+									<p class="detail-section-head__date">2022.07.30</p>
+									<h2 class="detail-section-head__title">오늘의 춘봉이</h2>
+								</div>
+								<div class="detail-section-head__right">
+									<!-- DD : 클릭 시 [공통 > 메뉴 팝업] 이용 -->
+									<button type="button" class="ui-button menu-button">
+										<span class="for-a11y">편집 메뉴</span>
+									</button>
+								</div>
+							</div>
+
+							<div class="tags">
+								<ul class="tags__list">
+									<li class="tags__item">
+										<span class="tag tag--001">
+											<span class="tag__icon"></span>
+											<span class="tag__text">일상</span>
+										</span>
+									</li>
+									<li class="tags__item">
+										<span class="tag tag--002">
+											<span class="tag__icon"></span>
+											<span class="tag__text">건강</span>
+										</span>
+									</li>
+									<li class="tags__item">
+										<span class="tag tag--003">
+											<span class="tag__icon"></span>
+											<span class="tag__text">운동</span>
+										</span>
+									</li>
+									<li class="tags__item">
+										<span class="tag tag--004">
+											<span class="tag__icon"></span>
+											<span class="tag__text">병원</span>
+										</span>
+									</li>
+									<li class="tags__item">
+										<span class="tag tag--005">
+											<span class="tag__icon"></span>
+											<span class="tag__text">미용</span>
+										</span>
+									</li>
+									<li class="tags__item">
+										<span class="tag tag--006">
+											<span class="tag__icon"></span>
+											<span class="tag__text">목욕</span>
+										</span>
+									</li>
+									<li class="tags__item">
+										<span class="tag tag--007">
+											<span class="tag__icon"></span>
+											<span class="tag__text">기타</span>
+										</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="basic-text row-contents-group">
+								오늘은 새로 바꾼 사료를 춘봉이에게 줬다. 잘 안 먹을까봐 걱정했는데 그래도 잘 춘봉이랑 양재 시민의 숲으로 산책을 다녀왔다. 산책가면 항상 다른 강아지들을 무서워한다. 일찍부터 사회성을
+								길러 주면 좋았을 텐데 강아지들을 피해가는 모습이 안타깝다. 그래도 자주 산책을 나가서 강아지 친구들을 만나면 점점 잘 지낼 수 있지 않을까 생각이 든다. 먹어서 다행이다.
+							</div>
+
+							<div class="detail-gallery row-contents-group">
+								<div class="detail-gallery__controller"></div>
+								<div class="detail-gallery__list">
+									<div class="detail-gallery__item">
+										<div class="detail-gallery__photo" style="background-image: url('./assets/images/_dummy/image-3.jpg')">
+											<img src="./assets/images/_dummy/image-3.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+										</div>
+									</div>
+									<div class="detail-gallery__item">
+										<div class="detail-gallery__photo" style="background-image: url('./assets/images/_dummy/image-4.jpg')">
+											<img src="./assets/images/_dummy/image-4.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+										</div>
+									</div>
+									<div class="detail-gallery__item">
+										<div class="detail-gallery__photo" style="background-image: url('./assets/images/_dummy/image-3.jpg')">
+											<img src="./assets/images/_dummy/image-3.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+										</div>
+									</div>
+									<div class="detail-gallery__item">
+										<div class="detail-gallery__photo" style="background-image: url('./assets/images/_dummy/image-4.jpg')">
+											<img src="./assets/images/_dummy/image-4.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="detail-section">
+							<div class="detail-section-head">
+								<div class="detail-section-head__left">
+									<p class="detail-section-head__date">2022.07.30</p>
+									<h2 class="detail-section-head__title">오늘의 춘봉이</h2>
+								</div>
+								<div class="detail-section-head__right">
+									<!-- DD : 클릭 시 [공통 > 메뉴 팝업] 이용 -->
+									<button type="button" class="ui-button menu-button">
+										<span class="for-a11y">편집 메뉴</span>
+									</button>
+								</div>
+							</div>
+
+							<div class="tags">
+								<ul class="tags__list">
+									<li class="tags__item">
+										<span class="tag tag--001">
+											<span class="tag__icon"></span>
+											<span class="tag__text">일상</span>
+										</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="basic-text row-contents-group">
+								오늘은 새로 바꾼 사료를 춘봉이에게 줬다. 잘 안 먹을까봐 걱정했는데 그래도 잘 춘봉이랑 양재 시민의 숲으로 산책을 다녀왔다. 산책가면 항상 다른 강아지들을 무서워한다. 일찍부터 사회성을
+								길러 주면 좋았을 텐데 강아지들을 피해가는 모습이 안타깝다. 그래도 자주 산책을 나가서 강아지 친구들을 만나면 점점 잘 지낼 수 있지 않을까 생각이 든다. 먹어서 다행이다.
+							</div>
+						</section>
+
+						<section class="detail-section">
+							<div class="detail-section-head">
+								<div class="detail-section-head__left">
+									<p class="detail-section-head__date">2022.07.30</p>
+									<h2 class="detail-section-head__title">오늘의 춘봉이</h2>
+								</div>
+								<div class="detail-section-head__right">
+									<!-- DD : 클릭 시 [공통 > 메뉴 팝업] 이용 -->
+									<button type="button" class="ui-button menu-button">
+										<span class="for-a11y">편집 메뉴</span>
+									</button>
+								</div>
+							</div>
+
+							<div class="tags">
+								<ul class="tags__list">
+									<li class="tags__item">
+										<span class="tag tag--001">
+											<span class="tag__icon"></span>
+											<span class="tag__text">일상</span>
+										</span>
+									</li>
+									<li class="tags__item">
+										<span class="tag tag--002">
+											<span class="tag__icon"></span>
+											<span class="tag__text">건강</span>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</section>
+
+						<!-- fix buttons -->
+						<div class="fix-bottom-wrap">
+							<div class="fix-bottom-wrap__area">
+								<div class="board-detail-controller">
+									<button type="button" class="ui-button board-detail-controller__prev">이전일기</button>
+									<button type="button" class="ui-button board-detail-controller__next" disabled>다음일기</button>
+								</div>
+							</div>
+						</div>
+						<!-- //fix buttons -->
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

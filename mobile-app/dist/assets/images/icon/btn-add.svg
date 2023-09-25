@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path data-name="사각형 29139" style="fill:transparent" d="M0 0h24v24H0z"/>
+    <g transform="translate(-117 -368)">
+        <circle data-name="타원 2560" cx="10" cy="10" r="10" transform="translate(119 370)" style="fill:#4749fb"/>
+        <g data-name="ic-plus-20" transform="translate(-133 150)">
+            <circle data-name="타원 2405" cx="10" cy="10" r="10" transform="translate(252 220)" style="fill:none"/>
+            <g data-name="사각형 28081" style="stroke-linecap:round;stroke:transparent;fill:transparent">
+                <path style="stroke:none" d="M0 0h8v8H0z" transform="translate(258 226)"/>
+                <path style="fill:none" d="M.5.5h7v7h-7z" transform="translate(258 226)"/>
+            </g>
+            <g data-name="그룹 19857">
+                <path data-name="선 71" transform="translate(258 230)" style="stroke:#fff;stroke-width:2px;stroke-linecap:round;fill:none" d="M0 0h8"/>
+                <path data-name="선 72" transform="translate(262 226)" style="stroke:#fff;stroke-width:2px;stroke-linecap:round;fill:none" d="M0 0v8"/>
+            </g>
+        </g>
+    </g>
+</svg>

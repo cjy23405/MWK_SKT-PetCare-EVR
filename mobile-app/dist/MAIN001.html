@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 APP</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<h1 class="for-a11y">PetCare</h1>
+							<a href="" class="header__my">
+								<!-- DD : 이미지 없을 때 -->
+								<span class="header__my-photo">
+									<span class="header__my-photo-inner"></span>
+								</span>
+								<!-- //DD : 이미지 없을 때 -->
+
+								<!-- DD : 이미지 에러 -->
+								<span class="header__my-photo">
+									<span class="header__my-photo-inner">
+										<img src="./assets/images/_dummy/" alt="" onerror="this.parentNode.className += ' is-error';" />
+									</span>
+								</span>
+								<!-- //DD : 이미지 에러 -->
+
+								<!-- DD : 이미지 있을 때 -->
+								<span class="header__my-photo">
+									<span class="header__my-photo-inner">
+										<img src="./assets/images/_dummy/my-photo.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+									</span>
+								</span>
+								<!-- //DD : 이미지 있을 때 -->
+
+								<span class="header__my-name">$반려동물이름$</span>
+							</a>
+						</div>
+						<div class="header__right">
+							<a href="" class="header__button header__button--push">
+								<span class="for-a11y">알림</span>
+								<span class="header__button-new">
+									<span class="for-a11y">(신규 알림 있음)</span>
+								</span>
+							</a>
+						</div>
+					</header>
+					<!-- //header -->
+
+					<!-- nav -->
+					<nav class="nav-bar">
+						<h2 class="for-a11y">메뉴</h2>
+						<div class="nav-bar__inner">
+							<ul class="nav-bar__list">
+								<li class="nav-bar__item">
+									<!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+									<a href="" class="nav-bar__link is-active">
+										<span class="nav-bar__link-text">홈</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">셀프점검</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">캘린더</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">병원수첩</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<!-- 2022.10.11 : mod : 메뉴명 수정 -->
+										<span class="nav-bar__link-text">MY</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<!-- //nav -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents page-contents--home">
+						<section class="pet-score">
+							<!-- 2022.10.14 : mod : 문구 변경 -->
+							<h2 class="pet-score__title">멍냥포인트</h2>
+							<!-- //2022.10.14 : mod : 문구 변경 -->
+							<div class="pet-score__inner">
+								<div class="pet-score__contents">
+									<p class="pet-score__text">
+										지속적인 관심과 사랑으로<br />
+										반려점수를 올려보세요!<a href="" class="pet-score__button">점수분석</a>
+									</p>
+								</div>
+								<div class="pet-score__value">
+									<span class="pet-score__value-num">83</span>
+									<span class="pet-score__value-unit">점</span>
+								</div>
+							</div>
+						</section>
+
+						<!-- 2022.10.14 : mod : 메인 디자인 변경으로 구조 변경 -->
+
+						<!-- Case : 고양이 - 셀프점검 등록 전 -->
+						<div class="home-pet-info">
+							<p class="home-pet-info__bubble">오늘 저의 상태를 체크해주세요, 냥!</p>
+							<div class="home-pet-info__photo" style="background-image: url('./assets/images/_dummy/image-4.jpg')">
+								<img src="./assets/images/_dummy/image-4.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+							</div>
+							<a href="" class="home-pet-info__link">
+								<span class="home-pet-info__link-text">오늘 <strong>$반려동물이름$</strong>의<br />상태 등록하러 가기</span>
+							</a>
+						</div>
+						<!-- //Case : 고양이 - 셀프점검 등록 전 -->
+
+						<!-- Case : 고양이 - 셀프점검 등록 후 -->
+						<div class="home-pet-info">
+							<p class="home-pet-info__bubble">오늘 저의 상태를 체크해주세요, 냥!</p>
+							<div class="home-pet-info__photo" style="background-image: url('./assets/images/_dummy/image-4.jpg')">
+								<img src="./assets/images/_dummy/image-4.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+							</div>
+							<a href="" class="home-pet-info__link">
+								<span class="home-pet-info__link-text">오늘 <strong>$반려동물이름$</strong>의<br />상태 확인하러 가기</span>
+							</a>
+						</div>
+						<!-- //Case : 고양이 - 셀프점검 등록 후 -->
+
+						<!-- Case : 강아지 - 셀프점검 등록 전 -->
+						<div class="home-pet-info">
+							<p class="home-pet-info__bubble">오늘 저의 상태를 체크해주세요, 멍!</p>
+							<div class="home-pet-info__photo" style="background-image: url('./assets/images/_dummy/image-5.jpg')">
+								<img src="./assets/images/_dummy/image-5.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+							</div>
+							<a href="" class="home-pet-info__link">
+								<span class="home-pet-info__link-text">오늘 <strong>$반려동물이름$</strong>의<br />상태 등록하러 가기</span>
+							</a>
+						</div>
+						<!-- //Case : 강아지 - 셀프점검 등록 전 -->
+
+						<!-- Case : 강아지 - 셀프점검 등록 후 -->
+						<div class="home-pet-info">
+							<p class="home-pet-info__bubble">오늘 저의 상태를 체크해주세요, 멍!</p>
+							<div class="home-pet-info__photo" style="background-image: url('./assets/images/_dummy/image-5.jpg')">
+								<img src="./assets/images/_dummy/image-5.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+							</div>
+							<a href="" class="home-pet-info__link">
+								<span class="home-pet-info__link-text">오늘 <strong>$반려동물이름$</strong>의<br />상태 확인하러 가기</span>
+							</a>
+						</div>
+						<!-- //Case : 강아지 - 셀프점검 등록 후 -->
+
+						<div class="home-tip">
+							<div class="tip-section-head">
+								<p class="tip-section-head__title">
+									<span class="tip-section-head__title-symbol">Tip.</span>
+									<span class="tip-section-head__title-text">종합백신은 범백혈구 감소증, 전염성 비기관지염, 클라미디아, 칼라시 바이러스를 예방해요.</span>
+								</p>
+							</div>
+						</div>
+
+						<!-- Case : 일정 등록 전 -->
+						<div class="text-banner">
+							<a href="" class="text-banner__link">
+								<span class="text-banner__icon text-banner__icon--004"></span>
+								<span class="text-banner__contents">
+									<span class="text-banner__title color-primary-black font-weight-regular">
+										<mark><strong>다음 일정,</strong></mark> 놓치지 마세요!
+									</span>
+									<span class="text-banner__text ellipsis color-primary-black">$반려동물이름$ "컨넬코프" 예방접종 예약일정이 있습니다.</span>
+								</span>
+							</a>
+						</div>
+						<!-- //Case : 일정 등록 전 -->
+
+						<!-- Case : 일정 등록 후 -->
+						<div class="text-banner">
+							<a href="" class="text-banner__link">
+								<span class="text-banner__icon text-banner__icon--005"></span>
+								<span class="text-banner__contents">
+									<span class="text-banner__title">아직 등록된 일정이 없어요!</span>
+									<span class="text-banner__text ellipsis">다가오는 일정이 있다면 등록해주세요.</span>
+								</span>
+							</a>
+						</div>
+						<!-- //Case : 일정 등록 후 -->
+
+						<!-- //2022.10.14 : mod : 메인 디자인 변경으로 구조 변경 -->
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

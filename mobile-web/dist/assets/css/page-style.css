@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* page-contents--completion */
+.page-contents--completion {
+  padding-top: 50px;
+}
+
+/* page-contents--login */
+.page-contents--login {
+  padding-top: 62px;
+}
+.page-contents--login .ui-form {
+  margin-bottom: 50px;
+}
+
+/* layer-gnb */
+.layer-gnb .layer-container {
+  -webkit-transition: transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translateX(100%) translateZ(0);
+  transform: translateX(100%) translateZ(0);
+}
+.layer-gnb.js-layer-opened .layer-container {
+  -webkit-transform: translateX(0) translateZ(0);
+  transform: translateX(0) translateZ(0);
+}
+
+/* page-contents--error */
+.page-contents--error {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}

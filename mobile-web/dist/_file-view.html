@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-file-view">파일 뷰</a>
+
+		<!-- layer: 파일 뷰 -->
+		<div class="layer-wrap layer-wrap--full" data-layer="layer-file-view">
+			<div class="layer-container">
+				<section class="ui-layer ui-layer--full">
+					<div class="ui-layer__head">
+						<div class="layer-header">
+							<div class="layer-header__left">
+								<h2 class="layer-header__title">상세보기</h2>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__body">
+						<div class="ui-layer__body-inner">
+							<div class="file-view">
+								<ul class="file-view__list">
+									<li class="file-view__item">
+										<div class="file-view__block">
+											<div class="file-view__frame">
+												<div class="file-view__photo">
+													<img src="./assets/images/_dummy/image-1.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+											<div class="file-view__info">
+												<div class="file-view__name">File_Name_here.jpg</div>
+												<a href="" class="file-view__download"><span class="for-a11y">다운로드</span></a>
+											</div>
+										</div>
+									</li>
+									<li class="file-view__item">
+										<div class="file-view__block">
+											<div class="file-view__frame">
+												<div class="file-view__photo">
+													<img src="./assets/images/_dummy/image-2.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+											<div class="file-view__info">
+												<div class="file-view__name">File_Name_here.jpg</div>
+												<a href="" class="file-view__download"><span class="for-a11y">다운로드</span></a>
+											</div>
+										</div>
+									</li>
+									<li class="file-view__item">
+										<div class="file-view__block">
+											<div class="file-view__frame">
+												<div class="file-view__icon file-view__icon--pdf">
+													<span class="for-a11y">PDF File</span>
+												</div>
+											</div>
+											<div class="file-view__info">
+												<div class="file-view__name">File_Name_here_File_Name_here_File_Name_here_File_Name_here_File_Name_here_File_Name_here.pdf</div>
+												<a href="" class="file-view__download"><span class="for-a11y">다운로드</span></a>
+											</div>
+										</div>
+									</li>
+									<li class="file-view__item">
+										<div class="file-view__block">
+											<div class="file-view__frame">
+												<div class="file-view__icon file-view__icon--video">
+													<span class="for-a11y">Video File</span>
+												</div>
+											</div>
+											<div class="file-view__info">
+												<div class="file-view__name">File_Name_here.mp4</div>
+												<a href="" class="file-view__download"><span class="for-a11y">다운로드</span></a>
+											</div>
+										</div>
+									</li>
+									<li class="file-view__item">
+										<div class="file-view__block">
+											<div class="file-view__frame">
+												<div class="file-view__icon file-view__icon--etc">
+													<span class="for-a11y">ETC File</span>
+												</div>
+											</div>
+											<div class="file-view__info">
+												<div class="file-view__name">File_Name_here.txt</div>
+												<a href="" class="file-view__download"><span class="for-a11y">다운로드</span></a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__foot">
+						<div class="ui-buttons ui-buttons--no-margin">
+							<ul class="ui-buttons__list">
+								<li class="ui-buttons__item">
+									<button type="button" class="ui-button ui-basic-button ui-basic-button--secondary" data-role="layerClose">
+										<span class="ui-basic-button__text">닫기</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- //layer: 파일 뷰 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-file-view');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

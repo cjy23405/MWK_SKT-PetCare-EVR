@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 APP</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<a href="" class="header__button header__button--back">
+								<span class="for-a11y">뒤로가기</span>
+							</a>
+						</div>
+						<div class="header__center">
+							<h1 class="header__title">예방접종 기록</h1>
+						</div>
+					</header>
+					<!-- //header -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<section class="section">
+							<div class="tab-bar row-contents-group">
+								<div class="tab-bar__inner">
+									<ul class="tab-bar__list">
+										<li class="tab-bar__item">
+											<!-- DD : 현재 페이지면 is-active 클래스값 추가 -->
+											<a href="" class="tab-bar__link is-active">
+												<span class="tab-bar__link-text">전체</span>
+											</a>
+										</li>
+										<li class="tab-bar__item">
+											<a href="" class="tab-bar__link">
+												<span class="tab-bar__link-text">백신</span>
+											</a>
+										</li>
+										<li class="tab-bar__item">
+											<a href="" class="tab-bar__link">
+												<span class="tab-bar__link-text">내외부구충</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- Case : 데이터 없을 때 -->
+							<div class="card">
+								<div class="ui-empty">
+									<div class="ui-empty__object ui-empty__object--011"></div>
+									<p class="ui-empty__text">등록된 예방접종 이력이 없어요.</p>
+								</div>
+							</div>
+							<!-- //Case : 데이터 없을 때 -->
+
+							<div class="board">
+								<ul class="board__list">
+									<li class="board__item">
+										<a href="" class="board__block">
+											<span class="board__content">
+												<!-- 2022.10.11 : mod : 클래스 값 변경-->
+												<span class="status-round status-round--primary row-item">백신</span>
+												<!-- //2022.10.11 : mod : 클래스 값 변경-->
+												<span class="board__title">DHPPL</span>
+												<!-- 2022.10.11: add : 메모 추가 -->
+												<span class="board__text">백신을 맞고 난 후 춘봉이가 기력이 없었다.</span>
+												<!-- //2022.10.11: add : 메모 추가 -->
+												<span class="board__date">2022.09.18</span>
+											</span>
+										</a>
+									</li>
+									<li class="board__item">
+										<a href="" class="board__block">
+											<span class="board__content">
+												<!-- 2022.10.11 : mod : 클래스 값 변경-->
+												<span class="status-round status-round--secondary row-item">내외부구충</span>
+												<!-- //2022.10.11 : mod : 클래스 값 변경-->
+												<span class="board__title">하트가드 블루</span>
+												<!-- 2022.10.11: add : 메모 추가 -->
+												<span class="board__text">춘봉이가 내외부구충 약을 먹고 토했다.</span>
+												<!-- //2022.10.11: add : 메모 추가 -->
+												<span class="board__date">2022.08.18</span>
+											</span>
+										</a>
+									</li>
+									<li class="board__item">
+										<a href="" class="board__block">
+											<span class="board__content">
+												<!-- 2022.10.11 : mod : 클래스 값 변경-->
+												<span class="status-round status-round--primary row-item">백신</span>
+												<!-- //2022.10.11 : mod : 클래스 값 변경-->
+												<span class="board__title">인플루엔자</span>
+												<span class="board__date">2022.07.18</span>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</section>
+
+						<!-- fix buttons -->
+						<div class="fix-bottom-wrap">
+							<div class="fix-bottom-wrap__area">
+								<div class="ui-buttons ui-buttons--no-margin">
+									<ul class="ui-buttons__list">
+										<li class="ui-buttons__item">
+											<a href="" class="ui-basic-button">
+												<span class="ui-basic-button__text">예방접종 등록하기</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //fix buttons -->
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

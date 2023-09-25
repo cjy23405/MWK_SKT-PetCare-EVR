@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 APP</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<a href="" class="header__button header__button--back">
+								<span class="for-a11y">뒤로가기</span>
+							</a>
+						</div>
+						<div class="header__center">
+							<!-- 2022.10.11 : mod : 텍스트 수정 -->
+							<h1 class="header__title">멍냥포인트</h1>
+						</div>
+					</header>
+					<!-- //header -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<div class="row-contents-group-medium">
+							<div class="select-button-area">
+								<button type="button" class="ui-button select-button">
+									<!-- 2022.10.11 : mod : 텍스트 수정 -->
+									<span class="select-button__text"><strong>레이나</strong>의 멍냥포인트</span>
+								</button>
+							</div>
+
+							<!-- Case : 좋음 -->
+							<div class="my-pet-score my-pet-score--cat is-good row-item-group">
+								<p class="my-pet-score__value">
+									<span class="my-pet-score__num">100</span>
+									<span class="my-pet-score__unit">점</span>
+								</p>
+							</div>
+							<!-- //Case : 좋음 -->
+
+							<!-- Case : 보통 -->
+							<div class="my-pet-score my-pet-score--cat is-normal row-item-group">
+								<p class="my-pet-score__value">
+									<span class="my-pet-score__num">75</span>
+									<span class="my-pet-score__unit">점</span>
+								</p>
+							</div>
+							<!-- //Case : 보통 -->
+
+							<!-- Case : 나쁨 -->
+							<div class="my-pet-score my-pet-score--cat is-bad row-item-group">
+								<p class="my-pet-score__value">
+									<span class="my-pet-score__num">3</span>
+									<span class="my-pet-score__unit">점</span>
+								</p>
+							</div>
+							<!-- //Case : 나쁨 -->
+
+							<!-- banner -->
+							<div class="banner banner--container row-item-group">
+								<a href="" class="banner__link">
+									<img src="./assets/images/_dummy/banner-1.png" alt="" class="banner__img" />
+								</a>
+							</div>
+							<!-- //banner -->
+
+							<div class="care-notice row-item-group">
+								<!-- 2022.10.11 : mod : 텍스트 수정 -->
+								<p class="care-notice__text">멍냥포인트를 높여, 아이에게 관심을 보여주세요.</p>
+							</div>
+						</div>
+
+						<div class="ui-form">
+							<div class="ui-form__list">
+								<section class="ui-form__item">
+									<!-- 2022.10.11 : mod : 텍스트 수정 -->
+									<h2 class="ui-form__key">최근 멍냥포인트 현황</h2>
+									<div class="ui-form__val">
+										<div class="card">
+											<!-- list -->
+											<div class="logs">
+												<ul class="logs__list">
+													<li class="logs__item">
+														<div class="logs__row">
+															<div class="logs__left">
+																<div class="logs__title">셀프점검 완료</div>
+															</div>
+															<div class="logs__right">
+																<div class="score is-good"><span class="score__symbol">+</span> 2점</div>
+															</div>
+														</div>
+														<div class="logs__date row-item-small">2022.08.31</div>
+													</li>
+													<li class="logs__item">
+														<div class="logs__row">
+															<div class="logs__left">
+																<div class="logs__title">셀프점검 누락</div>
+															</div>
+															<div class="logs__right">
+																<div class="score is-bad"><span class="score__symbol">-</span> 3점</div>
+															</div>
+														</div>
+														<div class="logs__date row-item-small">2022.08.31</div>
+													</li>
+													<li class="logs__item">
+														<div class="logs__row">
+															<div class="logs__left">
+																<div class="logs__title">셀프점검 완료</div>
+															</div>
+															<div class="logs__right">
+																<div class="score is-good"><span class="score__symbol">+</span> 2점</div>
+															</div>
+														</div>
+														<div class="logs__date row-item-small">2022.08.31</div>
+													</li>
+												</ul>
+											</div>
+											<!-- //list -->
+
+											<div class="more-button-area">
+												<a href="" class="more-button more-button--no-arrow">
+													<span class="more-button__text">전체 보기</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+
+						<div class="card row-contents-group-medium">
+							<section class="tip-section">
+								<div class="tip-section-head">
+									<h3 class="tip-section-head__title">
+										<span class="tip-section-head__title-symbol">Tip.</span>
+										<!-- 2022.10.11 : mod : 텍스트 수정 -->
+										<span class="tip-section-head__title-text">멍냥포인트 어떻게 올려요?</span>
+									</h3>
+								</div>
+								<!-- 2022.10.11 : mod : 텍스트 수정 -->
+								<p class="tip-section-text">
+									멍냥포인트를 올리기 위해서는<br />
+									반려동물을 위한 <strong class="font-weight-medium">셀프점검</strong>을 꼭 등록해주세요!<br />
+									셀프점검을 통해 멍냥포인트 100점에 도전해보세요.
+								</p>
+								<!-- //2022.10.11 : mod : 텍스트 수정 -->
+							</section>
+						</div>
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

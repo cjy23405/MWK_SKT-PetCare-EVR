@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 APP</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<a href="" class="header__button header__button--back">
+								<span class="for-a11y">뒤로가기</span>
+							</a>
+						</div>
+						<div class="header__center">
+							<h1 class="header__title">진료이력 수정하기</h1>
+						</div>
+					</header>
+					<!-- //header -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<form action="">
+							<p class="page-title">
+								반려동물과 함께 <br />
+								<strong>진료보신 내용</strong>을 작성해주세요
+							</p>
+
+							<div class="ui-form">
+								<dl class="ui-form__list">
+									<div class="ui-form__item">
+										<dt class="ui-form__key">진료 일자<span class="ui-require" aria-label="(필수)"></span></dt>
+										<dd class="ui-form__val">
+											<div class="ui-input-block ui-input-block--date">
+												<input type="text" class="ui-input js-datepicker" title="진료 일자" placeholder="연도.월.일" value="2022.07.30 " />
+											</div>
+										</dd>
+									</div>
+									<div class="ui-form__item">
+										<dt class="ui-form__key">병원 이름<span class="ui-require" aria-label="(필수)"></span></dt>
+										<dd class="ui-form__val">
+											<div class="ui-input-block">
+												<input type="text" class="ui-input" title="병원 이름" placeholder="병원이름을 입력해주세요." value="가나다 동물병원" />
+											</div>
+										</dd>
+									</div>
+									<div class="ui-form__item">
+										<dt class="ui-form__key">내원 사유<span class="ui-require" aria-label="(필수)"></span></dt>
+										<dd class="ui-form__val">
+											<div class="ui-input-block">
+												<textarea class="ui-input input-height-small" title="내원 사유" placeholder="내원 사유를 입력해주세요.">피부병</textarea>
+											</div>
+										</dd>
+									</div>
+									<div class="ui-form__item">
+										<dt class="ui-form__key">처방 내역</dt>
+										<dd class="ui-form__val">
+											<div class="detail-comment">
+												<div class="detail-comment__body">
+													<div class="ui-input-block">
+														<textarea class="ui-input input-height-small" title="처방 내역" placeholder="처방 내역을 입력해주세요.">피부병 연고</textarea>
+													</div>
+												</div>
+												<div class="detail-comment__foot">
+													<div class="gallery-file">
+														<div class="gallery-file__inner">
+															<ul class="gallery-file__list">
+																<li class="gallery-file__item">
+																	<div class="gallery-input">
+																		<input type="file" class="gallery-input__input" title="사진 추가" />
+																	</div>
+																</li>
+																<li class="gallery-file__item">
+																	<div class="gallery-file__block">
+																		<div class="gallery-file__image" style="background-image: url('./assets/images/_dummy/image-1.png')">
+																			<!-- 2022.11.03 : add : img 태그 추가 -->
+																			<img src="./assets/images/_dummy/" alt="" onerror="this.parentNode.className += ' is-error';" />
+																		</div>
+																		<button type="button" class="ui-button gallery-file__delete">
+																			<span class="for-a11y">삭제</span>
+																		</button>
+																	</div>
+																</li>
+																<li class="gallery-file__item">
+																	<div class="gallery-file__block">
+																		<div class="gallery-file__image" style="background-image: url('./assets/images/_dummy/image-1.png')">
+																			<!-- 2022.11.03 : add : img 태그 추가 -->
+																			<img src="./assets/images/_dummy/image-1.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																		</div>
+																		<button type="button" class="ui-button gallery-file__delete">
+																			<span class="for-a11y">삭제</span>
+																		</button>
+																	</div>
+																</li>
+																<li class="gallery-file__item">
+																	<div class="gallery-file__block">
+																		<div class="gallery-file__image" style="background-image: url('./assets/images/_dummy/image-1.png')">
+																			<!-- 2022.11.03 : add : img 태그 추가 -->
+																			<img src="./assets/images/_dummy/image-1.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																		</div>
+																		<button type="button" class="ui-button gallery-file__delete">
+																			<span class="for-a11y">삭제</span>
+																		</button>
+																	</div>
+																</li>
+																<li class="gallery-file__item">
+																	<div class="gallery-file__block">
+																		<div class="gallery-file__image" style="background-image: url('./assets/images/_dummy/image-1.png')">
+																			<!-- 2022.11.03 : add : img 태그 추가 -->
+																			<img src="./assets/images/_dummy/image-1.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																		</div>
+																		<button type="button" class="ui-button gallery-file__delete">
+																			<span class="for-a11y">삭제</span>
+																		</button>
+																	</div>
+																</li>
+																<li class="gallery-file__item">
+																	<div class="gallery-file__block">
+																		<div class="gallery-file__image" style="background-image: url('./assets/images/_dummy/image-1.png')">
+																			<!-- 2022.11.03 : add : img 태그 추가 -->
+																			<img src="./assets/images/_dummy/image-1.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																		</div>
+																		<button type="button" class="ui-button gallery-file__delete">
+																			<span class="for-a11y">삭제</span>
+																		</button>
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</dd>
+									</div>
+									<div class="ui-form__item">
+										<dt class="ui-form__key">메모</dt>
+										<dd class="ui-form__val">
+											<div class="ui-input-block">
+												<textarea class="ui-input input-height-small" title="메모" placeholder="자유롭게 메모해주세요.">피부병이 생긴 곳을 춘봉이가 최대한 핥거나 긁지 않게 잘 관찰하기</textarea>
+											</div>
+										</dd>
+									</div>
+								</dl>
+							</div>
+
+							<!-- fix buttons -->
+							<div class="fix-bottom-wrap">
+								<div class="fix-bottom-wrap__area">
+									<div class="ui-buttons ui-buttons--no-margin">
+										<ul class="ui-buttons__list">
+											<li class="ui-buttons__item">
+												<button type="submit" class="ui-button ui-basic-button">
+													<!-- 2022.10.11 : mod : 버튼명 수정 -->
+													<span class="ui-basic-button__text">수정 완료</span>
+												</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- //fix buttons -->
+						</form>
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

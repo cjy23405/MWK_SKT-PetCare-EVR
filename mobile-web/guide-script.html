@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>스크립트 가이드</title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./dist/assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./dist/assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/page-style.css" />
+		<style>
+			b {
+				margin-left: 10px;
+			}
+			h1.test-title {
+				font-size: 30px;
+				margin: 50px 50px;
+			}
+			h2.test-title {
+				margin: 0 0 20px;
+				font-size: 22px;
+				padding-bottom: 10px;
+				border-bottom: 2px solid #888;
+			}
+			h3.test-title {
+				margin: 0 0 10px;
+				font-size: 18px;
+			}
+			h4.test-title {
+				margin: 0 0 10px;
+				font-size: 16px;
+			}
+			.test-section {
+				border-top: 2px solid #ccc;
+				padding: 50px;
+			}
+			.test-section-sub + .test-section-sub {
+				margin-top: 20px;
+				border-top: 2px dashed #ccc;
+				padding-top: 20px;
+			}
+			.test-section-child {
+				margin: 20px;
+			}
+			.test-code {
+				border: 2px solid #ccc;
+				margin: 10px 0;
+				background: #fff;
+				padding: 10px;
+			}
+			.test-code:before {
+				content: 'ex.';
+				display: block;
+				font-size: 12px;
+			}
+			.test-description {
+				margin: 10px 0;
+				padding: 0 12px;
+			}
+			.test-links {
+				margin-left: -20px;
+			}
+			.test-links:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+			.test-links a {
+				display: block;
+				margin: 20px 0 0 20px;
+				float: left;
+				padding: 5px 15px;
+				color: #fff;
+				text-decoration: none;
+				border-radius: 5px;
+				background: #333;
+			}
+			.test-links + h2.test-title {
+				margin-top: 20px;
+			}
+		</style>
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div style="display: table"></div>
+
+			<h1 class="test-title">Script</h1>
+
+			<div class="test-section">
+				<h2 class="test-title">uiJSCommon</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">uiJSCommon($root);</h3>
+					<div class="test-description">
+						ui 기능 관련 init 함수 (탭, 아코디언 등)<br />
+						$root 인자는 선택값이며, 디폴트 $(document) 이다.<br />
+						$root 안에 있는 객체들만 init을 적용한다.
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section">
+				<h2 class="test-title">uiJSResize</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">uiJSResize();</h3>
+					<div class="test-description">ui 기능 관련 resize 함수</div>
+				</div>
+			</div>
+
+			<div class="test-section">
+				<h2 class="test-title">userAgentCheck</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">userAgentCheck.ieMode;</h3>
+					<div class="test-description">익스플로러 버전</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">userAgentCheck.isIos;</h3>
+					<div class="test-description">ios 여부</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">userAgentCheck.isAndroid;</h3>
+					<div class="test-description">Android 여부</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">userAgentCheck.androidVersion;</h3>
+					<div class="test-description">Android 버전</div>
+				</div>
+			</div>
+
+			<div class="test-section">
+				<style>
+					.test-guide-swiper {
+						position: relative;
+					}
+					.test-guide-swiper-list {
+						list-style: none;
+						margin: 0;
+						padding: 0;
+					}
+					.test-guide-swiper-item a,
+					.test-guide-swiper-item img {
+						display: block;
+						width: 100%;
+						max-width: 600px;
+						margin: 0 auto;
+					}
+					.test-guide-swiper .swiper-pagination {
+						position: static;
+					}
+					.test-guide-swiper .swiper-scrollbar {
+						height: 5px;
+					}
+					.test-guide-swiper .swiper-scrollbar-drag {
+						height: 100%;
+						background: blue;
+					}
+				</style>
+				<h2 class="test-title">.swiperSet()</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">controller 래퍼 지정 안했을 때</h3>
+
+					<div class="test-guide-swiper" id="testGuideSwiper1">
+						<ul class="test-guide-swiper-list">
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/image-1.jpg" alt="" />
+								</a>
+							</li>
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/image-1.jpg" alt="" />
+								</a>
+							</li>
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/image-1.jpg" alt="" />
+								</a>
+							</li>
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/image-1.jpg" alt="" />
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<script type="module">
+						$('#testGuideSwiper1 .test-guide-swiper-list').swiperSet({
+							customClass: 'text-custom-class',
+							pageControl: true,
+							nextControl: true,
+							prevControl: true,
+							playControl: true,
+							pauseControl: true,
+							togglePlayControl: true,
+							scrollbarControl: true,
+							autoplay: {
+								disableOnInteraction: false,
+							},
+						});
+					</script>
+				</div>
+
+				<div class="test-section-sub">
+					<h3 class="test-title">controller 래퍼 지정 했을 때</h3>
+
+					<div class="test-guide-swiper" id="testGuideSwiper2">
+						<div class="test-guide-swiper-controller"></div>
+						<ul class="test-guide-swiper-list">
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/image-1.jpg" alt="" />
+								</a>
+							</li>
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/image-1.jpg" alt="" />
+								</a>
+							</li>
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/image-1.jpg" alt="" />
+								</a>
+							</li>
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/image-1.jpg" alt="" />
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<script type="module">
+						$('#testGuideSwiper2 .test-guide-swiper-list').each(function () {
+							var $this = $(this);
+							var $controller = $this.siblings('.test-guide-swiper-controller');
+							$this.swiperSet({
+								appendController: $controller,
+								customClass: 'text-custom-class',
+								pageControl: true,
+								nextControl: true,
+								prevControl: true,
+								playControl: true,
+								pauseControl: true,
+								togglePlayControl: true,
+								scrollbarControl: true,
+								autoplay: {
+									disableOnInteraction: false,
+								},
+							});
+						});
+					</script>
+				</div>
+			</div>
+
+			<div class="test-section">
+				<style>
+					.js-ui-dropdown__opener,
+					.js-ui-dropdown__closer {
+						color: #000;
+					}
+				</style>
+				<h2 class="test-title">.uiDropDown()</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					<div class="js-ui-dropdown">
+						<button type="button" class="js-ui-dropdown__opener">
+							<span class="open-text">open</span>
+							<span class="close-text">close</span>
+						</button>
+						<div class="js-ui-dropdown__layer">
+							피어나기 갑 천지는 그들에게 능히 것이다.<br />
+							목숨을 구할 인생에 꽃이 끓는 희망의 창공에 길지 봄바람이다.<br />
+							창공에 풀이 새 불어 있다.<br />
+							<button type="button" class="js-ui-dropdown__closer">close</button>
+						</div>
+					</div>
+
+					<div class="test-section-child">
+						<h4 class="test-title">Event</h4>
+						<div class="test-code">$('.js-ui-dropdown').on('uiDropDownOpened', function(){...});</div>
+						<div class="test-description">레이어 열릴 때 발생</div>
+						<div class="test-code">$('.js-ui-dropdown').on('uiDropDownClosed', function(){...});</div>
+						<div class="test-description">레이어 닫힐 때 발생</div>
+					</div>
+
+					<div class="test-section-child">
+						<h4 class="test-title">Method</h4>
+						<div class="test-code">$('.js-ui-dropdown').uiDropDown('close');</div>
+						<div class="test-description">레이어 닫기</div>
+						<div class="test-code">$('.js-ui-dropdown').uiDropDown('open');</div>
+						<div class="test-description">레이어 열기</div>
+						<div class="test-code">$('.js-ui-dropdown').uiDropDown('update');</div>
+						<div class="test-description">레이어 위치 업데이트</div>
+						<div class="test-code">$('.js-ui-dropdown').uiDropDown('btnClose');</div>
+						<div class="test-description">별도 버튼을 통해서 레이어 닫기 (접근성 포커스 관련 지원)</div>
+					</div>
+				</div>
+			</div>
+
+			<!--
+			<div class="test-section">
+				<style>
+					.test- {
+						position: relative;
+					}
+				</style>
+				<h2 class="test-title">.AAAAAA()</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					//
+
+					<script type="module">
+						//
+					</script>
+				</div>
+			</div>
+			-->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./dist/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./dist/assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

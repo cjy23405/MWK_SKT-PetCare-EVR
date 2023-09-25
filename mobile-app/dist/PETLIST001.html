@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 APP</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-pet-select">반려동물 목록</a>
+
+		<!-- layer: 반려동물 목록 -->
+		<div class="layer-wrap layer-wrap--toast" data-layer="layer-pet-select">
+			<div class="layer-container">
+				<section class="ui-layer ui-layer--toast">
+					<div class="ui-layer__head">
+						<div class="layer-header">
+							<div class="layer-header__left">
+								<h2 class="layer-header__title">반려동물 목록</h2>
+							</div>
+							<div class="layer-header__right">
+								<button type="button" class="ui-button layer-header__button layer-header__button--close" data-role="layerClose">
+									<span class="for-a11y">레이어 닫기</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__body">
+						<div class="ui-layer__body-inner">
+							<div class="pet-select">
+								<ul class="pet-select__list">
+									<li class="pet-select__item">
+										<a href="" class="pet-select__button">
+											<!-- Case : 이미지 없을 때 -->
+											<span class="pet-select__thumb">
+												<span class="pet-select__thumb-inner"></span>
+											</span>
+											<span class="pet-select__name">츄르츄르</span>
+										</a>
+									</li>
+									<li class="pet-select__item">
+										<a href="" class="pet-select__button">
+											<!-- Case : 이미지 에러 -->
+											<span class="pet-select__thumb">
+												<span class="pet-select__thumb-inner">
+													<img src="./assets/images/_dummy/" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</span>
+											</span>
+											<span class="pet-select__name">반려동물이름</span>
+										</a>
+									</li>
+									<li class="pet-select__item">
+										<a href="" class="pet-select__button">
+											<!-- Case : 이미지 있을 때 -->
+											<span class="pet-select__thumb">
+												<span class="pet-select__thumb-inner">
+													<img src="./assets/images/_dummy/my-photo.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</span>
+											</span>
+											<span class="pet-select__name">반려동물이름</span>
+										</a>
+									</li>
+									<li class="pet-select__item">
+										<!-- DD : 선택 된 동물 is-active 클래스 값 추가 -->
+										<a href="" class="pet-select__button is-active">
+											<span class="pet-select__thumb">
+												<span class="pet-select__thumb-inner">
+													<img src="./assets/images/_dummy/image-2.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</span>
+											</span>
+											<span class="pet-select__name">티모</span>
+										</a>
+									</li>
+									<li class="pet-select__item">
+										<a href="" class="pet-select__button">
+											<span class="pet-select__thumb">
+												<span class="pet-select__thumb-inner">
+													<img src="./assets/images/_dummy/image-1.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</span>
+											</span>
+											<span class="pet-select__name">모찌</span>
+										</a>
+									</li>
+									<li class="pet-select__item">
+										<a href="" class="pet-select__button pet-select__button--add">
+											<span class="pet-select__thumb pet-select__thumb--add">
+												<span class="pet-select__thumb-inner"></span>
+											</span>
+											<span class="pet-select__name">추가</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- //layer: 반려동물 목록 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-pet-select');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

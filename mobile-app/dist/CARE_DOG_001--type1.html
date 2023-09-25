@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 APP</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<h1 class="for-a11y">PetCare</h1>
+							<a href="" class="header__my">
+								<!-- DD : 이미지 없을 때 -->
+								<span class="header__my-photo">
+									<span class="header__my-photo-inner"></span>
+								</span>
+								<!-- //DD : 이미지 없을 때 -->
+
+								<!-- DD : 이미지 에러 -->
+								<span class="header__my-photo">
+									<span class="header__my-photo-inner">
+										<img src="./assets/images/_dummy/" alt="" onerror="this.parentNode.className += ' is-error';" />
+									</span>
+								</span>
+								<!-- //DD : 이미지 에러 -->
+
+								<!-- DD : 이미지 있을 때 -->
+								<span class="header__my-photo">
+									<span class="header__my-photo-inner">
+										<img src="./assets/images/_dummy/my-photo.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+									</span>
+								</span>
+								<!-- //DD : 이미지 있을 때 -->
+
+								<span class="header__my-name">$반려동물이름$</span>
+							</a>
+						</div>
+						<div class="header__right">
+							<a href="" class="header__button header__button--push">
+								<span class="for-a11y">알림</span>
+								<span class="header__button-new">
+									<span class="for-a11y">(신규 알림 있음)</span>
+								</span>
+							</a>
+						</div>
+					</header>
+					<!-- //header -->
+
+					<!-- nav -->
+					<nav class="nav-bar">
+						<h2 class="for-a11y">메뉴</h2>
+						<div class="nav-bar__inner">
+							<ul class="nav-bar__list">
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">홈</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link is-active">
+										<span class="nav-bar__link-text">셀프점검</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">캘린더</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">병원수첩</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<!-- 2022.10.11 : mod : 메뉴명 수정 -->
+										<span class="nav-bar__link-text">MY</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<!-- //nav -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<!-- DD : data-view-date 속성으로 먼저 보일 날짜 지정 (해당 속성이 없으면 기본적으로 오늘 날짜가 먼저 보임) -->
+						<div class="week" id="week" data-view-date="2022.07.20">
+							<div class="week__head">
+								<button type="button" class="ui-button week__select-month">
+									<span class="week__select-month-text">0000년 00월</span>
+								</button>
+							</div>
+							<div class="week__slide">
+								<div class="week__slide-list">
+									<div class="week__slide-item">
+										<!-- // -->
+									</div>
+									<div class="week__slide-item">
+										<!--
+										<ul class="week__list">
+											<li class="week__item">
+												<button type="button" class="ui-button week__block">
+													<span class="week__title">일</span>
+													<span class="week__day">25</span>
+												</button>
+											</li>
+											<li class="week__item">
+												<button type="button" class="ui-button week__block">
+													<span class="week__title">월</span>
+													<span class="week__day">26</span>
+													<span class="week__be">
+														<span class="for-a11y">(기록 함)</span>
+													</span>
+												</button>
+											</li>
+											<li class="week__item">
+												<button type="button" class="ui-button week__block is-active">
+													<span class="week__title">화</span>
+													<span class="week__day">27</span>
+													<span class="week__be">
+														<span class="for-a11y">(기록 함)</span>
+													</span>
+												</button>
+											</li>
+											<li class="week__item">
+												<button type="button" class="ui-button week__block">
+													<span class="week__title">수</span>
+													<span class="week__day">28</span>
+													<span class="week__be">
+														<span class="for-a11y">(기록 함)</span>
+													</span>
+												</button>
+											</li>
+											<li class="week__item">
+												<button type="button" class="ui-button week__block">
+													<span class="week__title">목</span>
+													<span class="week__day">29</span>
+												</button>
+											</li>
+											<li class="week__item">
+												<button type="button" class="ui-button week__block is-today">
+													<span class="week__title">금</span>
+													<span class="week__day">30</span>
+													<span class="week__be">
+														<span class="for-a11y">(기록 함)</span>
+													</span>
+												</button>
+											</li>
+											<li class="week__item">
+												<button type="button" class="ui-button week__block" disabled>
+													<span class="week__title">토</span>
+													<span class="week__day">31</span>
+												</button>
+											</li>
+										</ul>
+										-->
+									</div>
+									<div class="week__slide-item">
+										<!-- // -->
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="box-menu">
+							<ul class="box-menu__list">
+								<li class="box-menu__item">
+									<a href="" class="box-menu__link box-menu__link--disabled">
+										<span class="box-menu__icon box-menu__icon--001"></span>
+										<span class="box-menu__title">급식</span>
+										<span class="box-menu__text">기록 없음</span>
+									</a>
+								</li>
+								<li class="box-menu__item">
+									<a href="" class="box-menu__link box-menu__link--disabled">
+										<span class="box-menu__icon box-menu__icon--003"></span>
+										<span class="box-menu__title">대변상태</span>
+										<span class="box-menu__text">기록 없음</span>
+									</a>
+								</li>
+								<li class="box-menu__item">
+									<a href="" class="box-menu__link box-menu__link--disabled">
+										<span class="box-menu__icon box-menu__icon--005"></span>
+										<span class="box-menu__title">양치질</span>
+										<span class="box-menu__text">기록 없음</span>
+									</a>
+								</li>
+								<li class="box-menu__item">
+									<a href="" class="box-menu__link box-menu__link--disabled">
+										<span class="box-menu__icon box-menu__icon--007"></span>
+										<span class="box-menu__title">산책</span>
+										<span class="box-menu__text">기록 없음</span>
+									</a>
+								</li>
+								<li class="box-menu__item">
+									<a href="" class="box-menu__link box-menu__link--disabled">
+										<span class="box-menu__icon box-menu__icon--009"></span>
+										<span class="box-menu__title">이상부위</span>
+										<span class="box-menu__text">기록 없음</span>
+									</a>
+								</li>
+								<li class="box-menu__item">
+									<a href="" class="box-menu__link box-menu__link--disabled">
+										<span class="box-menu__icon box-menu__icon--010"></span>
+										<span class="box-menu__title">메모</span>
+										<span class="box-menu__text">기록 없음</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="text-banner">
+							<a href="" class="text-banner__link">
+								<span class="text-banner__icon text-banner__icon--001"></span>
+								<span class="text-banner__contents">
+									<span class="text-banner__title">셀프점검 기록</span>
+									<span class="text-banner__text">셀프점검 전체 이력을 확인해보세요!</span>
+								</span>
+							</a>
+						</div>
+
+						<!-- fix buttons -->
+						<div class="fix-bottom-wrap">
+							<div class="fix-bottom-wrap__area">
+								<div class="ui-buttons ui-buttons--no-margin">
+									<ul class="ui-buttons__list">
+										<li class="ui-buttons__item">
+											<a href="" class="ui-basic-button">
+												<span class="ui-basic-button__text">등록하러 가기</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //fix buttons -->
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			var dummyDatas = {};
+
+			// 데이터 로드 테스트 구현
+			function pushDummyDatas(dates) {
+				var firstDateString = luxon.DateTime.fromJSDate(dates[0]).toFormat('yyyy.MM.dd');
+
+				if (dummyDatas[firstDateString]) return;
+
+				setTimeout(function () {
+					if (dummyDatas[firstDateString]) return;
+
+					var arr = [
+						{
+							date: '2022.07.20',
+							foo: 1,
+							bar: '1',
+						},
+						{
+							date: '2022.08.10',
+							foo: 2,
+							bar: '2',
+						},
+						{
+							date: '2022.08.21',
+							foo: 3,
+							bar: '3',
+						},
+						{
+							date: '2022.08.25',
+							foo: 4,
+							bar: '4',
+						},
+						{
+							date: '2022.08.26',
+							foo: 5,
+							bar: '5',
+						},
+						{
+							date: '2022.08.27',
+							foo: 6,
+							bar: '6',
+						},
+						{
+							date: '2022.08.28',
+							foo: 7,
+							bar: '7',
+						},
+						{
+							date: '2022.08.29',
+							foo: 8,
+							bar: '8',
+						},
+						{
+							date: '2022.08.31',
+							foo: 9,
+							bar: '9',
+						},
+					];
+					var makeDatas = {};
+					var filterData = null;
+					var dateString = '';
+
+					for (var i = 0; i < dates.length; i++) {
+						dateString = luxon.DateTime.fromJSDate(dates[i]).toFormat('yyyy.MM.dd');
+						filterData = (function () {
+							var d = null;
+
+							$.each(arr, function (i) {
+								if (this.date === dateString) {
+									d = this;
+								}
+							});
+
+							return d;
+						})();
+
+						if (filterData) {
+							makeDatas[dateString] = $.extend({}, filterData, {
+								be: true,
+							});
+						} else {
+							makeDatas[dateString] = {
+								be: false,
+							};
+						}
+					}
+
+					$.extend(dummyDatas, makeDatas);
+
+					console.log('pushDummyDatas', dummyDatas);
+
+					weekObject.render(); // 날짜 html 렌더 다시하기
+				}, 1000);
+			}
+
+			var weekObject = null;
+			var weekOptions = {
+				html: function (dates, week) {
+					var luxonDate = null;
+					var luxonDateString = null;
+					var todayDateString = luxon.DateTime.fromJSDate(week.today).toFormat('yyyy.MM.dd');
+					var viewDateString = luxon.DateTime.fromJSDate(week.viewDate).toFormat('yyyy.MM.dd');
+					var todayClassName = '';
+					var activeClassName = '';
+					var disabled = '';
+					var html = '';
+
+					html += '<ul class="week__list">';
+
+					for (var i = 0; i < dates.length; i++) {
+						luxonDate = luxon.DateTime.fromJSDate(dates[i]);
+						luxonDateString = luxonDate.toFormat('yyyy.MM.dd');
+						todayClassName = luxonDateString === todayDateString ? ' is-today' : '';
+						activeClassName = luxonDateString === viewDateString ? ' is-active' : '';
+						disabled = luxonDateString > todayDateString ? ' disabled' : '';
+
+						html += '	<li class="week__item">';
+						html += '		<button type="button" class="ui-button week__block' + todayClassName + activeClassName + '" data-date="' + luxonDateString + '"' + disabled + '>';
+						html += '			<span class="week__title">' + luxonDate.weekdayShort + '</span>';
+						html += '			<span class="week__day">' + luxonDate.day + '</span>';
+
+						if (dummyDatas[luxonDateString] && dummyDatas[luxonDateString].be) {
+							html += '			<span class="week__be">';
+							html += '				<span class="for-a11y">(기록 함)</span>';
+							html += '			</span>';
+						}
+
+						html += '		</button>';
+						html += '	</li>';
+					}
+
+					html += '</ul>';
+
+					return html;
+				},
+			};
+
+			$(document)
+				// 날짜 클릭
+				.on('click', '#week .week__block', function () {
+					var $this = $(this);
+					var date = luxon.DateTime.fromFormat($this.attr('data-date'), 'yyyy.MM.dd').toJSDate();
+
+					console.log('dayClick', date);
+
+					weekObject.setViewDate(date); // 날짜 선택
+				})
+
+				// 초기 세팅 시작 전에 발생
+				.on('weekBeforeInit', '#week', function () {
+					console.log('weekBeforeInit');
+
+					$(this).data('weekOptions', weekOptions); // 초기 세팅 시작 전에 옵션 적용
+				})
+
+				// 초기 세팅 후 발생
+				.on('weekInit', '#week', function (e, week) {
+					console.log('weekInit', week.viewDate, week.beforeDates, week.dates, week.afterDates);
+
+					weekObject = week;
+
+					pushDummyDatas(week.beforeDates); // 데이터 로드 테스트 구현
+					pushDummyDatas(week.dates); // 데이터 로드 테스트 구현
+					pushDummyDatas(week.afterDates); // 데이터 로드 테스트 구현
+
+					// week.render(); // 날짜 html 렌더 다시하기
+				})
+
+				// 날짜 선택 후 발생
+				.on('weekSelected', '#week', function (e, week) {
+					console.log('weekSelected', week.viewDate, week.beforeDates, week.dates, week.afterDates);
+
+					uiJSCommon($('.page-contents')); // ui 관련 스크립트 init 함수 실행 (하단 내용 html 변경 후 호출 해주세요.)
+				})
+
+				// 패널 변경 후 발생
+				.on('weekChange', '#week', function (e, week) {
+					console.log('weekChange', week.viewDate, week.beforeDates, week.dates, week.afterDates);
+
+					pushDummyDatas(week.beforeDates); // 데이터 로드 테스트 구현
+					pushDummyDatas(week.dates); // 데이터 로드 테스트 구현
+					pushDummyDatas(week.afterDates); // 데이터 로드 테스트 구현
+				});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 APP</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-breed-select">품종선택</a>
+
+		<!-- layer: 품종선택 -->
+		<div class="layer-wrap layer-wrap--toast layer-search-keyword" data-layer="layer-breed-select">
+			<div class="layer-container">
+				<section class="ui-layer ui-layer--toast ui-layer--toast-full">
+					<div class="ui-layer__head">
+						<div class="layer-header">
+							<div class="layer-header__left">
+								<h2 class="layer-header__title">품종선택</h2>
+							</div>
+							<div class="layer-header__right">
+								<button type="button" class="ui-button layer-header__button layer-header__button--close" data-role="layerClose">
+									<span class="for-a11y">레이어 닫기</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__body">
+						<div class="search-keyword">
+							<div class="search-keyword__head">
+								<div class="ui-input-block ui-input-block--line ui-input-block--search">
+									<input type="search" class="ui-input" title="품종 검색" placeholder="품종을 검색해주세요" />
+								</div>
+							</div>
+							<div class="search-keyword__body">
+								<div class="search-keyword__body-inner">
+									<div class="search-keyword__default">
+										<ul class="search-keyword__list">
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link">가멜 댄스크 횐제훈드</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link">가스콩 생통주아</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link">고든 세터</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link">곤치 폴스키</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link">골든리트리버</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link">그랑 그리퐁 방데앙</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link">그랑 바셋 그리퐁 방데앙</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link">가멜 댄스크 횐제훈드</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link">가스콩 생통주아</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link">고든 세터</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link">곤치 폴스키</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link">골든리트리버</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link">그랑 그리퐁 방데앙</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link">그랑 바셋 그리퐁 방데앙</button>
+											</li>
+										</ul>
+									</div>
+									<div class="search-keyword__result">
+										<ul class="search-keyword__list">
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link"><mark>그레이</mark> 하운드</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link"><mark>그레이</mark>트 데인</button>
+											</li>
+											<li class="search-keyword__item">
+												<button type="button" class="ui-button search-keyword__link"><mark>그레이</mark>트 피레니즈</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- //layer: 품종선택 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-breed-select');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 APP</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<a href="" class="header__button header__button--back">
+								<span class="for-a11y">뒤로가기</span>
+							</a>
+						</div>
+						<div class="header__center">
+							<!-- 2022.10.11 : mod : 텍스트 수정 -->
+							<h1 class="header__title">전체 멍냥포인트 현황</h1>
+						</div>
+					</header>
+					<!-- //header -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<div class="card">
+							<div class="sorting-button-area">
+								<!-- DD : 클릭 시 [공통 > 소팅 팝업] 이용 -->
+								<button type="button" class="ui-button sorting-button">
+									<span class="sorting-button__text">전체</span>
+								</button>
+							</div>
+
+							<!-- list -->
+							<div class="logs">
+								<ul class="logs__list">
+									<li class="logs__item">
+										<div class="logs__row">
+											<div class="logs__left">
+												<div class="logs__title">셀프점검 완료</div>
+											</div>
+											<div class="logs__right">
+												<div class="score is-good"><span class="score__symbol">+</span> 2점</div>
+											</div>
+										</div>
+										<div class="logs__date row-item-small">2022.08.31</div>
+									</li>
+									<li class="logs__item">
+										<div class="logs__row">
+											<div class="logs__left">
+												<div class="logs__title">셀프점검 누락</div>
+											</div>
+											<div class="logs__right">
+												<div class="score is-bad"><span class="score__symbol">-</span> 3점</div>
+											</div>
+										</div>
+										<div class="logs__date row-item-small">2022.08.31</div>
+									</li>
+									<li class="logs__item">
+										<div class="logs__row">
+											<div class="logs__left">
+												<div class="logs__title">셀프점검 완료</div>
+											</div>
+											<div class="logs__right">
+												<div class="score is-good"><span class="score__symbol">+</span> 2점</div>
+											</div>
+										</div>
+										<div class="logs__date row-item-small">2022.08.31</div>
+									</li>
+									<li class="logs__item">
+										<div class="logs__row">
+											<div class="logs__left">
+												<div class="logs__title">셀프점검 완료</div>
+											</div>
+											<div class="logs__right">
+												<div class="score is-good"><span class="score__symbol">+</span> 2점</div>
+											</div>
+										</div>
+										<div class="logs__date row-item-small">2022.08.31</div>
+									</li>
+									<li class="logs__item">
+										<div class="logs__row">
+											<div class="logs__left">
+												<div class="logs__title">셀프점검 누락</div>
+											</div>
+											<div class="logs__right">
+												<div class="score is-bad"><span class="score__symbol">-</span> 3점</div>
+											</div>
+										</div>
+										<div class="logs__date row-item-small">2022.08.31</div>
+									</li>
+									<li class="logs__item">
+										<div class="logs__row">
+											<div class="logs__left">
+												<div class="logs__title">셀프점검 완료</div>
+											</div>
+											<div class="logs__right">
+												<div class="score is-good"><span class="score__symbol">+</span> 2점</div>
+											</div>
+										</div>
+										<div class="logs__date row-item-small">2022.08.31</div>
+									</li>
+									<li class="logs__item">
+										<div class="logs__row">
+											<div class="logs__left">
+												<div class="logs__title">셀프점검 완료</div>
+											</div>
+											<div class="logs__right">
+												<div class="score is-good"><span class="score__symbol">+</span> 2점</div>
+											</div>
+										</div>
+										<div class="logs__date row-item-small">2022.08.31</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //list -->
+
+							<div class="more-button-area">
+								<button type="button" class="ui-button more-button">
+									<span class="more-button__text">더 보기</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

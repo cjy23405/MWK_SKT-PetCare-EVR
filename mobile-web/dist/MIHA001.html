@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR Mobile</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<h1 class="header__title">입원</h1>
+						</div>
+						<div class="header__right">
+							<a href="" class="header__button header__button--menu" data-layer-open="layer-gnb">
+								<span class="for-a11y">메뉴</span>
+							</a>
+						</div>
+					</header>
+					<!-- //header -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<div class="flex-box row-contents-group">
+							<div class="flex-box__cell flex-box__cell--flexible">
+								<div class="ui-dropdown js-ui-dropdown">
+									<div class="ui-dropdown__head">
+										<div class="ui-dropdown__text js-ui-dropdown__watch">구분 전체</div>
+										<button type="button" class="ui-button ui-dropdown__opener js-ui-dropdown__opener">
+											<span class="for-a11y">
+												menu
+												<span class="open-text">open</span>
+												<span class="close-text">close</span>
+											</span>
+										</button>
+									</div>
+									<div class="ui-dropdown__layer js-ui-dropdown__layer">
+										<div class="ui-dropdown__contents">
+											<ul class="ui-dropdown__list">
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="구분 전체">구분 전체</button>
+												</li>
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="일반 입원(개)">일반 입원(개)</button>
+												</li>
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="격리입원(개)">격리입원(개)</button>
+												</li>
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="ICU(개)">ICU(개)</button>
+												</li>
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="호텔(개)">호텔(개)</button>
+												</li>
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="일반 입원(고양이)">일반 입원(고양이)</button>
+												</li>
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="격리 입원">격리 입원(고양이)</button>
+												</li>
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="ICU(고양이)">ICU(고양이)</button>
+												</li>
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="호텔(고양이)">호텔(고양이)</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex-box__cell flex-box__cell--flexible">
+								<div class="ui-dropdown js-ui-dropdown">
+									<div class="ui-dropdown__head">
+										<div class="ui-dropdown__text js-ui-dropdown__watch">입원실 전체</div>
+										<button type="button" class="ui-button ui-dropdown__opener js-ui-dropdown__opener">
+											<span class="for-a11y">
+												menu
+												<span class="open-text">open</span>
+												<span class="close-text">close</span>
+											</span>
+										</button>
+									</div>
+									<div class="ui-dropdown__layer js-ui-dropdown__layer">
+										<div class="ui-dropdown__contents">
+											<ul class="ui-dropdown__list">
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="입원실 전체">입원실 전체</button>
+												</li>
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="일반 입원실 03">일반 입원실 03</button>
+												</li>
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="격리입원실 02">격리입원실 02</button>
+												</li>
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="ICU 03">ICU 03</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cards">
+							<ul class="cards__list">
+								<li class="cards__item">
+									<a href="" class="card">
+										<div class="arrow-block">
+											<div class="flex-box row-item">
+												<div class="flex-box__cell flex-box__cell--small-margin">
+													<span class="status status--ongoing-fill display-block">입원중</span>
+												</div>
+												<div class="flex-box__cell flex-box__cell--small-margin">
+													<strong class="basic-small-text display-block">2022.06.26 ~ 2022.06.30</strong>
+												</div>
+											</div>
+											<p class="regular-small-text">소간증으로 인한 간 절제 수술 후 입원</p>
+											<div class="info-tags info-tags--regular row-item-group">
+												<!-- 2022.10.24 : mod : 정보 텍스트 수정 -->
+												<div class="info-tags__inner">
+													<span class="info-tags__item color-dark-gray">일반 입원(개)</span>
+													<span class="info-tags__item color-dark-gray">입원실 NO.3</span>
+												</div>
+												<!-- //2022.10.24 : mod : 정보 텍스트 수정 -->
+											</div>
+										</div>
+										<div class="hr hr--secondary hr--container row-contents"></div>
+										<!-- 2022.12.09 : mod : 노출 순서 변경 -->
+										<div class="info-tags info-tags--regular row-item-group">
+											<div class="info-tags__inner">
+												<span class="info-tags__item font-weight-medium color-blue-black">G20220301001</span>
+												<span class="info-tags__item font-weight-medium color-blue-black">홍길동 010-4879-9873</span>
+											</div>
+										</div>
+										<!-- //2022.12.09 : mod : 노출 순서 변경 -->
+										<h2 class="patients-title patients-title--regular">P20220301001&nbsp;&nbsp;티모</h2>
+										<div class="pet-tags">
+											<ul class="pet-tags__list">
+												<!-- 2022.12.09 : mod : 품종 분리 노출로 변경 -->
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">Cat</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">Abyssinian</div>
+												</li>
+												<!-- //2022.12.09 : mod : 품종 분리 노출로 변경 -->
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">수컷</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">2년 6개월</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">3.4kg</div>
+												</li>
+											</ul>
+										</div>
+									</a>
+								</li>
+
+								<li class="cards__item">
+									<a href="" class="card">
+										<div class="arrow-block">
+											<div class="flex-box row-item">
+												<div class="flex-box__cell flex-box__cell--small-margin">
+													<span class="status status--ongoing-fill display-block">입원중</span>
+												</div>
+												<div class="flex-box__cell flex-box__cell--small-margin">
+													<strong class="basic-small-text display-block">2022.06.26 ~ 2022.06.30</strong>
+												</div>
+											</div>
+											<p class="regular-small-text">소간증으로 인한 간 절제 수술 후 입원</p>
+											<div class="info-tags info-tags--regular row-item-group">
+												<!-- 2022.10.24 : mod : 정보 텍스트 수정 -->
+												<div class="info-tags__inner">
+													<span class="info-tags__item color-dark-gray">일반 입원(개)</span>
+													<span class="info-tags__item color-dark-gray">입원실 NO.3</span>
+												</div>
+												<!-- //2022.10.24 : mod : 정보 텍스트 수정 -->
+											</div>
+										</div>
+										<div class="hr hr--secondary hr--container row-contents"></div>
+										<!-- 2022.12.09 : mod : 노출 순서 변경 -->
+										<div class="info-tags info-tags--regular row-item-group">
+											<div class="info-tags__inner">
+												<span class="info-tags__item font-weight-medium color-blue-black">G20220301001</span>
+												<span class="info-tags__item font-weight-medium color-blue-black">홍길동 010-4879-9873</span>
+											</div>
+										</div>
+										<!-- //2022.12.09 : mod : 노출 순서 변경 -->
+										<h2 class="patients-title patients-title--regular">P20220301001&nbsp;&nbsp;티모</h2>
+										<div class="pet-tags">
+											<ul class="pet-tags__list">
+												<!-- 2022.12.09 : mod : 품종 분리 노출로 변경 -->
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">Cat</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">Abyssinian</div>
+												</li>
+												<!-- //2022.12.09 : mod : 품종 분리 노출로 변경 -->
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">수컷</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">2년 6개월</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">3.4kg</div>
+												</li>
+											</ul>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<nav class="pagination">
+							<h3 class="for-a11y">Pagination</h3>
+							<ul class="pagination__list">
+								<li class="pagination__item">
+									<!-- DD : 첫번째 페이지일 경우 disabled 속성 추가 -->
+									<button type="button" class="ui-button pagination__link pagination__link--prev">
+										<span class="for-a11y">이전</span>
+									</button>
+								</li>
+								<li class="pagination__item">
+									<a href="" class="pagination__link">7</a>
+								</li>
+								<li class="pagination__item">
+									<a href="" class="pagination__link">8</a>
+								</li>
+								<li class="pagination__item">
+									<!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+									<a href="" class="pagination__link is-active">9</a>
+								</li>
+								<li class="pagination__item">
+									<a href="" class="pagination__link">10</a>
+								</li>
+								<li class="pagination__item">
+									<a href="" class="pagination__link">11</a>
+								</li>
+								<li class="pagination__item">
+									<!-- DD : 마지막 페이지일 경우 disabled 속성 추가 -->
+									<button type="button" class="ui-button pagination__link pagination__link--next">
+										<span class="for-a11y">다음</span>
+									</button>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

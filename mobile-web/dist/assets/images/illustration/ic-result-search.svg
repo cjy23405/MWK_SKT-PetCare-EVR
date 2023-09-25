@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+    <g data-name="그룹 22026" transform="translate(-1062 -711)">
+        <rect data-name="사각형 27918" width="54" height="60" rx="5" transform="translate(1075 721)" style="fill:#e5e5e5"/>
+        <path data-name="빼기 347" d="M-444.992 20412h-4a6.008 6.008 0 0 0 6-6v-48a6.011 6.011 0 0 0-6-6h4a6.006 6.006 0 0 1 6 6v48a6.006 6.006 0 0 1-6 6z" transform="translate(1567.991 -19631)" style="fill:#dcdcdc"/>
+        <rect data-name="사각형 27919" width="22" height="6" rx="1" transform="translate(1091 720)" style="fill:#c8c8c8"/>
+        <ellipse data-name="타원 2443" cx="3.5" cy="4.5" rx="3.5" ry="4.5" transform="translate(1094.526 740)" style="fill:#c8c8c8"/>
+        <ellipse data-name="타원 2447" cx="3.5" cy="4.5" rx="3.5" ry="4.5" transform="translate(1102.526 740)" style="fill:#c8c8c8"/>
+        <ellipse data-name="타원 2440" cx="3.5" cy="4" rx="3.5" ry="4" transform="rotate(-34 1768.044 -1402.434)" style="fill:#c8c8c8"/>
+        <ellipse data-name="타원 2448" cx="3.5" cy="4" rx="3.5" ry="4" transform="rotate(-146 672.149 207.588)" style="fill:#c8c8c8"/>
+        <path data-name="패스 17360" d="M953.977 625.51a6.527 6.527 0 0 1 9.718-.854 5.063 5.063 0 0 1 .7.863l4.309 6.407a5.114 5.114 0 0 1-.194 6.22 5.7 5.7 0 0 1-.426.454 5.4 5.4 0 0 1-6.1.634 5.87 5.87 0 0 0-2.612-.71 6.856 6.856 0 0 0-2.762.71c-2.511 1.162-5.837.5-7.2-1.711a4.976 4.976 0 0 1-.443-4.354 4.512 4.512 0 0 1 .536-1.006z" transform="translate(142.537 126.669)" style="fill:#c8c8c8"/>
+    </g>
+</svg>

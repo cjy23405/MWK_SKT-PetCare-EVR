@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+@import '../fonts/SpoqaHanSansNeo/style.css';
+
+:root {
+  --page-min-width: 320px;
+  --image-max-width: 640px;
+
+  --font-family-default: 'Spoqa Han Sans Neo', '맑은고딕', 'Malgun Gothic', '돋움', Dotum, 'Apple Gothic', sans-serif;
+
+  --letter-spacing-default: -0.025em;
+
+  --black: #000;
+  --black-rgb: 0, 0, 0;
+
+  --white: #fff;
+  --white-rgb: 255, 255, 255;
+
+  --primary-black: #111;
+  --primary-black-rgb: 17, 17, 17;
+
+  --primary: #4749fb;
+  --primary-rgb: 71, 73, 251;
+  --primary-medium: #3436be;
+  --primary-medium-rgb: 52, 54, 190;
+  --primary-blur: #b1befe;
+  --primary-blur-rgb: 177, 190, 254;
+  --primary-light: #eaeefb;
+  --primary-light-rgb: 234, 238, 251;
+
+  --secondary: #26a6cc;
+  --secondary-rgb: 38, 166, 204;
+  --secondary-medium: #0787ac;
+  --secondary-medium-rgb: 7, 135, 172;
+  --secondary-blur: #63c7e5;
+  --secondary-blur-rgb: 99, 199, 229;
+  --secondary-light: #ddf5fc;
+  --secondary-light-rgb: 221, 245, 252;
+
+  --system-normal: #1f99f8;
+  --system-normal-rgb: 31, 153, 248;
+  --system-normal-blur: #a7d9ff;
+  --system-normal-blur-rgb: 167, 217, 255;
+  --system-normal-light: #d8ecfd;
+  --system-normal-light-rgb: 216, 236, 253;
+
+  --system-success: #1dbdbf;
+  --system-success-rgb: 29, 189, 191;
+  --system-success-blur: #afe5e8;
+  --system-success-blur-rgb: 175, 229, 232;
+  --system-success-light: #d7f1f3;
+  --system-success-light-rgb: 215, 241, 243;
+
+  --system-waiting: #ff8919;
+  --system-waiting-rgb: 255, 137, 25;
+  --system-waiting-blur: #fad4b1;
+  --system-waiting-blur-rgb: 250, 212, 177;
+  --system-waiting-light: #ffeddc;
+  --system-waiting-light-rgb: 255, 237, 220;
+
+  --system-danger: #fc696a;
+  --system-danger-rgb: 252, 105, 106;
+  --system-danger-blur: #fdd4d5;
+  --system-danger-blur-rgb: 253, 212, 213;
+  --system-danger-light: #fff0f0;
+  --system-danger-light-rgb: 255, 240, 240;
+
+  --system-warning: #f3aa00;
+  --system-warning-rgb: 243, 170, 0;
+  --system-warning-blur: #f8e7a6;
+  --system-warning-blur-rgb: 248, 231, 166;
+  --system-warning-light: #feffe1;
+  --system-warning-light-rgb: 254, 255, 225;
+
+  --gray-100: #fafafa;
+  --gray-100-rgb: 250, 250, 250;
+  --gray-200: #f2f2f2;
+  --gray-200-rgb: 242, 242, 242;
+  --gray-300: #ececec;
+  --gray-300-rgb: 236, 236, 236;
+  --gray-400: #e5e5e5;
+  --gray-400-rgb: 229, 229, 229;
+  --gray-500: #d4d4d4;
+  --gray-500-rgb: 212, 212, 212;
+  --gray-600: #b2b2b2;
+  --gray-600-rgb: 178, 178, 178;
+  --gray-700: #a2a2a2;
+  --gray-700-rgb: 162, 162, 162;
+  --gray-800: #888888;
+  --gray-800-rgb: 136, 136, 136;
+  --gray-900: #666666;
+  --gray-900-rgb: 102, 102, 102;
+
+  --blue-gray-100: #f4f6fa;
+  --blue-gray-100-rgb: 244, 246, 250;
+  --blue-gray-200: #e5e9ea;
+  --blue-gray-200-rgb: 229, 233, 234;
+  --blue-gray-300: #e2e6eb;
+  --blue-gray-300-rgb: 226, 230, 235;
+  --blue-gray-400: #d9dfe5;
+  --blue-gray-400-rgb: 217, 223, 229;
+  --blue-gray-500: #cdd5de;
+  --blue-gray-500-rgb: 205, 213, 222;
+  --blue-gray-600: #aeb8c2;
+  --blue-gray-600-rgb: 174, 184, 194;
+  --blue-gray-700: #9fa9b4;
+  --blue-gray-700-rgb: 159, 169, 180;
+  --blue-gray-800: #78889a;
+  --blue-gray-800-rgb: 120, 136, 154;
+  --blue-gray-900: #243b57;
+  --blue-gray-900-rgb: 36, 59, 87;
+}
+
+/* init */
+html,
+body,
+pre,
+button,
+select,
+textarea,
+[type='button'],
+[type='submit'],
+[type='text'],
+[type='password'],
+[type='search'],
+[type='email'],
+[type='url'],
+[type='number'],
+[type='tel'],
+[type='file'],
+[type='date'],
+[type='time'] {
+  font-family: var(--font-family-default);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: var(--letter-spacing-default);
+  color: var(--primary-black);
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+button:focus,
+[type='button']:focus,
+[type='submit']:focus {
+  outline-width: 1px;
+  outline-style: dotted;
+}
+
+label {
+  cursor: pointer;
+}
+
+/* script style */
+.is-scroll-blocking,
+.is-scroll-blocking body,
+.is-scroll-blocking #wrap {
+  overflow: hidden;
+}
+.is-scroll-blocking.is-scrollbars-width #wrap {
+  margin-right: 17px;
+}
+.close-text {
+  display: none;
+}
+.js-ui-dropdown.js-dropdown-opened .js-ui-dropdown__opener .open-text {
+  display: none;
+}
+.js-ui-dropdown.js-dropdown-opened .js-ui-dropdown__opener .close-text {
+  display: inline;
+}
+.js-ui-dropdown__layer,
+.js-ui-dropdown-hover__layer {
+  display: none;
+}
+
+/* reset style */
+.ui-button,
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-button-play,
+.swiper-button-pause,
+.swiper-button-toggle-play {
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  overflow: visible;
+}
+.ui-button[type='submit'] {
+  filter: chroma(color=#000000);
+}
+.ui-button::-moz-focus-inner,
+.swiper-button-next::-moz-focus-inner,
+.swiper-button-prev::-moz-focus-inner,
+.swiper-button-play::-moz-focus-inner,
+.swiper-button-pause::-moz-focus-inner,
+.swiper-button-toggle-play::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+.ui-button[disabled],
+.swiper-button-next[disabled],
+.swiper-button-prev[disabled],
+.swiper-button-play[disabled],
+.swiper-button-pause[disabled],
+.swiper-button-toggle-play[disabled] {
+  cursor: default;
+  opacity: 1;
+}
+@-moz-document url-prefix() {
+  select {
+    text-indent: -2px;
+  }
+}
+.ui-radio,
+.ui-checkbox {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+}
+.ui-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* hidden text style */
+.for-a11y,
+.swiper-button-next-text,
+.swiper-button-prev-text {
+  display: block;
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  color: transparent;
+  border: none;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  filter: alpha(opacity=0);
+  background: none;
+}
+caption.for-a11y {
+  display: table-caption;
+  margin: 0 0 -1px;
+  position: static;
+}

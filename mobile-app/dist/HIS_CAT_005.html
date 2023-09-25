@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 APP</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<a href="" class="header__button header__button--back">
+								<span class="for-a11y">뒤로가기</span>
+							</a>
+						</div>
+						<div class="header__center">
+							<h1 class="header__title">셀프점검 기록</h1>
+						</div>
+					</header>
+					<!-- //header -->
+
+					<!-- nav -->
+					<nav class="nav-bar">
+						<h2 class="for-a11y">메뉴</h2>
+						<div class="nav-bar__inner">
+							<ul class="nav-bar__list">
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">급식</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">소변상태</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">빗질</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">놀이</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link is-active">
+										<span class="nav-bar__link-text">이상부위</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">메모</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<!-- //nav -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<!-- banner -->
+						<div class="banner">
+							<a href="" class="banner__link">
+								<img src="./assets/images/_dummy/banner-1.png" alt="" class="banner__img" />
+							</a>
+						</div>
+						<!-- //banner -->
+
+						<section class="section">
+							<div class="section-head">
+								<div class="section-head__left">
+									<div class="section-head__icon section-head__icon--009"></div>
+									<h2 class="section-head__title">이상부위</h2>
+								</div>
+								<!-- 2022.09.30 : del : 삭제
+								<div class="section-head__right">
+									<p class="small-text color-blue-gray">최근 일주일 기준</p>
+								</div> -->
+							</div>
+							<div class="card">
+								<div class="line-section">
+									<!-- 2022.09.30 : add : 기준일 선택 버튼 추가 -->
+									<div class="sorting-button-area">
+										<!-- DD : 클릭 시 [공통 > 소팅 팝업] 이용 -->
+										<button type="button" class="ui-button sorting-button">
+											<span class="sorting-button__text">최근 7일 기준</span>
+										</button>
+									</div>
+									<!-- //2022.09.30 : add : 기준일 선택 버튼 추가 -->
+									<div class="conditions">
+										<ul class="conditions__list">
+											<li class="conditions__item">
+												<div class="conditions__block">
+													<div class="conditions__icon conditions__icon--014"></div>
+													<div class="conditions__title">5 회</div>
+													<div class="conditions__text">정상</div>
+												</div>
+											</li>
+											<li class="conditions__item">
+												<div class="conditions__block">
+													<div class="conditions__icon conditions__icon--016"></div>
+													<div class="conditions__title">0 회</div>
+													<div class="conditions__text">귀</div>
+												</div>
+											</li>
+											<li class="conditions__item">
+												<div class="conditions__block">
+													<div class="conditions__icon conditions__icon--017"></div>
+													<div class="conditions__title">0 회</div>
+													<div class="conditions__text">발</div>
+												</div>
+											</li>
+											<li class="conditions__item">
+												<div class="conditions__block">
+													<div class="conditions__icon conditions__icon--018"></div>
+													<div class="conditions__title">1 회</div>
+													<div class="conditions__text">눈</div>
+												</div>
+											</li>
+											<li class="conditions__item">
+												<div class="conditions__block">
+													<div class="conditions__icon conditions__icon--019"></div>
+													<div class="conditions__title">1 회</div>
+													<div class="conditions__text">피부</div>
+												</div>
+											</li>
+											<li class="conditions__item">
+												<div class="conditions__block">
+													<div class="conditions__icon conditions__icon--020"></div>
+													<div class="conditions__title">0 회</div>
+													<div class="conditions__text">잇몸</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- DD : 데이터 없을 때 해당 영역 비노출 -->
+								<div class="line-section">
+									<!-- 2022.09.30 : mod : 변경 디자인 반영 -->
+									<section class="tip-section">
+										<div class="tip-section-head">
+											<h3 class="tip-section-head__title">
+												<span class="tip-section-head__title-symbol">Tip.</span>
+												<span class="tip-section-head__title-text">셀프점검</span>
+											</h3>
+										</div>
+										<!-- 2022.11.14 : mod : 클래스 값 변경 -->
+										<p class="tip-section-text">호기심 많은 고양이들은 종종 실, 끈, 고무줄 등을 삼키기도 해요. 이런 끈은 장 폐색을 일으킬 수 있으니 잘 지켜봐 주세요.</p>
+										<!-- //2022.11.14 : mod : 클래스 값 변경 -->
+									</section>
+									<!-- //2022.09.30 : mod : 변경 디자인 반영 -->
+								</div>
+								<!-- //DD : 데이터 없을 때 해당 영역 비노출 -->
+							</div>
+
+							<!-- 2022.09.30 : mod : 셀프점검 기록 달력으로 변경 -->
+							<!-- Case : 데이터 없을 때 -->
+							<div class="card row-item-group">
+								<div class="ui-empty">
+									<div class="ui-empty__object ui-empty__object--009"></div>
+									<p class="ui-empty__text">
+										아직 이상부위 셀프점검 기록이 없어요.<br />
+										소중한 반려동물의 상태를 점검해주세요.
+									</p>
+								</div>
+							</div>
+							<!-- //Case : 데이터 없을 때 -->
+
+							<!-- 달력 -->
+							<div class="condition-logs row-item-group">
+								<div class="condition-logs__head">
+									<button type="button" class="ui-button condition-logs__select-month">
+										<span class="condition-logs__select-month-text">2022년 07월</span>
+									</button>
+								</div>
+								<div class="condition-logs__table">
+									<table>
+										<thead>
+											<tr>
+												<th>일</th>
+												<th>월</th>
+												<th>화</th>
+												<th>수</th>
+												<th>목</th>
+												<th>금</th>
+												<th>토</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">1</div>
+														</div>
+														<div class="status status--danger">귀</div>
+														<div class="status status--danger">발</div>
+														<div class="status status--danger">눈</div>
+														<div class="status status--danger">피부</div>
+														<div class="status status--danger">잇몸</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">2</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">3</div>
+														</div>
+														<div class="status status--danger">잇몸</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">4</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">5</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">6</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">7</div>
+														</div>
+														<div class="status status--danger">귀</div>
+														<div class="status status--danger">발</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">8</div>
+														</div>
+														<div class="status status--danger">귀</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">9</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">10</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">11</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">12</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">13</div>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">14</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">15</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">16</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">17</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">18</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">19</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">20</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">21</div>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">22</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">23</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">24</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">25</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<div class="condition-logs__day">
+															<div class="condition-logs__day-text">26</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<!-- DD : 오늘 날짜 is-today 클래스 값 추가 -->
+														<div class="condition-logs__day is-today">
+															<div class="condition-logs__day-text">27</div>
+														</div>
+														<div class="status status--success">정상</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<!-- DD : 오늘 이후의 미래 날짜 is-disabled 클래스 값 추가 -->
+														<div class="condition-logs__day is-disabled">
+															<div class="condition-logs__day-text">28</div>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<!-- DD : 오늘 이후의 미래 날짜 is-disabled 클래스 값 추가 -->
+														<div class="condition-logs__day is-disabled">
+															<div class="condition-logs__day-text">29</div>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<!-- DD : 오늘 이후의 미래 날짜 is-disabled 클래스 값 추가 -->
+														<div class="condition-logs__day is-disabled">
+															<div class="condition-logs__day-text">30</div>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="condition-logs__cell">
+														<!-- DD : 오늘 이후의 미래 날짜 is-disabled 클래스 값 추가 -->
+														<div class="condition-logs__day is-disabled">
+															<div class="condition-logs__day-text">31</div>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- //달력 -->
+							<!-- //2022.09.30 : mod : 셀프점검 기록 달력으로 변경 -->
+						</section>
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- 2022.10.11 : add : 월 선택 기능 가이드 스크립트 추가 -->
+		<script>
+			$(function () {
+				var $monthPicker = $('.condition-logs__select-month');
+				var monthPicker = $monthPicker.data('datetimepicker');
+
+				monthPicker.dates.setValue(monthPicker.dates.parseInput('2022.02')); // 특정 월 선택 시키기
+
+				// 미래 월 비활성화
+				monthPicker.updateOptions({
+					restrictions: {
+						maxDate: monthPicker.dates.parseInput(luxon.DateTime.now().toFormat('yyyy.MM')),
+					},
+				});
+
+				$monthPicker.on('change.td', function (e) {
+					// 월 변경 이벤트
+					if (e.date) {
+						console.log(e.date);
+					}
+				});
+			});
+		</script>
+		<!-- //2022.10.11 : add : 월 선택 기능 가이드 스크립트 추가 -->
+		<!-- //script -->
+	</body>
+</html>

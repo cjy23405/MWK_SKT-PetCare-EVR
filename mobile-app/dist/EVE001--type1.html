@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 APP</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<a href="" class="header__button header__button--back">
+								<span class="for-a11y">뒤로가기</span>
+							</a>
+						</div>
+						<div class="header__center">
+							<h1 class="header__title">이벤트</h1>
+						</div>
+					</header>
+					<!-- //header -->
+
+					<!-- nav -->
+					<nav class="nav-bar nav-bar--full">
+						<h2 class="for-a11y">메뉴</h2>
+						<div class="nav-bar__inner">
+							<ul class="nav-bar__list">
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link is-active">
+										<span class="nav-bar__link-text">진행중 이벤트</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">종료된 이벤트</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<!-- //nav -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<!-- 2022.11.14 : mod : board--has-image → board--regular-margin 클래스 값 변경 -->
+						<div class="board board--regular-margin">
+							<ul class="board__list">
+								<li class="board__item">
+									<a href="" class="board__block">
+										<span class="board__image" style="background-image: url('./assets/images/_dummy/image-3.jpg')">
+											<img src="./assets/images/_dummy/image-3.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+										</span>
+										<span class="board__content">
+											<span class="board__title">펫케어 서비스 이벤트</span>
+											<span class="board__date">2022.08.18</span>
+										</span>
+									</a>
+								</li>
+								<li class="board__item">
+									<a href="" class="board__block">
+										<span class="board__image" style="background-image: url('./assets/images/_dummy/image-4.jpg')">
+											<img src="./assets/images/_dummy/image-4.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+										</span>
+										<span class="board__content">
+											<span class="board__title">펫케어 서비스 이벤트</span>
+											<span class="board__date">2022.08.18</span>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR Mobile</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<h1 class="header__title">진료</h1>
+						</div>
+						<div class="header__right">
+							<a href="" class="header__button header__button--menu" data-layer-open="layer-gnb">
+								<span class="for-a11y">메뉴</span>
+							</a>
+						</div>
+					</header>
+					<!-- //header -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-input-block ui-input-block--search row-contents-group">
+							<a href="" class="ui-input" title="검색" data-placeholder="환자, 보호자 검색"></a>
+						</div>
+
+						<div class="card">
+							<!-- 2022.12.09 : mod : 노출 순서 변경 -->
+							<div class="info-tags info-tags--regular row-item-group">
+								<div class="info-tags__inner">
+									<span class="info-tags__item font-weight-medium color-blue-black">G20220301001</span>
+									<span class="info-tags__item font-weight-medium color-blue-black">홍길동 010-4879-9873</span>
+								</div>
+							</div>
+							<!-- //2022.12.09 : mod : 노출 순서 변경 -->
+							<h2 class="patients-title">P20220301001&nbsp;&nbsp;티모</h2>
+							<div class="pet-tags">
+								<ul class="pet-tags__list">
+									<!-- 2022.12.09 : mod : 품종 분리 노출로 변경 -->
+									<li class="pet-tags__item">
+										<div class="pet-tags__block">Cat</div>
+									</li>
+									<li class="pet-tags__item">
+										<div class="pet-tags__block">Abyssinian</div>
+									</li>
+									<!-- //2022.12.09 : mod : 품종 분리 노출로 변경 -->
+									<li class="pet-tags__item">
+										<div class="pet-tags__block">수컷</div>
+									</li>
+									<li class="pet-tags__item">
+										<div class="pet-tags__block">2년 6개월</div>
+									</li>
+									<li class="pet-tags__item">
+										<div class="pet-tags__block">3.4kg</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="hr"></div>
+
+						<!-- Case : 환자 진료이력이 없을 때 -->
+						<div class="ui-empty">
+							<div class="ui-empty__object ui-empty__object--view"></div>
+							<p class="ui-empty__text">해당 환자의 진료이력이 없습니다.</p>
+						</div>
+						<!-- //Case : 환자 진료이력이 없을 때 -->
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

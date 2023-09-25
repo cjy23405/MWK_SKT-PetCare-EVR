@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g transform="translate(-170 -249)">
+        <path data-name="사각형 22017" transform="translate(170 249)" style="fill:transparent" d="M0 0h24v24H0z"/>
+        <rect data-name="사각형 22030" width="7" height="7" rx="3.5" transform="translate(175.5 256)" style="fill:#26a6cc"/>
+        <rect data-name="사각형 22031" width="7" height="7" rx="3.5" transform="translate(181.5 256)" style="fill:#26a6cc"/>
+        <path data-name="패스 16569" d="M2.333 0h16.334a1.093 1.093 0 0 1 1.167 1L21 9a1.093 1.093 0 0 1-1.167 1H1.167A1.093 1.093 0 0 1 0 9l1.167-8a1.093 1.093 0 0 1 1.166-1z" transform="translate(171.5 259.6)" style="fill:#a8dbeb"/>
+        <path data-name="합치기 54" d="M7161.676-12294h-3.021a1.5 1.5 0 0 1-1.49 1.333 1.5 1.5 0 0 1-1.5-1.5 1.492 1.492 0 0 1 .313-.917 1.487 1.487 0 0 1-.313-.916 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5h3a1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.49 1.49 0 0 1-.313.916 1.5 1.5 0 0 1 .313.917 1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.489-1.333z" transform="translate(-6978.166 12559.684)" style="fill:#26a6cc"/>
+    </g>
+</svg>

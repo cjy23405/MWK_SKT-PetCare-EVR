@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 APP</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<a href="" class="header__button header__button--back">
+								<span class="for-a11y">뒤로가기</span>
+							</a>
+						</div>
+						<div class="header__center">
+							<h1 class="header__title">셀프점검 기록</h1>
+						</div>
+					</header>
+					<!-- //header -->
+
+					<!-- nav -->
+					<nav class="nav-bar">
+						<h2 class="for-a11y">메뉴</h2>
+						<div class="nav-bar__inner">
+							<ul class="nav-bar__list">
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">급식</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">대변상태</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">양치질</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">산책</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link">
+										<span class="nav-bar__link-text">이상부위</span>
+									</a>
+								</li>
+								<li class="nav-bar__item">
+									<a href="" class="nav-bar__link is-active">
+										<span class="nav-bar__link-text">메모</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<!-- //nav -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<!-- banner -->
+						<div class="banner">
+							<a href="" class="banner__link">
+								<img src="./assets/images/_dummy/banner-1.png" alt="" class="banner__img" />
+							</a>
+						</div>
+						<!-- //banner -->
+
+						<section class="section">
+							<div class="section-head">
+								<div class="section-head__left">
+									<div class="section-head__icon section-head__icon--010"></div>
+									<h2 class="section-head__title">메모</h2>
+								</div>
+							</div>
+
+							<!-- Case : 데이터 없을 때 -->
+							<div class="card">
+								<div class="ui-empty">
+									<div class="ui-empty__object ui-empty__object--010"></div>
+									<p class="ui-empty__text">
+										아직 메모 셀프점검 기록이 없어요.<br />
+										소중한 반려동물의 상태를 점검해주세요.
+									</p>
+								</div>
+							</div>
+							<!-- //Case : 데이터 없을 때 -->
+
+							<!-- list -->
+							<div class="cards">
+								<ul class="cards__list">
+									<li class="cards__item">
+										<div class="card">
+											<div class="memo">
+												<!-- 2022.10.11 : add : 사진 추가 -->
+												<div class="detail-gallery row-contents-group">
+													<div class="detail-gallery__controller"></div>
+													<div class="detail-gallery__list">
+														<div class="detail-gallery__item">
+															<div class="detail-gallery__photo" style="background-image: url('./assets/images/_dummy/image-3.jpg')">
+																<img src="./assets/images/_dummy/image-3.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+														<div class="detail-gallery__item">
+															<div class="detail-gallery__photo" style="background-image: url('./assets/images/_dummy/image-4.jpg')">
+																<img src="./assets/images/_dummy/image-4.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+														<div class="detail-gallery__item">
+															<div class="detail-gallery__photo" style="background-image: url('./assets/images/_dummy/image-3.jpg')">
+																<img src="./assets/images/_dummy/image-3.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+														<div class="detail-gallery__item">
+															<div class="detail-gallery__photo" style="background-image: url('./assets/images/_dummy/image-4.jpg')">
+																<img src="./assets/images/_dummy/image-4.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- //2022.10.11 : add : 사진 추가 -->
+												<p class="memo__text">오늘은 새로 바꾼 사료를 춘봉이에게 줬다. 잘 안 먹을까봐 걱정했는데 그래도 잘 먹어서 다행이다.</p>
+												<p class="memo__date">2022.07.16 13:00</p>
+											</div>
+										</div>
+									</li>
+									<li class="cards__item">
+										<div class="card">
+											<div class="memo">
+												<p class="memo__text">
+													춘봉이랑 양재 시민의 숲으로 산책을 다녀왔다. 산책가면 항상 다른 강아지들을 무서워한다. 일찍부터 사회성을 길러 주면 좋았을 텐데 강아지들을 피해가는 모습이 안타깝다. 그래도
+													자주 산책을 나가서 강아지 친구들을 만나면 점점 잘 지낼 수 있지 않을까 생각이 든다.
+												</p>
+												<p class="memo__date">2022.07.16 13:00</p>
+											</div>
+										</div>
+									</li>
+									<li class="cards__item">
+										<div class="card">
+											<div class="memo">
+												<p class="memo__text">춘봉이가 오늘 낯선 사람이 다가오자 엄청나게 경계하면서 짖었다.</p>
+												<p class="memo__date">2022.07.16 13:00</p>
+											</div>
+										</div>
+									</li>
+									<li class="cards__item">
+										<div class="card">
+											<div class="memo">
+												<p class="memo__text">사료를 잘 안 먹어서 연어를 구워서 같이 섞어줬다.</p>
+												<p class="memo__date">2022.07.16 13:00</p>
+											</div>
+										</div>
+									</li>
+									<li class="cards__item">
+										<div class="card">
+											<div class="memo">
+												<p class="memo__text">오늘은 새로 산 개껌을 춘봉이에게 간식으로 줬다.</p>
+												<p class="memo__date">2022.07.16 13:00</p>
+											</div>
+										</div>
+									</li>
+									<li class="cards__item">
+										<div class="card">
+											<div class="memo">
+												<p class="memo__text">춘봉이에게 관절영양제를 먹이기 시작했다.</p>
+												<p class="memo__date">2022.07.16 13:00</p>
+											</div>
+										</div>
+									</li>
+									<li class="cards__item">
+										<div class="card">
+											<div class="memo">
+												<p class="memo__text">춘봉이가 나이가 있다 보니 점점 백내장이 생기는 것 같다. 눈이 약간 하얗게 변하는 것 같다. 백내장을 늦추는 방법을 찾아봐야 할 것 같다.</p>
+												<p class="memo__date">2022.07.16 13:00</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //list -->
+
+							<button type="button" class="ui-button more-button more-button--secondary row-contents">
+								<span class="more-button__text">더 보기</span>
+							</button>
+						</section>
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

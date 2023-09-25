@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.001" height="24" viewBox="0 0 24.001 24">
+    <path data-name="사각형 22017" style="fill:transparent" d="M0 0h24v24H0z"/>
+    <g data-name="그룹 19901">
+        <g data-name="그룹 19902">
+            <path data-name="패스 16896" d="M22.634 4h-6.417a1.029 1.029 0 0 0-.292.042 1 1 0 0 0-.682 1.245l.65 2.129A2.56 2.56 0 0 0 14.492 7 2.533 2.533 0 0 0 12 8.989 2.533 2.533 0 0 0 9.517 7a2.569 2.569 0 0 0-.992.2l.637-1.882A.985.985 0 0 0 9.214 5 1.008 1.008 0 0 0 8.2 4H1.017a1.069 1.069 0 0 0-.322.051 1 1 0 0 0-.643 1.265l3.586 10.6a1.007 1.007 0 0 0 .649.638 1.02 1.02 0 0 0 1.283-.638L7 11.706a2.54 2.54 0 0 0 5.008.3 2.545 2.545 0 0 0 5.029-.511v-.343l1.418 4.65a1.021 1.021 0 0 0 1.948 0l3.208-10.52A.982.982 0 0 0 23.65 5a1.009 1.009 0 0 0-1.017-1" transform="translate(0 5)" style="fill:#bfc4d5"/>
+            <path data-name="패스 16897" d="M2.05 0h19.917A2.016 2.016 0 0 1 24 2v3a5.042 5.042 0 0 1-5.083 5H5.1A5.042 5.042 0 0 1 .017 5V2A2.016 2.016 0 0 1 2.05 0" transform="translate(0 5)" style="fill:#9ba8bb"/>
+            <path data-name="사각형 28107" transform="translate(5.741 9)" style="fill:#bfc4d5" d="M0 0h2.033v2H0z"/>
+            <path data-name="사각형 28108" transform="translate(11.098 9)" style="fill:#bfc4d5" d="M0 0h2.033v2H0z"/>
+            <path data-name="사각형 28109" transform="translate(16.455 9)" style="fill:#bfc4d5" d="M0 0h2.033v2H0z"/>
+        </g>
+    </g>
+</svg>

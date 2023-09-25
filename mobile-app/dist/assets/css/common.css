@@ -1,0 +1,274 @@
+@charset "utf-8";
+
+@import '../fonts/SpoqaHanSansNeo/style.css';
+@import '../fonts/Tgothic/style.css';
+
+:root {
+  --page-min-width: 320px;
+  --image-max-width: 640px;
+
+  --font-family-default: 'Spoqa Han Sans Neo', '맑은고딕', 'Malgun Gothic', '돋움', Dotum, 'Apple Gothic', sans-serif;
+  --font-family-t-gothic: 'T고딕', 'Spoqa Han Sans Neo', '맑은고딕', 'Malgun Gothic', '돋움', Dotum, 'Apple Gothic', sans-serif;
+
+  --letter-spacing-default: -0.025em;
+
+  --black: #000;
+  --black-rgb: 0, 0, 0;
+
+  --white: #fff;
+  --white-rgb: 255, 255, 255;
+
+  --primary-black: #111;
+  --primary-black-rgb: 17, 17, 17;
+
+  --primary: #4749fb;
+  --primary-rgb: 71, 73, 251;
+  --primary-dark: #393acf;
+  --primary-dark-rgb: 57, 58, 207;
+  --primary-light: #bcbffb;
+  --primary-light-rgb: 188, 191, 251;
+
+  --secondary: #26a6cc;
+  --secondary-rgb: 38, 166, 204;
+  --secondary-dark: #1a819f;
+  --secondary-dark-rgb: 26, 129, 159;
+  --secondary-light: #b2dbed;
+  --secondary-light-rgb: 178, 219, 237;
+
+  --tertiary: #dde1ee;
+  --tertiary-rgb: 221, 225, 238;
+  --tertiary-dark: #bec3d4;
+  --tertiary-dark-rgb: 190, 195, 212;
+  --tertiary-light: #e2e6f2;
+  --tertiary-light-rgb: 226, 230, 242;
+
+  --system-success: #26cc9f;
+  --system-success-rgb: 38, 204, 159;
+  --system-success-dark: #179e79;
+  --system-success-dark-rgb: 23, 158, 121;
+  --system-success-light: #6ae6c4;
+  --system-success-light-rgb: 106, 230, 196;
+
+  --system-warning: #ffcb21;
+  --system-warning-rgb: 255, 203, 33;
+  --system-warning-dark: #ff9621;
+  --system-warning-dark-rgb: 255, 150, 33;
+  --system-warning-light: #ffeba8;
+  --system-warning-light-rgb: 255, 235, 168;
+
+  --system-danger: #ff4a4a;
+  --system-danger-rgb: 255, 74, 74;
+  --system-danger-dark: #9b1c1c;
+  --system-danger-dark-rgb: 155, 28, 28;
+  --system-danger-light: #ffb6a4;
+  --system-danger-light-rgb: 255, 182, 164;
+
+  --system-error: #ce2d2d;
+  --system-error-rgb: 206, 45, 45;
+  --system-error-dark: #a70404;
+  --system-error-dark-rgb: 167, 4, 4;
+  --system-error-light: #ffe1e1;
+  --system-error-light-rgb: 255, 225, 225;
+
+  --system-disabled: #9ea2b2;
+  --system-disabled-rgb: 158, 162, 178;
+  --system-disabled-light: #e2e3e8;
+  --system-disabled-light-rgb: 226, 227, 232;
+
+  --blue-gray-100: #f0f3fb;
+  --blue-gray-100-rgb: 240, 243, 251;
+  --blue-gray-150: #f1f3f8;
+  --blue-gray-150-rgb: 241, 243, 248;
+  --blue-gray-200: #e5eaf2;
+  --blue-gray-200-rgb: 229, 234, 242;
+  --blue-gray-300: #dbe0eb;
+  --blue-gray-300-rgb: 219, 224, 235;
+  --blue-gray-400: #bfc4d5;
+  --blue-gray-400-rgb: 191, 196, 213;
+  --blue-gray-500: #9ba8bb;
+  --blue-gray-500-rgb: 155, 168, 187;
+  --blue-gray-600: #6a798d;
+  --blue-gray-600-rgb: 106, 121, 141;
+  /*
+  --blue-gray-700: #;
+  --blue-gray-700-rgb: ;
+  */
+  --blue-gray-800: #435164;
+  --blue-gray-800-rgb: 67, 81, 100;
+  --blue-gray-900: #243b57;
+  --blue-gray-900-rgb: 36, 59, 87;
+}
+
+/* init */
+html,
+body,
+pre,
+button,
+select,
+textarea,
+[type='button'],
+[type='submit'],
+[type='text'],
+[type='password'],
+[type='search'],
+[type='email'],
+[type='url'],
+[type='number'],
+[type='tel'],
+[type='file'],
+[type='date'],
+[type='time'] {
+  font-family: var(--font-family-default);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: var(--letter-spacing-default);
+  color: var(--primary-black);
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  background-color: var(--blue-gray-100);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+img {
+  pointer-events: none;
+}
+
+button:focus,
+[type='button']:focus,
+[type='submit']:focus {
+  outline-width: 1px;
+  outline-style: dotted;
+}
+
+label {
+  cursor: pointer;
+}
+
+/* script style */
+.is-scroll-blocking,
+.is-scroll-blocking body,
+.is-scroll-blocking #wrap {
+  overflow: hidden;
+}
+.is-scroll-blocking.is-scrollbars-width #wrap {
+  margin-right: 17px;
+}
+.js-ui-accordion__layer {
+  display: none;
+  height: 0;
+}
+.js-ui-accordion__layer::before,
+.js-ui-accordion__layer::after {
+  content: '';
+  display: table;
+}
+.close-text {
+  display: none;
+}
+.js-ui-accordion__opener.js-accordion-active .open-text,
+.js-ui-dropdown.js-dropdown-opened .js-ui-dropdown__opener .open-text {
+  display: none;
+}
+.js-ui-accordion__opener.js-accordion-active .close-text,
+.js-ui-dropdown.js-dropdown-opened .js-ui-dropdown__opener .close-text {
+  display: inline;
+}
+.js-ui-dropdown__layer,
+.js-ui-dropdown-hover__layer {
+  display: none;
+}
+[data-simplebar] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* reset style */
+.ui-button,
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-button-play,
+.swiper-button-pause,
+.swiper-button-toggle-play {
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  overflow: visible;
+}
+.ui-button[type='submit'] {
+  filter: chroma(color=#000000);
+}
+.ui-button::-moz-focus-inner,
+.swiper-button-next::-moz-focus-inner,
+.swiper-button-prev::-moz-focus-inner,
+.swiper-button-play::-moz-focus-inner,
+.swiper-button-pause::-moz-focus-inner,
+.swiper-button-toggle-play::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+.ui-button[disabled],
+.swiper-button-next[disabled],
+.swiper-button-prev[disabled],
+.swiper-button-play[disabled],
+.swiper-button-pause[disabled],
+.swiper-button-toggle-play[disabled] {
+  cursor: default;
+  opacity: 1;
+}
+@-moz-document url-prefix() {
+  select {
+    text-indent: -2px;
+  }
+}
+.ui-radio,
+.ui-checkbox {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+}
+.ui-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* hidden text style */
+.for-a11y,
+.swiper-button-next-text,
+.swiper-button-prev-text {
+  display: block;
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  color: transparent;
+  border: none;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  filter: alpha(opacity=0);
+  background: none;
+}
+caption.for-a11y {
+  display: table-caption;
+  margin: 0 0 -1px;
+  position: static;
+}

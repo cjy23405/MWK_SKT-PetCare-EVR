@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 APP</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- top area -->
+				<div class="fix-top-wrap">
+					<!-- header -->
+					<header class="header">
+						<div class="header__left">
+							<a href="" class="header__button header__button--back">
+								<span class="for-a11y">뒤로가기</span>
+							</a>
+						</div>
+						<div class="header__center">
+							<h1 class="header__title">예방접종 등록하기</h1>
+						</div>
+					</header>
+					<!-- //header -->
+				</div>
+				<!-- //top area -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<form action="">
+							<p class="page-title">
+								<strong>예방접종</strong> 다녀오신 기록을<br />
+								작성해주세요.
+							</p>
+
+							<div class="ui-form">
+								<dl class="ui-form__list">
+									<div class="ui-form__item">
+										<dt class="ui-form__key">예방접종 일자<span class="ui-require" aria-label="(필수)"></span></dt>
+										<dd class="ui-form__val">
+											<div class="ui-input-block ui-input-block--date">
+												<input type="text" class="ui-input js-datepicker" title="예방접종 일자" placeholder="연도.월.일" />
+											</div>
+										</dd>
+									</div>
+									<div class="ui-form__item">
+										<dt class="ui-form__key">예방접종 구분<span class="ui-require" aria-label="(필수)"></span></dt>
+										<dd class="ui-form__val">
+											<div class="box-checks box-checks--per-500">
+												<ul class="box-checks__list">
+													<li class="box-checks__item">
+														<div class="ui-radio-block">
+															<input type="radio" class="ui-radio" name="boxCheckRadio2" id="boxCheckRadio2_1" checked />
+															<label for="boxCheckRadio2_1" class="box-checks__block">
+																<span class="box-checks__text">백신</span>
+															</label>
+														</div>
+													</li>
+													<li class="box-checks__item">
+														<div class="ui-radio-block">
+															<input type="radio" class="ui-radio" name="boxCheckRadio2" id="boxCheckRadio2_2" />
+															<label for="boxCheckRadio2_2" class="box-checks__block">
+																<span class="box-checks__text">내외부구충</span>
+															</label>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</dd>
+									</div>
+									<div class="ui-form__item">
+										<dt class="ui-form__key">예방접종 명<span class="ui-require" aria-label="(필수)"></span></dt>
+										<dd class="ui-form__val">
+											<!-- 2022.10.11 : mod : 기타 입력 폼 추가로 구조 수정 -->
+											<div class="ui-select-block">
+												<select class="ui-select js-select-tab" title="예방접종 명">
+													<option value="-1" disabled selected>예방접종 명</option>
+													<option value="">option 2</option>
+													<option value="">option 3</option>
+													<option value="">option 4</option>
+													<option value="">option 5</option>
+													<option value="" data-select-tab="selectTab01">기타</option>
+												</select>
+											</div>
+											<div class="ui-input-block row-contents" data-select-tab-panel="selectTab01">
+												<input type="text" class="ui-input" title="기타 예방접종 명" placeholder="기타 예방접종 명을 입력해주세요." />
+											</div>
+											<!-- //2022.10.11 : mod : 기타 입력 폼 추가로 구조 수정 -->
+										</dd>
+									</div>
+									<div class="ui-form__item">
+										<dt class="ui-form__key">예방접종 회차</dt>
+										<dd class="ui-form__val">
+											<div class="flex-box">
+												<div class="flex-box__cell flex-box__cell--flexible">
+													<div class="ui-input-block">
+														<input type="number" pattern="\d*" class="ui-input" title="예방접종 회차" placeholder="회차를 입력해주세요." />
+													</div>
+												</div>
+												<div class="flex-box__cell flex-box__cell--regular-margin">
+													<div class="basic-text">회차</div>
+												</div>
+											</div>
+										</dd>
+									</div>
+									<div class="ui-form__item">
+										<dt class="ui-form__key">병원 이름</dt>
+										<dd class="ui-form__val">
+											<div class="ui-input-block">
+												<input type="text" class="ui-input" title="병원 이름" placeholder="병원이름을 입력해주세요." />
+											</div>
+										</dd>
+									</div>
+									<div class="ui-form__item">
+										<dt class="ui-form__key">비용</dt>
+										<dd class="ui-form__val">
+											<div class="flex-box">
+												<div class="flex-box__cell flex-box__cell--flexible">
+													<div class="ui-input-block">
+														<input type="number" pattern="\d*" class="ui-input" title="비용" placeholder="예방접종 비용" />
+													</div>
+												</div>
+												<div class="flex-box__cell flex-box__cell--regular-margin">
+													<div class="basic-text">원</div>
+												</div>
+											</div>
+										</dd>
+									</div>
+									<!-- 2022.10.11 : add : 메모 항목 추가 -->
+									<div class="ui-form__item">
+										<dt class="ui-form__key">메모</dt>
+										<dd class="ui-form__val">
+											<div class="ui-input-block">
+												<textarea class="ui-input input-height-small" title="메모" placeholder="메모해주세요."></textarea>
+											</div>
+										</dd>
+									</div>
+									<!-- //2022.10.11 : add : 메모 항목 추가 -->
+								</dl>
+							</div>
+
+							<!-- fix buttons -->
+							<div class="fix-bottom-wrap">
+								<div class="fix-bottom-wrap__area">
+									<div class="ui-buttons ui-buttons--no-margin">
+										<ul class="ui-buttons__list">
+											<li class="ui-buttons__item">
+												<button type="submit" class="ui-button ui-basic-button">
+													<span class="ui-basic-button__text">등록 완료</span>
+												</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- //fix buttons -->
+						</form>
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

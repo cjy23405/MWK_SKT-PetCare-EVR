@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <clipPath id="r2ivstjhqa">
+            <path data-name="사각형 28458" transform="translate(-4 -6)" style="fill:transparent" d="M0 0h48v48H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="마스크 그룹 100" transform="translate(4 6)" style="clip-path:url(#r2ivstjhqa)">
+        <g data-name="그룹 20139" transform="rotate(-45 25.143 9.823)">
+            <rect data-name="사각형 28467" width="3" height="18" rx="1.5" transform="translate(-2.739 2.261)" style="fill:#bfc4d5"/>
+            <path data-name="사각형 28473" transform="translate(.26 8.261)" style="fill:#bfc4d5" d="M0 0h4v6H0z"/>
+            <rect data-name="사각형 28470" width="3" height="11" rx="1.5" transform="rotate(90 14.792 25.053)" style="fill:#bfc4d5"/>
+            <rect data-name="사각형 28469" width="3" height="26" rx="1.5" transform="translate(4.26 -1.739)" style="fill:#dbe0eb"/>
+            <path data-name="사각형 28468" d="M0 0h24a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H0V0z" transform="translate(4.26 1.261)" style="fill:#dbe0eb"/>
+            <path data-name="사각형 28471" transform="translate(11.26 1.261)" style="fill:#bfc4d5" d="M0 0h3v10H0z"/>
+            <path data-name="사각형 28472" transform="translate(20.261 1.261)" style="fill:#bfc4d5" d="M0 0h3v10H0z"/>
+        </g>
+    </g>
+</svg>

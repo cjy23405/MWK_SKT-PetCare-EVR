@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>컴포넌트 가이드</title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./dist/assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./dist/assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/page-style.css" />
+		<style>
+			b {
+				margin-left: 10px;
+			}
+			h1.test-title {
+				font-size: 30px;
+				margin: 50px 50px;
+			}
+			h2.test-title {
+				margin: 0 0 20px;
+				font-size: 22px;
+				padding-bottom: 10px;
+				border-bottom: 2px solid #888;
+			}
+			h3.test-title {
+				margin: 0 0 10px;
+				font-size: 18px;
+			}
+			.test-section {
+				border-top: 2px solid #ccc;
+				padding: 50px 20px;
+			}
+			.test-section-sub + .test-section-sub {
+				margin-top: 20px;
+				border-top: 2px dashed #ccc;
+				padding-top: 20px;
+			}
+			.test-code {
+				border: 2px solid #ccc;
+				margin: 10px 0;
+				background: #101737;
+				padding: 10px;
+			}
+			.test-code:before {
+				content: 'ex.';
+				display: block;
+				font-size: 12px;
+			}
+			.test-description {
+				margin: 10px 0;
+				padding: 0 12px;
+			}
+			.test-links {
+				margin-left: -20px;
+			}
+			.test-links:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+			.test-links a {
+				display: block;
+				margin: 20px 0 0 20px;
+				float: left;
+				padding: 5px 15px;
+				color: #fff;
+				text-decoration: none;
+				border-radius: 5px;
+				background: #333;
+			}
+			.test-links + h2.test-title {
+				margin-top: 20px;
+			}
+		</style>
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div style="display: table"></div>
+
+			<h1 class="test-title">Component</h1>
+
+			<div class="test-section test-section--button">
+				<style>
+					.test-section--button .ui-basic-button {
+						display: -webkit-inline-box;
+						display: -ms-inline-flexbox;
+						display: inline-flex;
+						vertical-align: top;
+						margin: 10px;
+					}
+					.test-section--button .ui-basic-button:not(.ui-basic-button--icon-only) {
+						width: auto;
+					}
+				</style>
+				<h2 class="test-title">Basic Button</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">button tag</h3>
+					<button type="button" class="ui-button ui-basic-button">
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button" disabled>
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--secondary">
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--secondary" disabled>
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<!--
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--tertiary">
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--tertiary" disabled>
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--quaternary">
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--quaternary" disabled>
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--quinary">
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--quinary" disabled>
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--senary">
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--senary" disabled>
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--septenary">
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--septenary" disabled>
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--octonary">
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--octonary" disabled>
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--nonary">
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--nonary" disabled>
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--denary">
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--denary" disabled>
+						<span class="ui-basic-button__text">button</span>
+					</button>
+					-->
+				</div>
+
+				<div class="test-section-sub">
+					<h3 class="test-title">a tag</h3>
+					<a href="" class="ui-basic-button">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--disabled">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--secondary">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--secondary ui-basic-button--disabled">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<!--
+					<a href="" class="ui-basic-button ui-basic-button--tertiary">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--tertiary ui-basic-button--disabled">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--quaternary">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--quaternary ui-basic-button--disabled">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--quinary">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--quinary ui-basic-button--disabled">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--senary">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--senary ui-basic-button--disabled">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--septenary">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--septenary ui-basic-button--disabled">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--octonary">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--octonary ui-basic-button--disabled">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--nonary">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--nonary ui-basic-button--disabled">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--denary">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					<a href="" class="ui-basic-button ui-basic-button--denary ui-basic-button--disabled">
+						<span class="ui-basic-button__text">button</span>
+					</a>
+					-->
+				</div>
+
+				<div class="test-section-sub">
+					<h3 class="test-title">ETC</h3>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--inline-block">.ui-basic-button--inline-block</button>
+					<button type="button" class="ui-button ui-basic-button ui-basic-button--auto">.ui-basic-button--auto</button>
+				</div>
+			</div>
+
+			<div class="test-section test-section--etc-button">
+				<style>
+					.test-section--etc-button a,
+					.test-section--etc-button button {
+						display: inline-block;
+						vertical-align: top;
+						margin: 10px;
+					}
+				</style>
+				<h2 class="test-title">ETC Button</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<button type="button" class="ui-button row-add-button">
+						<span class="for-a11y">표 추가</span>
+					</button>
+					<button type="button" class="ui-button row-remove-button">
+						<span class="for-a11y">표 삭제</span>
+					</button>
+				</div>
+			</div>
+
+			<div class="test-section test-section--button-list">
+				<h2 class="test-title">Button List</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="ui-buttons">
+						<ul class="ui-buttons__list">
+							<li class="ui-buttons__item">
+								<a href="" class="ui-basic-button ui-basic-button--secondary">
+									<span class="ui-basic-button__text">button</span>
+								</a>
+							</li>
+							<li class="ui-buttons__item">
+								<a href="" class="ui-basic-button">
+									<span class="ui-basic-button__text">button</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Align Left</h3>
+					<div class="ui-buttons ui-buttons--left">
+						<ul class="ui-buttons__list">
+							<li class="ui-buttons__item">
+								<a href="" class="ui-basic-button ui-basic-button--secondary">
+									<span class="ui-basic-button__text">button</span>
+								</a>
+							</li>
+							<li class="ui-buttons__item">
+								<a href="" class="ui-basic-button">
+									<span class="ui-basic-button__text">button</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Align Right</h3>
+					<div class="ui-buttons ui-buttons--right">
+						<ul class="ui-buttons__list">
+							<li class="ui-buttons__item">
+								<a href="" class="ui-basic-button ui-basic-button--secondary">
+									<span class="ui-basic-button__text">button</span>
+								</a>
+							</li>
+							<li class="ui-buttons__item">
+								<a href="" class="ui-basic-button">
+									<span class="ui-basic-button__text">button</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Align Center</h3>
+					<div class="ui-buttons ui-buttons--center">
+						<ul class="ui-buttons__list">
+							<li class="ui-buttons__item">
+								<a href="" class="ui-basic-button ui-basic-button--secondary">
+									<span class="ui-basic-button__text">button</span>
+								</a>
+							</li>
+							<li class="ui-buttons__item">
+								<a href="" class="ui-basic-button">
+									<span class="ui-basic-button__text">button</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Full width</h3>
+					<div class="ui-buttons ui-buttons--full">
+						<ul class="ui-buttons__list">
+							<li class="ui-buttons__item">
+								<a href="" class="ui-basic-button ui-basic-button--secondary">
+									<span class="ui-basic-button__text">button</span>
+								</a>
+							</li>
+							<li class="ui-buttons__item">
+								<a href="" class="ui-basic-button">
+									<span class="ui-basic-button__text">button</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">No margin</h3>
+					<div class="ui-buttons ui-buttons--no-margin">
+						<ul class="ui-buttons__list">
+							<li class="ui-buttons__item">
+								<a href="" class="ui-basic-button ui-basic-button--secondary">
+									<span class="ui-basic-button__text">button</span>
+								</a>
+							</li>
+							<li class="ui-buttons__item">
+								<a href="" class="ui-basic-button">
+									<span class="ui-basic-button__text">button</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--input">
+				<style>
+					.test-section--input .ui-input-block + .ui-input-block {
+						margin-top: 10px;
+					}
+				</style>
+				<h2 class="test-title">Input</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="ui-input-block">
+						<input type="text" class="ui-input" title="title" placeholder="placeholder" />
+					</div>
+					<div class="ui-input-block">
+						<input type="text" class="ui-input" title="title" placeholder="readonly placeholder" readonly />
+					</div>
+					<div class="ui-input-block">
+						<input type="text" class="ui-input" title="title" placeholder="readonly placeholder" value="readonly value" readonly />
+					</div>
+					<div class="ui-input-block">
+						<input type="text" class="ui-input" title="title" placeholder="disabled placeholder" disabled />
+					</div>
+					<div class="ui-input-block">
+						<input type="text" class="ui-input" title="title" placeholder="disabled placeholder" value="disabled value" disabled />
+					</div>
+					<div class="ui-input-block ui-input-block--disabled">
+						<input type="text" class="ui-input" title="title" placeholder="placeholder" value="입력은 되지만 스타일만 disabled" />
+					</div>
+				</div>
+
+				<div class="test-section-sub">
+					<h3 class="test-title">Default - 삭제 버튼 없음</h3>
+					<div class="ui-input-block ui-input-block--no-delete">
+						<input type="text" class="ui-input" title="title" placeholder="placeholder" />
+					</div>
+					<div class="ui-input-block ui-input-block--no-delete">
+						<input type="text" class="ui-input" title="title" placeholder="readonly placeholder" readonly />
+					</div>
+					<div class="ui-input-block ui-input-block--no-delete">
+						<input type="text" class="ui-input" title="title" placeholder="readonly placeholder" value="readonly value" readonly />
+					</div>
+					<div class="ui-input-block ui-input-block--no-delete">
+						<input type="text" class="ui-input" title="title" placeholder="disabled placeholder" disabled />
+					</div>
+					<div class="ui-input-block ui-input-block--no-delete">
+						<input type="text" class="ui-input" title="title" placeholder="disabled placeholder" value="disabled value" disabled />
+					</div>
+					<div class="ui-input-block ui-input-block--no-delete ui-input-block--disabled">
+						<input type="text" class="ui-input" title="title" placeholder="placeholder" value="입력은 되지만 스타일만 disabled" />
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--select">
+				<style>
+					.test-section--select .ui-select-block + .ui-select-block {
+						margin-top: 10px;
+					}
+				</style>
+				<h2 class="test-title">Select (Form 용)</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="ui-select-block">
+						<select class="ui-select" title="title">
+							<option value="-1" disabled selected>placeholder</option>
+							<option value="">option 1</option>
+							<option value="">option 2</option>
+							<option value="">option 3</option>
+							<option value="">option 4</option>
+							<option value="">option 5</option>
+						</select>
+					</div>
+					<div class="ui-select-block">
+						<select class="ui-select" title="title" disabled>
+							<option value="-1" disabled>disabled placeholder</option>
+							<option value="" selected>disabled option 1</option>
+							<option value="">disabled option 2</option>
+							<option value="">disabled option 3</option>
+							<option value="">disabled option 4</option>
+							<option value="">disabled option 5</option>
+						</select>
+					</div>
+					<div class="ui-select-block ui-select-block--disabled">
+						<select class="ui-select" title="title">
+							<option value="-1" disabled selected>입력은 되지만 스타일만 disabled</option>
+							<option value="">option 1</option>
+							<option value="">option 2</option>
+							<option value="">option 3</option>
+							<option value="">option 4</option>
+							<option value="">option 5</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--dropdown">
+				<h2 class="test-title">Dropdown (링크, 버튼 용)</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					<div class="ui-dropdown js-ui-dropdown">
+						<div class="ui-dropdown__head">
+							<div class="ui-dropdown__text js-ui-dropdown__watch">link 1</div>
+							<button type="button" class="ui-button ui-dropdown__opener js-ui-dropdown__opener">
+								<span class="for-a11y">
+									menu
+									<span class="open-text">open</span>
+									<span class="close-text">close</span>
+								</span>
+							</button>
+						</div>
+						<div class="ui-dropdown__layer js-ui-dropdown__layer">
+							<div class="ui-dropdown__contents">
+								<ul class="ui-dropdown__list">
+									<li class="ui-dropdown__item">
+										<a href="" class="ui-dropdown__link">link 1</a>
+									</li>
+									<li class="ui-dropdown__item">
+										<a href="" class="ui-dropdown__link">link 2</a>
+									</li>
+									<li class="ui-dropdown__item">
+										<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="button 3">button 3</button>
+									</li>
+									<li class="ui-dropdown__item">
+										<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="button 4">button 4</button>
+									</li>
+									<li class="ui-dropdown__item">
+										<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="button 5">button 5</button>
+									</li>
+									<li class="ui-dropdown__item">
+										<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="button 6">button 6</button>
+									</li>
+									<li class="ui-dropdown__item">
+										<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="button 7">button 7</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--search">
+				<style>
+					.test-section--input .ui-input-block + .ui-input-block {
+						margin-top: 10px;
+					}
+				</style>
+				<h2 class="test-title">Search</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="ui-input-block ui-input-block--search">
+						<input type="text" class="ui-input" title="title" placeholder="placeholder" />
+					</div>
+					<div class="ui-input-block ui-input-block--search">
+						<input type="text" class="ui-input" title="title" placeholder="readonly placeholder" readonly />
+					</div>
+					<div class="ui-input-block ui-input-block--search">
+						<input type="text" class="ui-input" title="title" placeholder="readonly placeholder" value="readonly value" readonly />
+					</div>
+					<div class="ui-input-block ui-input-block--search">
+						<input type="text" class="ui-input" title="title" placeholder="disabled placeholder" disabled />
+					</div>
+					<div class="ui-input-block ui-input-block--search">
+						<input type="text" class="ui-input" title="title" placeholder="disabled placeholder" value="disabled value" disabled />
+					</div>
+					<div class="ui-input-block ui-input-block--search ui-input-block--disabled">
+						<input type="text" class="ui-input" title="title" placeholder="placeholder" value="입력은 되지만 스타일만 disabled" />
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Button</h3>
+					<div class="ui-input-block ui-input-block--search">
+						<button type="button" class="ui-button ui-input" title="title" data-placeholder="placeholder"></button>
+					</div>
+					<div class="ui-input-block ui-input-block--search">
+						<button type="button" class="ui-button ui-input" title="title" data-placeholder="placeholder">value</button>
+					</div>
+					<div class="ui-input-block ui-input-block--search">
+						<button type="button" class="ui-button ui-input" title="title" data-placeholder="disabled placeholder" disabled></button>
+					</div>
+					<div class="ui-input-block ui-input-block--search">
+						<button type="button" class="ui-button ui-input" title="title" data-placeholder="disabled placeholder" disabled>disabled value</button>
+					</div>
+					<div class="ui-input-block ui-input-block--search ui-input-block--disabled">
+						<button type="button" class="ui-button ui-input" title="title" data-placeholder="placeholder">사용은 되지만 스타일만 disabled</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--date">
+				<style>
+					.test-section--date .ui-input-block + .ui-input-block {
+						margin-top: 10px;
+					}
+				</style>
+				<h2 class="test-title">Date picker</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="ui-input-block ui-input-block--date">
+						<input type="text" class="ui-input js-datepicker" title="title" placeholder="연도.월.일" />
+					</div>
+					<div class="ui-input-block ui-input-block--date">
+						<input type="text" class="ui-input js-datepicker" title="title" placeholder="연도.월.일" value="2022.07.14" />
+					</div>
+					<div class="ui-input-block ui-input-block--date">
+						<input type="text" class="ui-input js-datepicker" title="title" placeholder="연도.월.일" disabled />
+					</div>
+					<div class="ui-input-block ui-input-block--date">
+						<input type="text" class="ui-input js-datepicker" title="title" placeholder="연도.월.일" disabled value="2022.07.14" />
+					</div>
+					<br />
+					입력은 되지만 스타일만 disabled
+					<div class="ui-input-block ui-input-block--date ui-input-block--disabled">
+						<input type="text" class="ui-input js-datepicker" title="title" placeholder="연도.월.일" />
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Range</h3>
+					<div class="flex-box js-datepicker-range">
+						<div class="flex-box__cell flex-box__cell--flexible">
+							<div class="ui-input-block ui-input-block--date">
+								<input type="text" class="ui-input js-datepicker-range__min" title="title" placeholder="연도.월.일" value="2022.07.10" />
+							</div>
+						</div>
+						<div class="flex-box__cell">
+							<div class="small-text">-</div>
+						</div>
+						<div class="flex-box__cell flex-box__cell--flexible">
+							<div class="ui-input-block ui-input-block--date">
+								<input type="text" class="ui-input js-datepicker-range__max" title="title" placeholder="연도.월.일" value="2022.07.20" />
+							</div>
+						</div>
+					</div>
+					<div class="flex-box js-datepicker-range">
+						<div class="flex-box__cell flex-box__cell--flexible">
+							<div class="ui-input-block ui-input-block--date ui-input-block--small">
+								<input type="text" class="ui-input js-datepicker-range__min" title="title" placeholder="연도.월.일" value="2022.07.10" />
+							</div>
+						</div>
+						<div class="flex-box__cell">
+							<div class="small-text">-</div>
+						</div>
+						<div class="flex-box__cell flex-box__cell--flexible">
+							<div class="ui-input-block ui-input-block--date ui-input-block--small">
+								<input type="text" class="ui-input js-datepicker-range__max" title="title" placeholder="연도.월.일" value="2022.07.20" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--time">
+				<style>
+					.test-section--time .ui-input-block + .ui-input-block {
+						margin-top: 10px;
+					}
+				</style>
+				<h2 class="test-title">Time picker</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="ui-input-block ui-input-block--time">
+						<input type="text" class="ui-input js-timepicker" title="title" placeholder="00:00" />
+					</div>
+					<div class="ui-input-block ui-input-block--time">
+						<input type="text" class="ui-input js-timepicker" title="title" placeholder="00:00" value="14:45" />
+					</div>
+					<div class="ui-input-block ui-input-block--time">
+						<input type="text" class="ui-input js-timepicker" title="title" placeholder="00:00" disabled />
+					</div>
+					<div class="ui-input-block ui-input-block--time">
+						<input type="text" class="ui-input js-timepicker" title="title" placeholder="00:00" disabled value="14:45" />
+					</div>
+					<br />
+					입력은 되지만 스타일만 disabled
+					<div class="ui-input-block ui-input-block--time ui-input-block--disabled">
+						<input type="text" class="ui-input js-timepicker" title="title" placeholder="00:00" />
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--flex-box">
+				<h2 class="test-title">Flex box</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="flex-box">
+						<div class="flex-box__cell">
+							<div class="ui-select-block">
+								<select class="ui-select" title="title">
+									<option value="-1" disabled selected>placeholder</option>
+									<option value="">option 1</option>
+									<option value="">option 2</option>
+									<option value="">option 3</option>
+									<option value="">option 4</option>
+									<option value="">option 5</option>
+								</select>
+							</div>
+						</div>
+						<div class="flex-box__cell flex-box__cell--flexible">
+							<div class="ui-input-block">
+								<input type="text" class="ui-input" title="title" placeholder="placeholder" />
+							</div>
+						</div>
+						<div class="flex-box__cell">
+							<a href="" class="ui-basic-button">
+								<span class="ui-basic-button__text">Button</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">align top</h3>
+					<div class="flex-box flex-box--align-top">
+						<div class="flex-box__cell">
+							<div class="ui-select-block">
+								<select class="ui-select" title="title">
+									<option value="-1" disabled selected>placeholder</option>
+									<option value="">option 1</option>
+									<option value="">option 2</option>
+									<option value="">option 3</option>
+									<option value="">option 4</option>
+									<option value="">option 5</option>
+								</select>
+							</div>
+						</div>
+						<div class="flex-box__cell flex-box__cell--flexible">
+							<div class="ui-input-block">
+								<input type="text" class="ui-input" title="title" placeholder="placeholder" />
+							</div>
+						</div>
+						<div class="flex-box__cell">
+							<a href="" class="ui-basic-button">
+								<span class="ui-basic-button__text">Button</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">cell margin</h3>
+					<div class="flex-box">
+						<div class="flex-box__cell flex-box__cell--flexible">
+							<span class="ui-basic-button ui-basic-button--tertiary">
+								<span class="ui-basic-button__text">Default (12px)</span>
+							</span>
+						</div>
+						<div class="flex-box__cell flex-box__cell--flexible">
+							<span class="ui-basic-button ui-basic-button--tertiary">
+								<span class="ui-basic-button__text">Default (12px)</span>
+							</span>
+						</div>
+						<div class="flex-box__cell flex-box__cell--flexible flex-box__cell--no-margin">
+							<span class="ui-basic-button ui-basic-button--tertiary">
+								<span class="ui-basic-button__text">flex-box__cell--no-margin (0px)</span>
+							</span>
+						</div>
+						<!--
+						<div class="flex-box__cell flex-box__cell--flexible flex-box__cell--mini-margin">
+							<span class="ui-basic-button ui-basic-button--tertiary">
+								<span class="ui-basic-button__text">flex-box__cell--mini-margin (4px)</span>
+							</span>
+						</div>
+						-->
+						<div class="flex-box__cell flex-box__cell--flexible flex-box__cell--small-margin">
+							<span class="ui-basic-button ui-basic-button--tertiary">
+								<span class="ui-basic-button__text">flex-box__cell--small-margin (8px)</span>
+							</span>
+						</div>
+						<!--
+						<div class="flex-box__cell flex-box__cell--flexible flex-box__cell--regular-margin">
+							<span class="ui-basic-button ui-basic-button--tertiary">
+								<span class="ui-basic-button__text">flex-box__cell--regular-margin (10px)</span>
+							</span>
+						</div>
+						-->
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--row-margin">
+				<h2 class="test-title">Row margin</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="row-group">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-group (40px)</div>
+					</div>
+					<div class="row-group">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-group (40px)</div>
+					</div>
+					<div class="row-contents-group">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-contents-group (32px)</div>
+					</div>
+					<div class="row-contents-group">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-contents-group (32px)</div>
+					</div>
+					<div class="row-contents">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-contents (24px)</div>
+					</div>
+					<div class="row-contents">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-contents (24px)</div>
+					</div>
+					<div class="row-item-group">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-item-group (16px)</div>
+					</div>
+					<div class="row-item-group">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-item-group (16px)</div>
+					</div>
+					<div class="row-item-group-small">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-item-group-small (12px)</div>
+					</div>
+					<div class="row-item-group-small">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-item-group-small (12px)</div>
+					</div>
+					<div class="row-item">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-item (8px)</div>
+					</div>
+					<div class="row-item">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-item (8px)</div>
+					</div>
+					<div class="row-item-small">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-item-small (4px)</div>
+					</div>
+					<div class="row-item-small">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-item-small (4px)</div>
+					</div>
+					<div class="row-item-mini">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-item-mini (2px)</div>
+					</div>
+					<div class="row-item-mini">
+						<div style="background-color: rgba(0, 0, 0, 0.2)">.row-item-mini (2px)</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--section">
+				<h2 class="test-title">Section</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<section class="section">
+						<div class="section-head">
+							<div class="section-head__left">
+								<h2 class="section-head__title">타이틀</h2>
+							</div>
+							<div class="section-head__right">
+								<p class="small-text color-gray">서브 텍스트</p>
+							</div>
+						</div>
+					</section>
+					<section class="section">
+						<div class="section-head">
+							<div class="section-head__left">
+								<h2 class="section-head__title">타이틀</h2>
+							</div>
+							<div class="section-head__right">
+								<p class="small-text color-gray">서브 텍스트</p>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+
+			<div class="test-section test-section--form">
+				<h2 class="test-title">Form</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="ui-form">
+						<dl class="ui-form__list">
+							<div class="ui-form__item">
+								<dt class="ui-form__key">이름</dt>
+								<dd class="ui-form__val">
+									<div class="basic-text">홍길동</div>
+								</dd>
+							</div>
+							<div class="ui-form__item">
+								<dt class="ui-form__key">이름<span class="ui-require" aria-label="(필수)"></span></dt>
+								<dd class="ui-form__val">
+									<div class="ui-input-block">
+										<input type="text" class="ui-input" title="이름" placeholder="이름" />
+									</div>
+									<p class="form-guide">반드시 실명을 입력하세요.</p>
+								</dd>
+							</div>
+						</dl>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Horizontal (.ui-form--horizontal)</h3>
+					<div class="ui-form ui-form--horizontal">
+						<dl class="ui-form__list">
+							<div class="ui-form__item">
+								<dt class="ui-form__key">이름</dt>
+								<dd class="ui-form__val">
+									<div class="basic-text">홍길동</div>
+								</dd>
+							</div>
+							<div class="ui-form__item">
+								<dt class="ui-form__key">이름<span class="ui-require" aria-label="(필수)"></span></dt>
+								<dd class="ui-form__val">
+									<div class="ui-input-block">
+										<input type="text" class="ui-input" title="이름" placeholder="이름" />
+									</div>
+									<p class="form-guide">반드시 실명을 입력하세요.</p>
+								</dd>
+							</div>
+						</dl>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">2분할</h3>
+					<div class="ui-form ui-form--per-500">
+						<dl class="ui-form__list">
+							<div class="ui-form__item">
+								<dt class="ui-form__key">이름</dt>
+								<dd class="ui-form__val">
+									<div class="basic-text">홍길동</div>
+								</dd>
+							</div>
+							<div class="ui-form__item">
+								<dt class="ui-form__key">이름<span class="ui-require" aria-label="(필수)"></span></dt>
+								<dd class="ui-form__val">
+									<div class="ui-input-block">
+										<input type="text" class="ui-input" title="이름" placeholder="이름" />
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form__item">
+								<dt class="ui-form__key">이름<span class="ui-require" aria-label="(필수)"></span></dt>
+								<dd class="ui-form__val">
+									<div class="ui-input-block">
+										<input type="text" class="ui-input" title="이름" placeholder="이름" />
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form__item">
+								<dt class="ui-form__key">이름<span class="ui-require" aria-label="(필수)"></span></dt>
+								<dd class="ui-form__val">
+									<div class="ui-input-block ui-input-block--line">
+										<input type="text" class="ui-input" title="이름" placeholder="이름" />
+									</div>
+								</dd>
+							</div>
+						</dl>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--table">
+				<h2 class="test-title">Table</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="ui-table">
+						<table>
+							<tbody>
+								<tr>
+									<th>항목명</th>
+									<td>
+										<div class="ui-table__input-cell">
+											<div class="ui-input-block ui-input-block--cell">
+												<input type="text" class="ui-input align-right" title="항목명" value="999" />
+											</div>
+										</div>
+									</td>
+									<th>항목명</th>
+									<td>
+										<div class="ui-table__input-cell">
+											<div class="ui-input-block ui-input-block--cell">
+												<input type="text" class="ui-input align-right js-timepicker" title="항목명" value="16:30" />
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>항목명</th>
+									<td>
+										<div class="ui-table__input-cell">
+											<div class="ui-input-block ui-input-block--cell">
+												<input type="text" class="ui-input align-right" title="항목명" value="999" />
+											</div>
+										</div>
+									</td>
+									<th>항목명</th>
+									<td>
+										<div class="ui-table__input-cell">
+											<div class="ui-input-block ui-input-block--cell">
+												<input type="text" class="ui-input align-right" title="항목명" value="999" />
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>항목명</th>
+									<td>
+										<div class="ui-table__input-cell">
+											<div class="ui-input-block ui-input-block--cell">
+												<input type="text" class="ui-input align-right" title="항목명" value="999" />
+											</div>
+										</div>
+									</td>
+									<th>항목명</th>
+									<td>
+										<div class="ui-table__input-cell">
+											<div class="ui-input-block ui-input-block--cell">
+												<input type="text" class="ui-input align-right" title="항목명" value="999" />
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="ui-table__foot">
+							<button type="button" class="ui-button row-remove-button">
+								<span class="for-a11y">표 삭제</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--pagination">
+				<h2 class="test-title">Pagination</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					<nav class="pagination">
+						<h3 class="for-a11y">Pagination</h3>
+						<ul class="pagination__list">
+							<li class="pagination__item">
+								<!-- DD : 첫번째 페이지일 경우 disabled 속성 추가 -->
+								<button type="button" class="ui-button pagination__link pagination__link--prev">
+									<span class="for-a11y">이전</span>
+								</button>
+							</li>
+							<li class="pagination__item">
+								<a href="" class="pagination__link">7</a>
+							</li>
+							<li class="pagination__item">
+								<a href="" class="pagination__link">8</a>
+							</li>
+							<li class="pagination__item">
+								<!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+								<a href="" class="pagination__link is-active">9</a>
+							</li>
+							<li class="pagination__item">
+								<a href="" class="pagination__link">10</a>
+							</li>
+							<li class="pagination__item">
+								<a href="" class="pagination__link">11</a>
+							</li>
+							<li class="pagination__item">
+								<!-- DD : 마지막 페이지일 경우 disabled 속성 추가 -->
+								<button type="button" class="ui-button pagination__link pagination__link--next">
+									<span class="for-a11y">다음</span>
+								</button>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="test-section test-section--hr">
+				<h2 class="test-title">hr</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="hr"></div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">좌우 margin 없음 (.hr--container)</h3>
+					<div class="hr hr--container"></div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Secondary (2px dashed)</h3>
+					<div class="hr hr--secondary"></div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--info-tags">
+				<h2 class="test-title">Info tags</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="info-tags">
+						<div class="info-tags__inner">
+							<span class="info-tags__item">초진</span>
+							<span class="info-tags__item">비대성심근병증</span>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Regular</h3>
+					<div class="info-tags info-tags--regular">
+						<div class="info-tags__inner">
+							<span class="info-tags__item">초진</span>
+							<span class="info-tags__item">비대성심근병증</span>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Line color</h3>
+					<div class="info-tags">
+						<div class="info-tags__inner">
+							<span class="info-tags__item">초진</span>
+							<span class="info-tags__item info-tags__item--line-gray">.info-tags__item--line-gray (#666)</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--ui-empty">
+				<h2 class="test-title">Empty</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					<div class="ui-empty">
+						<div class="ui-empty__object ui-empty__object--search"></div>
+						<p class="ui-empty__text">검색 후 환자를 먼저 선택해 주세요.</p>
+					</div>
+
+					<div class="ui-empty">
+						<div class="ui-empty__object ui-empty__object--view"></div>
+						<p class="ui-empty__text">해당 환자의 진료이력이 없습니다.</p>
+					</div>
+
+					<div class="ui-empty">
+						<div class="ui-empty__object ui-empty__object--ward"></div>
+						<p class="ui-empty__text">
+							입원중 상태의 입원실이 없거나,<br />
+							조회된 입원실이 없습니다.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--pet-tags">
+				<h2 class="test-title">Pet tags</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="pet-tags">
+						<ul class="pet-tags__list">
+							<li class="pet-tags__item">
+								<div class="pet-tags__block">Cat (Abyssinian)</div>
+							</li>
+							<li class="pet-tags__item">
+								<div class="pet-tags__block">중성화 수컷</div>
+							</li>
+							<li class="pet-tags__item">
+								<div class="pet-tags__block">2년 6개월</div>
+							</li>
+							<li class="pet-tags__item">
+								<div class="pet-tags__block">3.4kg</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--gallery-file">
+				<h2 class="test-title">Gallery file</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="gallery-file">
+						<ul class="gallery-file__list">
+							<li class="gallery-file__item">
+								<div class="gallery-input">
+									<input type="file" class="gallery-input__input" title="파일 첨부" />
+								</div>
+							</li>
+							<li class="gallery-file__item">
+								<div class="gallery-file__block">
+									<div class="gallery-file__image">
+										<img src="./dist/assets/images/_dummy/image-1.jpg" alt="Image File" onerror="this.parentNode.className += ' is-error';" />
+									</div>
+									<div class="gallery-file__name">File_Name_here.jpg</div>
+									<button type="button" class="ui-button gallery-file__link">
+										<span class="for-a11y">미리보기</span>
+									</button>
+									<button type="button" class="ui-button gallery-file__delete">
+										<span class="for-a11y">삭제</span>
+									</button>
+								</div>
+							</li>
+							<li class="gallery-file__item">
+								<div class="gallery-file__block">
+									<div class="gallery-file__image">
+										<img src="./dist/assets/images/_dummy/image-2.jpg" alt="Image File" onerror="this.parentNode.className += ' is-error';" />
+									</div>
+									<div class="gallery-file__name">File_Name_here.jpg</div>
+									<button type="button" class="ui-button gallery-file__link">
+										<span class="for-a11y">미리보기</span>
+									</button>
+									<button type="button" class="ui-button gallery-file__delete">
+										<span class="for-a11y">삭제</span>
+									</button>
+								</div>
+							</li>
+							<li class="gallery-file__item">
+								<div class="gallery-file__block">
+									<div class="gallery-file__icon gallery-file__icon--pdf">
+										<span class="for-a11y">PDF File</span>
+									</div>
+									<div class="gallery-file__name">File_Name_here.pdf</div>
+									<button type="button" class="ui-button gallery-file__link">
+										<span class="for-a11y">미리보기</span>
+									</button>
+									<button type="button" class="ui-button gallery-file__delete">
+										<span class="for-a11y">삭제</span>
+									</button>
+								</div>
+							</li>
+							<li class="gallery-file__item">
+								<div class="gallery-file__block">
+									<div class="gallery-file__icon gallery-file__icon--video">
+										<span class="for-a11y">Video File</span>
+									</div>
+									<div class="gallery-file__name">File_Name_here.mp4</div>
+									<button type="button" class="ui-button gallery-file__link">
+										<span class="for-a11y">미리보기</span>
+									</button>
+									<button type="button" class="ui-button gallery-file__delete">
+										<span class="for-a11y">삭제</span>
+									</button>
+								</div>
+							</li>
+							<li class="gallery-file__item">
+								<div class="gallery-file__block">
+									<div class="gallery-file__icon gallery-file__icon--etc">
+										<span class="for-a11y">ETC File</span>
+									</div>
+									<div class="gallery-file__name">File_Name_here.txt</div>
+									<button type="button" class="ui-button gallery-file__link">
+										<span class="for-a11y">미리보기</span>
+									</button>
+									<button type="button" class="ui-button gallery-file__delete">
+										<span class="for-a11y">삭제</span>
+									</button>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--info-detail">
+				<h2 class="test-title">Info Detail</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="info-detail">
+						<ul class="info-detail__list">
+							<li class="info-detail__item">
+								<div class="info-detail__block">
+									<div class="info-detail__head">
+										<h4 class="info-detail__title">Cephradine Inj. (덱스린)</h4>
+									</div>
+									<div class="info-detail__contents">
+										<div class="ui-form ui-form--horizontal ui-form--per-500">
+											<dl class="ui-form__list">
+												<div class="ui-form__item">
+													<dt class="ui-form__key">
+														<div class="basic-text color-gray-secondary">단위</div>
+													</dt>
+													<dd class="ui-form__val">
+														<div class="basic-text font-weight-medium">mg/kg</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">
+														<div class="basic-text color-gray-secondary">날수</div>
+													</dt>
+													<dd class="ui-form__val">
+														<div class="basic-text font-weight-medium">1</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">
+														<div class="basic-text color-gray-secondary">용법</div>
+													</dt>
+													<dd class="ui-form__val">
+														<div class="basic-text font-weight-medium">SC</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">
+														<div class="basic-text color-gray-secondary">총 용량</div>
+													</dt>
+													<dd class="ui-form__val">
+														<div class="basic-text font-weight-medium">100</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">
+														<div class="basic-text color-gray-secondary">용량</div>
+													</dt>
+													<dd class="ui-form__val">
+														<div class="basic-text font-weight-medium">100</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">
+														<div class="basic-text color-gray-secondary">수량</div>
+													</dt>
+													<dd class="ui-form__val">
+														<div class="basic-text font-weight-medium">1</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">
+														<div class="basic-text color-gray-secondary">횟수</div>
+													</dt>
+													<dd class="ui-form__val">
+														<div class="basic-text font-weight-medium">1</div>
+													</dd>
+												</div>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="info-detail__item">
+								<div class="info-detail__block">
+									<div class="info-detail__head">
+										<h4 class="info-detail__title">피하주사-일반 (벡타주사)</h4>
+									</div>
+									<div class="info-detail__contents">
+										<div class="ui-form ui-form--horizontal ui-form--per-500">
+											<dl class="ui-form__list">
+												<div class="ui-form__item">
+													<dt class="ui-form__key">
+														<div class="basic-text color-gray-secondary">단위</div>
+													</dt>
+													<dd class="ui-form__val">
+														<div class="basic-text font-weight-medium">T/kg</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">
+														<div class="basic-text color-gray-secondary">날수</div>
+													</dt>
+													<dd class="ui-form__val">
+														<div class="basic-text font-weight-medium">3</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">
+														<div class="basic-text color-gray-secondary">용법</div>
+													</dt>
+													<dd class="ui-form__val">
+														<div class="basic-text font-weight-medium">PO</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">
+														<div class="basic-text color-gray-secondary">총 용량</div>
+													</dt>
+													<dd class="ui-form__val">
+														<div class="basic-text font-weight-medium">12</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">
+														<div class="basic-text color-gray-secondary">용량</div>
+													</dt>
+													<dd class="ui-form__val">
+														<div class="basic-text font-weight-medium">20</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">
+														<div class="basic-text color-gray-secondary">수량</div>
+													</dt>
+													<dd class="ui-form__val">
+														<div class="basic-text font-weight-medium">0.1</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">
+														<div class="basic-text color-gray-secondary">횟수</div>
+													</dt>
+													<dd class="ui-form__val">
+														<div class="basic-text font-weight-medium">2</div>
+													</dd>
+												</div>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--chart-info">
+				<h2 class="test-title">Chart Info</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="chart-info">
+						<ul class="chart-info__list">
+							<li class="chart-info__item">
+								<div class="chart-info__block">
+									<div class="chart-info__icon chart-info__icon--001"></div>
+									<div class="chart-info__text">2022.06.04</div>
+								</div>
+							</li>
+							<li class="chart-info__item">
+								<div class="chart-info__block">
+									<div class="chart-info__icon chart-info__icon--002"></div>
+									<div class="chart-info__text">김민수</div>
+								</div>
+							</li>
+							<li class="chart-info__item">
+								<div class="chart-info__block">
+									<div class="chart-info__icon chart-info__icon--003"></div>
+									<div class="chart-info__text">
+										<div class="info-tags info-tags--regular">
+											<div class="info-tags__inner">
+												<span class="info-tags__item">
+													<span class="basic-text display-block">초진</span>
+												</span>
+												<span class="info-tags__item">
+													<span class="basic-text display-block">중성화 수술</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="chart-info__item">
+								<div class="chart-info__block">
+									<div class="chart-info__icon chart-info__icon--004"></div>
+									<div class="chart-info__text">
+										<div class="info-tags info-tags--regular">
+											<div class="info-tags__inner">
+												<span class="info-tags__item">
+													<span class="basic-text display-block">초진</span>
+												</span>
+												<span class="info-tags__item">
+													<span class="basic-text display-block">중성화 수술</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--status">
+				<h2 class="test-title">Status</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<span class="status status--ongoing">텍스트</span>
+					<span class="status status--ongoing-fill">텍스트</span>
+					<span class="status status--waiting">텍스트</span>
+					<span class="status status--waiting-fill">텍스트</span>
+					<span class="status status--success">텍스트</span>
+					<span class="status status--success-fill">텍스트</span>
+					<span class="status status--normal">텍스트</span>
+					<span class="status status--normal-fill">텍스트</span>
+					<span class="status status--danger">텍스트</span>
+					<span class="status status--danger-fill">텍스트</span>
+					<span class="status status--warning">텍스트</span>
+					<span class="status status--warning-fill">텍스트</span>
+					<span class="status status--disabled">텍스트</span>
+					<span class="status status--disabled-fill">텍스트</span>
+					<span class="status status--on">텍스트</span>
+					<span class="status status--on-fill">텍스트</span>
+					<span class="status status--off">텍스트</span>
+					<span class="status status--off-fill">텍스트</span>
+					<span class="status status--discharge">텍스트</span>
+					<span class="status status--discharge-fill">텍스트</span>
+				</div>
+			</div>
+
+			<div class="test-section test-section--page-title">
+				<h2 class="test-title">Page Title</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<p class="page-title">인증키 입력이 필요합니다.</p>
+				</div>
+			</div>
+
+			<div class="test-section test-section--page-info">
+				<h2 class="test-title">Page Info</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="page-info">
+						<p class="page-info__title">
+							EVR 구독 인증 키 입력 후<br />
+							서비스를 이용할 수 있습니다.
+						</p>
+						<p class="page-info__text">
+							PC 브라우저에서 로그인 하신 후 X Caliber에서<br />
+							발급된 인증키를 입력해 주시기 바랍니다.
+						</p>
+						<div class="page-info__icon page-info__icon--001"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--card">
+				<h2 class="test-title">Card</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="card">
+						<p class="basic-text">텍스트</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--cards">
+				<h2 class="test-title">Cards List</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="cards">
+						<ul class="cards__list">
+							<li class="cards__item">
+								<div class="card">
+									<p class="basic-text">텍스트</p>
+								</div>
+							</li>
+							<li class="cards__item">
+								<div class="card">
+									<p class="basic-text">텍스트</p>
+								</div>
+							</li>
+							<li class="cards__item">
+								<div class="card">
+									<p class="basic-text">텍스트</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--patients-title">
+				<h2 class="test-title">Patients Title</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<h2 class="patients-title">P20220301001&nbsp;&nbsp;티모</h2>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Regular</h3>
+					<h2 class="patients-title patients-title--regular">P20220301001&nbsp;&nbsp;티모</h2>
+				</div>
+			</div>
+
+			<div class="test-section test-section--arrow-block">
+				<h2 class="test-title">Arrow Block</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<a href="" class="arrow-block">
+						<p class="basic-text">텍스트</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="test-section test-section--logs">
+				<h2 class="test-title">Logs</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="logs">
+						<ul class="logs__list">
+							<li class="logs__item">
+								<a href="" class="arrow-block">
+									<span class="info-tags row-item-small">
+										<span class="info-tags__inner">
+											<span class="info-tags__item color-dark-gray">2022.06.04</span>
+											<span class="info-tags__item color-dark-gray">김민수</span>
+										</span>
+									</span>
+									<span class="info-tags">
+										<span class="info-tags__inner">
+											<span class="info-tags__item">
+												<span class="regular-text font-weight-medium display-block">초진</span>
+											</span>
+											<span class="info-tags__item">
+												<span class="regular-text font-weight-medium display-block">중성화 수술</span>
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							<li class="logs__item">
+								<a href="" class="arrow-block">
+									<span class="info-tags row-item-small">
+										<span class="info-tags__inner">
+											<span class="info-tags__item color-dark-gray">2022.06.04</span>
+											<span class="info-tags__item color-dark-gray">김민수</span>
+										</span>
+									</span>
+									<span class="info-tags">
+										<span class="info-tags__inner">
+											<span class="info-tags__item">
+												<span class="regular-text font-weight-medium display-block">초진</span>
+											</span>
+											<span class="info-tags__item">
+												<span class="regular-text font-weight-medium display-block">중성화 수술</span>
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+							<li class="logs__item">
+								<a href="" class="arrow-block">
+									<span class="info-tags row-item-small">
+										<span class="info-tags__inner">
+											<span class="info-tags__item color-dark-gray">2022.06.04</span>
+											<span class="info-tags__item color-dark-gray">김민수</span>
+										</span>
+									</span>
+									<span class="info-tags">
+										<span class="info-tags__inner">
+											<span class="info-tags__item">
+												<span class="regular-text font-weight-medium display-block">초진</span>
+											</span>
+											<span class="info-tags__item">
+												<span class="regular-text font-weight-medium display-block">중성화 수술</span>
+											</span>
+										</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--file-view">
+				<style>
+					.test-section--file-view .file-view {
+						max-width: 300px;
+					}
+				</style>
+				<h2 class="test-title">File View</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					<div class="file-view">
+						<ul class="file-view__list">
+							<li class="file-view__item">
+								<div class="file-view__block">
+									<div class="file-view__frame">
+										<div class="file-view__photo">
+											<img src="./dist/assets/images/_dummy/image-1.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+										</div>
+									</div>
+									<div class="file-view__info">
+										<div class="file-view__name">File_Name_here.jpg</div>
+										<a href="" class="file-view__download"><span class="for-a11y">다운로드</span></a>
+									</div>
+								</div>
+							</li>
+							<li class="file-view__item">
+								<div class="file-view__block">
+									<div class="file-view__frame">
+										<div class="file-view__photo">
+											<img src="./dist/assets/images/_dummy/image-2.jpg" alt="" onerror="this.parentNode.className += ' is-error';" />
+										</div>
+									</div>
+									<div class="file-view__info">
+										<div class="file-view__name">File_Name_here.jpg</div>
+										<a href="" class="file-view__download"><span class="for-a11y">다운로드</span></a>
+									</div>
+								</div>
+							</li>
+							<li class="file-view__item">
+								<div class="file-view__block">
+									<div class="file-view__frame">
+										<div class="file-view__icon file-view__icon--pdf">
+											<span class="for-a11y">PDF File</span>
+										</div>
+									</div>
+									<div class="file-view__info">
+										<div class="file-view__name">File_Name_here_File_Name_here_File_Name_here_File_Name_here_File_Name_here_File_Name_here.pdf</div>
+										<a href="" class="file-view__download"><span class="for-a11y">다운로드</span></a>
+									</div>
+								</div>
+							</li>
+							<li class="file-view__item">
+								<div class="file-view__block">
+									<div class="file-view__frame">
+										<div class="file-view__icon file-view__icon--video">
+											<span class="for-a11y">Video File</span>
+										</div>
+									</div>
+									<div class="file-view__info">
+										<div class="file-view__name">File_Name_here.mp4</div>
+										<a href="" class="file-view__download"><span class="for-a11y">다운로드</span></a>
+									</div>
+								</div>
+							</li>
+							<li class="file-view__item">
+								<div class="file-view__block">
+									<div class="file-view__frame">
+										<div class="file-view__icon file-view__icon--etc">
+											<span class="for-a11y">ETC File</span>
+										</div>
+									</div>
+									<div class="file-view__info">
+										<div class="file-view__name">File_Name_here.txt</div>
+										<a href="" class="file-view__download"><span class="for-a11y">다운로드</span></a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!--
+			<div class="test-section test-section--ui-icon">
+				<style>
+					.test-section--ui-icon .ui-icon {
+						margin: 5px;
+						display: inline-block;
+						vertical-align: top;
+					}
+				</style>
+				<h2 class="test-title">Icon</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					<span class="ui-icon ui-icon--question"></span>
+				</div>
+			</div>
+			-->
+
+			<div class="test-section test-section--etc">
+				<style>
+					.test-section--input .ui-input-block + .ui-input-block {
+						margin-top: 10px;
+					}
+				</style>
+				<h2 class="test-title">ETC</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">.display-block</h3>
+					<span class="display-block">&lt;span class="display-block"&gt;&lt;/span&gt;</span>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">.inline-block</h3>
+					<div class="inline-block">&lt;div class="inline-block"&gt;&lt;/div&gt;</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">.small-text</h3>
+					<p class="small-text">더미 텍스트 (12px)</p>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">.basic-small-text</h3>
+					<p class="basic-small-text">더미 텍스트 (13px)</p>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">.basic-text</h3>
+					<p class="basic-text">더미 텍스트 (14px)</p>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">.regular-small-text</h3>
+					<p class="regular-small-text">더미 텍스트 (15px)</p>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">.regular-text</h3>
+					<p class="regular-text">더미 텍스트 (16px)</p>
+				</div>
+				<!--
+				<div class="test-section-sub">
+					<h3 class="test-title">.medium-text</h3>
+					<p class="medium-text">더미 텍스트 (18px)</p>
+				</div>
+				-->
+				<div class="test-section-sub">
+					<h3 class="test-title">.font-weight</h3>
+					<p class="font-weight-thin">.font-weight-thin</p>
+					<p class="font-weight-light">.font-weight-light</p>
+					<p class="font-weight-regular">.font-weight-regular</p>
+					<p class="font-weight-medium">.font-weight-medium</p>
+					<p class="font-weight-bold">.font-weight-bold</p>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">.basic-link</h3>
+					<a href="" class="basic-link">더미 텍스트</a>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">.none-deco-link</h3>
+					<a href="" class="none-deco-link">더미 텍스트</a>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">.link-block</h3>
+					<a href="" class="link-block">더미 텍스트</a>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">.color</h3>
+					<p class="color-gray">.color-gray</p>
+					<p class="color-gray-secondary">.color-gray-secondary</p>
+					<p class="color-dark-gray">.color-dark-gray</p>
+					<p class="color-blue-black">.color-blue-black</p>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">.align</h3>
+					<p class="align-left">.align-left</p>
+					<p class="align-right">.align-right</p>
+					<p class="align-center">.align-center</p>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">.ellipsis</h3>
+					<p class="ellipsis" style="width: 300px">.ellipsis 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트</p>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">.underline</h3>
+					<p class="underline">더미 텍스트</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./dist/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./dist/assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'T고딕';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('T고딕 Light'),
+    url('./eot/TgothicLight.eot'),
+    url('./eot/TgothicLight.eot?#iefix') format('embedded-opentype'),
+    url('./woff/TgothicLight.woff') format('woff'),
+    url('./woff2/TgothicLight.woff2') format('woff2'),
+    url('./otf/TgothicLight.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'T고딕';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('T고딕 Medium'),
+    url('./eot/TgothicMedium.eot'),
+    url('./eot/TgothicMedium.eot?#iefix') format('embedded-opentype'),
+    url('./woff/TgothicMedium.woff') format('woff'),
+    url('./woff2/TgothicMedium.woff2') format('woff2'),
+    url('./otf/TgothicMedium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'T고딕';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('T고딕 Black'),
+    url('./eot/TgothicBlack.eot'),
+    url('./eot/TgothicBlack.eot?#iefix') format('embedded-opentype'),
+    url('./woff/TgothicBlack.woff') format('woff'),
+    url('./woff2/TgothicBlack.woff2') format('woff2'),
+    url('./otf/TgothicBlack.otf') format('opentype');
+}
